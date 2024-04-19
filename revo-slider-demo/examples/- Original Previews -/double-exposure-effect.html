@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Double Exposure Effect - Slider Revolution</title>
+		<meta name="description" content="Slider Revolution Example" />
+		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+		<meta name="author" content="ThemePunch" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- LOAD JQUERY LIBRARY -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+		
+		<!-- LOADING FONTS AND ICONS -->
+		<link href="http://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+		
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/font-awesome/css/font-awesome.css">
+		
+		<!-- REVOLUTION STYLE SHEETS -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/settings.css">
+		<!-- REVOLUTION LAYERS STYLES -->
+		
+
+			<link rel="stylesheet" type="text/css" href="../../revolution/css/layers.css">
+			
+			<!-- REVOLUTION NAVIGATION STYLES -->
+			<link rel="stylesheet" type="text/css" href="../../revolution/css/navigation.css">
+			
+			<!-- FONT AND STYLE FOR BASIC DOCUMENTS, NO NEED FOR FURTHER USAGE IN YOUR PROJECTS-->
+			<link href="http://fonts.googleapis.com/css?family=Roboto%3A700%2C300" rel="stylesheet" property="stylesheet" type="text/css" media="all" />
+			<link rel="stylesheet" type="text/css" href="../../assets/css/noneed.css">
+					<!-- REVOLUTION JS FILES -->
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.migration.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.video.min.js"></script>
+		<script type="text/javascript">function setREVStartSize(e){
+				try{ var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;					
+					if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+				}catch(d){console.log("Failure at Presize of Slider:"+d)}
+			};</script>
+	</head>
+	
+	<body>
+				<!-- HEADER -->
+		<article class="content">
+			<!-- Add your site or application content here -->
+			<section class="header">
+				<span class="logo" style="float:left"></span>
+				<a class="button" style="float:right" target="_blank" href="http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/"><i class="pe-7s-help2"></i>Online Documentation</a>
+				<div class="clearfix"></div>
+			</section>
+		</article>
+		
+				<!-- SLIDER EXAMPLE -->
+		<section class="example">
+			<article class="content">
+			
+
+<div id="rev_slider_312_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="double-exposure-effect" data-source="gallery" style="background:transparent;padding:0px;">
+<!-- START REVOLUTION SLIDER 5.4.3.1 fullscreen mode -->
+	<div id="rev_slider_312_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.3.1">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-892" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="500"  data-thumb="../../assets/images/portait2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/portait2.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="3000" data-ease="Power4.easeOut" data-scalestart="250" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="8" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzb_892" class="rev_row_zone rev_row_zone_bottom" style="z-index: 7;">
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption  " 
+			 id="slide-892-layer-9" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[130,100,100,80]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption  " 
+			 id="slide-892-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="100%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','center','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,50,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,50,20]"
+
+			style="z-index: 8; width: 100%;">
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-892-layer-5" 
+			 data-x="['left','left','center','center']" data-hoffset="['0','73','0','0']" 
+			 data-y="['top','bottom','bottom','bottom']" data-voffset="['0','230','270','250']" 
+						data-fontsize="['100','100','70','50']"
+			data-lineheight="['80','80','60','40']"
+			data-letterspacing="['-7','-7','-5','-3']"
+			data-width="['none','none','480','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+490","speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','center','center']"
+			data-paddingtop="[10,10,10,10]"
+			data-paddingright="[20,20,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[13,13,13,13]"
+
+			style="z-index: 9; white-space: normal; font-size: 100px; line-height: 80px; font-weight: 700; color: #2d3032; letter-spacing: -7px; display: inline-block;font-family:Poppins;">SLIDER<br/>REVOLUTION </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-892-layer-12" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="['20','20','10','10']"
+			data-whitespace="normal"
+ 
+			data-type="shape" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12; display: block;background-color:rgba(0, 0, 0, 0);"> </div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-892-layer-6" 
+			 data-x="['left','left','center','center']" data-hoffset="['0','72','0','0']" 
+			 data-y="['top','bottom','bottom','bottom']" data-voffset="['0','190','230','210']" 
+						data-width="['none','none','480','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+490","speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','center','center']"
+			data-paddingtop="[5,5,5,5]"
+			data-paddingright="[20,20,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[20,20,20,20]"
+
+			style="z-index: 10; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 700; color: #2d3032; letter-spacing: 0px; display: inline-block;font-family:Poppins;">DOUBLE EXPOSURE HEADER TEMPLATE </div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-892-layer-13" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="['40','40','30','30']"
+			data-whitespace="normal"
+ 
+			data-type="shape" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 13; display: block;background-color:rgba(0, 0, 0, 0);"> </div>
+
+		<!-- LAYER NR. 7 -->
+		<a class="tp-caption rev-btn  tp-resizeme" 
+ href="https://revolution.themepunch.com/direct-customer-benefits/" target="_blank"			 id="slide-892-layer-7" 
+			 data-x="['left','left','center','center']" data-hoffset="['0','93','0','0']" 
+			 data-y="['top','bottom','bottom','bottom']" data-voffset="['0','100','140','130']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="['normal','nowrap','nowrap','nowrap']"
+ 
+			data-type="button" 
+			data-actions=''
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+990","speed":1500,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0deg;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(45,48,50);bg:rgba(255,255,255,1);bc:rgba(0,0,0,1);bs:solid;bw:0 0 0 0;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[20,20,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[30,30,30,30]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[30,30,30,30]"
+
+			style="z-index: 11; white-space: normal; font-size: 15px; line-height: 46px; font-weight: 700; color: #ffffff; letter-spacing: px; display: inline-block;font-family:Poppins;background-color:rgb(45,48,50);border-color:rgb(255,255,255);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;">HOW TO DOWNLOAD? </a>
+				</div>
+			</div>
+		</div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption   tp-resizeme  disabled_lc tp-videolayer" 
+			 id="slide-892-layer-1" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-whitespace="nowrap"
+ 
+			data-type="video" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":400,"speed":2000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]'
+ data-videocontrols="none" data-videowidth="100%" data-videoheight="100%" data-videoposter="../../assets/images/Forest-Lullaby.jpg" data-videomp4="../../assets/videos/Forest-Lullaby.mp4" data-noposteronmobile="off" data-videopreload="auto" data-videoloop="loop"			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+			data-autoplay="on" 
+			data-volume="mute"
+			style="z-index: 5;"> </div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-892-layer-3" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full-proportional"
+			data-height="full-proportional"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":400,"speed":2000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="screen"
+
+			style="z-index: 6;"><img src="../../assets/images/galaxy_3-2.jpg" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption   tp-resizeme tp-svg-layer" 
+			 id="slide-892-layer-14" 
+			 data-x="['right','right','right','right']" data-hoffset="['70','70','70','70']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['70','70','70','70']" 
+						data-width="60"
+			data-height="60"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="svg" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+			data-svg_src="../../assets/images/ic_arrow_forward_36px.svg" 
+			data-svg_idle="sc:transparent;sw:0px;sda:0;sdo:0;" 
+			data-svg_hover="sc:transparent;sw:0;sda:0;sdo:0;" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power3.easeInOut","to":"o:0.5;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(45,48,50);"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 14; min-width: 60px; max-width: 60px; max-width: 60px; max-width: 60px; color: #2d3032;cursor:pointer;">
+<div class="rs-looped rs-slideloop"  data-easing="Power1.easeInOut" data-speed="1" data-xs="-10" data-xe="10" data-ys="0" data-ye="0"> </div></div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-893" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="500"  data-thumb="../../assets/images/bw-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/bw.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="3000" data-ease="Power4.easeOut" data-scalestart="250" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="8" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzb_893" class="rev_row_zone rev_row_zone_bottom" style="z-index: 7;">
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption  " 
+			 id="slide-893-layer-9" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[130,100,100,80]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 12 -->
+		<div class="tp-caption  " 
+			 id="slide-893-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="100%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','center','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,50,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,50,20]"
+
+			style="z-index: 8; width: 100%;">
+		<!-- LAYER NR. 13 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-893-layer-5" 
+			 data-x="['left','left','center','center']" data-hoffset="['0','73','0','0']" 
+			 data-y="['top','bottom','bottom','bottom']" data-voffset="['0','230','270','250']" 
+						data-fontsize="['100','100','70','50']"
+			data-lineheight="['80','80','60','40']"
+			data-letterspacing="['-7','-7','-5','-3']"
+			data-width="['none','none','480','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+490","speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','center','center']"
+			data-paddingtop="[10,10,10,10]"
+			data-paddingright="[20,20,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[13,13,13,13]"
+
+			style="z-index: 9; white-space: normal; font-size: 100px; line-height: 80px; font-weight: 700; color: #ffffff; letter-spacing: -7px; display: inline-block;font-family:Poppins;">SLIDER<br/>REVOLUTION </div>
+
+		<!-- LAYER NR. 14 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-893-layer-12" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="['20','20','10','10']"
+			data-whitespace="normal"
+ 
+			data-type="shape" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12; display: block;background-color:rgba(0, 0, 0, 0);"> </div>
+
+		<!-- LAYER NR. 15 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-893-layer-6" 
+			 data-x="['left','left','center','center']" data-hoffset="['0','72','0','0']" 
+			 data-y="['top','bottom','bottom','bottom']" data-voffset="['0','190','230','210']" 
+						data-width="['none','none','480','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+490","speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','center','center']"
+			data-paddingtop="[5,5,5,5]"
+			data-paddingright="[20,20,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[20,20,20,20]"
+
+			style="z-index: 10; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 700; color: #ffffff; letter-spacing: 0px; display: inline-block;font-family:Poppins;">DOUBLE EXPOSURE HEADER TEMPLATE </div>
+
+		<!-- LAYER NR. 16 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-893-layer-13" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="['40','40','30','30']"
+			data-whitespace="normal"
+ 
+			data-type="shape" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 13; display: block;background-color:rgba(0, 0, 0, 0);"> </div>
+
+		<!-- LAYER NR. 17 -->
+		<a class="tp-caption rev-btn  tp-resizeme" 
+ href="https://revolution.themepunch.com/direct-customer-benefits/" target="_blank"			 id="slide-893-layer-7" 
+			 data-x="['left','left','center','center']" data-hoffset="['0','93','0','0']" 
+			 data-y="['top','bottom','bottom','bottom']" data-voffset="['0','100','140','130']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="['normal','nowrap','nowrap','nowrap']"
+ 
+			data-type="button" 
+			data-actions=''
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+990","speed":1500,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0deg;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(45,48,50);bg:rgba(255,255,255,1);bc:rgba(0,0,0,1);bs:solid;bw:0 0 0 0;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[20,20,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[30,30,30,30]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[30,30,30,30]"
+
+			style="z-index: 11; white-space: normal; font-size: 15px; line-height: 46px; font-weight: 700; color: #ffffff; letter-spacing: px; display: inline-block;font-family:Poppins;background-color:rgb(45,48,50);border-color:rgb(255,255,255);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;">HOW TO DOWNLOAD? </a>
+				</div>
+			</div>
+		</div>
+
+		<!-- LAYER NR. 18 -->
+		<div class="tp-caption   tp-resizeme  disabled_lc tp-videolayer" 
+			 id="slide-893-layer-1" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-whitespace="nowrap"
+ 
+			data-type="video" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":400,"speed":2000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]'
+ data-videocontrols="none" data-videowidth="100%" data-videoheight="100%" data-videoposter="../../assets/images/space_cover.jpg" data-videomp4="../../assets/videos/space.mp4" data-noposteronmobile="off" data-videopreload="auto" data-videoloop="loop"			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+			data-autoplay="on" 
+			data-volume="mute"
+			style="z-index: 5;"> </div>
+
+		<!-- LAYER NR. 19 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-893-layer-3" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full-proportional"
+			data-height="full-proportional"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":400,"speed":2000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="screen"
+
+			style="z-index: 6;"><img src="../../assets/images/galaxy.jpg" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1823" data-no-retina> </div>
+
+		<!-- LAYER NR. 20 -->
+		<div class="tp-caption   tp-resizeme tp-svg-layer" 
+			 id="slide-893-layer-14" 
+			 data-x="['right','right','right','right']" data-hoffset="['70','70','70','70']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['70','70','70','70']" 
+						data-width="60"
+			data-height="60"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="svg" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+			data-svg_src="../../assets/images/ic_arrow_forward_36px.svg" 
+			data-svg_idle="sc:transparent;sw:0;sda:0;sdo:0;" 
+			data-svg_hover="sc:transparent;sw:0;sda:0;sdo:0;" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power3.easeInOut","to":"o:0.5;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(45,48,50);"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 14; min-width: 60px; max-width: 60px; max-width: 60px; max-width: 60px; color: #2d3032;cursor:pointer;">
+<div class="rs-looped rs-slideloop"  data-easing="Power1.easeInOut" data-speed="1" data-xs="-10" data-xe="10" data-ys="0" data-ye="0"> </div></div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-894" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="500"  data-thumb="../../assets/images/manbw-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/manbw.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="3000" data-ease="Power4.easeOut" data-scalestart="250" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="8" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzm_894" class="rev_row_zone rev_row_zone_middle" style="z-index: 7;">
+
+		<!-- LAYER NR. 21 -->
+		<div class="tp-caption  " 
+			 id="slide-894-layer-9" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,100,100,80]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 22 -->
+		<div class="tp-caption  " 
+			 id="slide-894-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="100%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['right','inherit','center','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,50,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,50,20]"
+
+			style="z-index: 8; width: 100%;">
+		<!-- LAYER NR. 23 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-894-layer-5" 
+			 data-x="['left','left','center','center']" data-hoffset="['0','73','0','0']" 
+			 data-y="['top','bottom','bottom','bottom']" data-voffset="['0','230','270','250']" 
+						data-fontsize="['100','100','70','50']"
+			data-lineheight="['80','80','60','40']"
+			data-letterspacing="['-7','-7','-5','-3']"
+			data-width="['none','none','480','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+490","speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','center','center']"
+			data-paddingtop="[10,10,10,10]"
+			data-paddingright="[20,20,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[13,13,13,13]"
+
+			style="z-index: 9; white-space: normal; font-size: 100px; line-height: 80px; font-weight: 700; color: #2d3032; letter-spacing: -7px; display: inline-block;font-family:Poppins;">SLIDER<br/>REVOLUTION </div>
+
+		<!-- LAYER NR. 24 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-894-layer-12" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="['20','20','10','10']"
+			data-whitespace="normal"
+ 
+			data-type="shape" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12; display: block;background-color:rgba(0, 0, 0, 0);"> </div>
+
+		<!-- LAYER NR. 25 -->
+		<div class="tp-caption   tp-resizeme" 
+			 id="slide-894-layer-6" 
+			 data-x="['left','left','center','center']" data-hoffset="['0','72','0','0']" 
+			 data-y="['top','bottom','bottom','bottom']" data-voffset="['0','190','230','210']" 
+						data-width="['none','none','480','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+490","speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','center','center']"
+			data-paddingtop="[5,5,5,5]"
+			data-paddingright="[20,20,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[20,20,20,20]"
+
+			style="z-index: 10; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 700; color: #2d3032; letter-spacing: 0px; display: inline-block;font-family:Poppins;">DOUBLE EXPOSURE HEADER TEMPLATE </div>
+
+		<!-- LAYER NR. 26 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-894-layer-13" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="['40','40','30','30']"
+			data-whitespace="normal"
+ 
+			data-type="shape" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 13; display: block;background-color:rgba(0, 0, 0, 0);"> </div>
+
+		<!-- LAYER NR. 27 -->
+		<a class="tp-caption rev-btn  tp-resizeme" 
+ href="https://revolution.themepunch.com/direct-customer-benefits/" target="_blank"			 id="slide-894-layer-7" 
+			 data-x="['left','left','center','center']" data-hoffset="['0','93','0','0']" 
+			 data-y="['top','bottom','bottom','bottom']" data-voffset="['0','100','140','130']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="['normal','nowrap','nowrap','nowrap']"
+ 
+			data-type="button" 
+			data-actions=''
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+990","speed":1500,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0deg;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":750,"frame":"999","to":"x:[-100%];opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","ease":"Power4.easeInOut"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(45,48,50);bg:rgba(255,255,255,1);bc:rgba(0,0,0,1);bs:solid;bw:0 0 0 0;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[20,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,20,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[30,30,30,30]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[30,30,30,30]"
+
+			style="z-index: 11; white-space: normal; font-size: 15px; line-height: 46px; font-weight: 700; color: #ffffff; letter-spacing: px; display: inline-block;font-family:Poppins;background-color:rgb(45,48,50);border-color:rgb(255,255,255);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;">HOW TO DOWNLOAD? </a>
+				</div>
+			</div>
+		</div>
+
+		<!-- LAYER NR. 28 -->
+		<div class="tp-caption   tp-resizeme  disabled_lc tp-videolayer" 
+			 id="slide-894-layer-1" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-whitespace="nowrap"
+ 
+			data-type="video" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":400,"speed":2000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]'
+ data-videocontrols="none" data-videowidth="100%" data-videoheight="100%" data-videoposter="../../assets/images/tp_vid_clouds-1.jpg" data-videomp4="../../assets/videos/tp_vid_clouds.mp4" data-noposteronmobile="off" data-videopreload="auto" data-videoloop="loop"			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+			data-autoplay="on" 
+			data-volume="mute"
+			style="z-index: 5;"> </div>
+
+		<!-- LAYER NR. 29 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-894-layer-3" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full-proportional"
+			data-height="full-proportional"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":400,"speed":2000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="screen"
+
+			style="z-index: 6;"><img src="../../assets/images/mountain4.jpg" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1272" data-no-retina> </div>
+
+		<!-- LAYER NR. 30 -->
+		<div class="tp-caption   tp-resizeme tp-svg-layer" 
+			 id="slide-894-layer-14" 
+			 data-x="['right','right','right','right']" data-hoffset="['70','70','70','70']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['70','70','70','70']" 
+						data-width="60"
+			data-height="60"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="svg" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
+			data-svg_src="../../assets/images/ic_arrow_forward_36px.svg" 
+			data-svg_idle="sc:transparent;sw:0px;sda:0;sdo:0;" 
+			data-svg_hover="sc:transparent;sw:0;sda:0;sdo:0;" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:[-100%];y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power3.easeInOut","to":"o:0.5;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(45,48,50);"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 14; min-width: 60px; max-width: 60px; max-width: 60px; max-width: 60px; color: #2d3032;cursor:pointer;">
+<div class="rs-looped rs-slideloop"  data-easing="Power1.easeInOut" data-speed="1" data-xs="-10" data-xe="10" data-ys="0" data-ye="0"> </div></div>
+	</li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+</div><!-- END REVOLUTION SLIDER -->
+		<script type="text/javascript">
+var revapi312,
+	tpj=jQuery;
+			
+tpj(document).ready(function() {
+	if(tpj("#rev_slider_312_1").revolution == undefined){
+		revslider_showDoubleJqueryError("#rev_slider_312_1");
+	}else{
+		revapi312 = tpj("#rev_slider_312_1").show().revolution({
+			sliderType:"standard",
+			jsFileLocation:"//server.local/revslider/wp-content/plugins/revslider/public/assets/js/",
+			sliderLayout:"fullscreen",
+			dottedOverlay:"none",
+			delay:9000,
+			navigation: {
+				keyboardNavigation:"off",
+				keyboard_direction: "horizontal",
+				mouseScrollNavigation:"off",
+ 							mouseScrollReverse:"default",
+				onHoverStop:"off",
+				bullets: {
+					enable:true,
+					hide_onmobile:false,
+					style:"hermes",
+					hide_onleave:false,
+					direction:"horizontal",
+					h_align:"center",
+					v_align:"bottom",
+					h_offset:0,
+					v_offset:30,
+					space:5,
+					tmp:''
+				}
+			},
+			responsiveLevels:[1240,1024,778,480],
+			visibilityLevels:[1240,1024,778,480],
+			gridwidth:[1240,1024,778,480],
+			gridheight:[868,768,960,720],
+			lazyType:"none",
+			parallax: {
+				type:"scroll",
+				origo:"slidercenter",
+				speed:400,
+				levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
+			},
+			shadow:0,
+			spinner:"spinner3",
+			stopLoop:"on",
+			stopAfterLoops:0,
+			stopAtSlide:1,
+			shuffle:"off",
+			autoHeight:"off",
+			fullScreenAutoWidth:"off",
+			fullScreenAlignForce:"off",
+			fullScreenOffsetContainer: "",
+			fullScreenOffset: "60px",
+			disableProgressBar:"on",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				nextSlideOnWindowFocus:"off",
+				disableFocusListener:false,
+			}
+		});
+var ua = window.navigator.userAgent;
+var msie = ua.indexOf("MSIE ");
+
+if(msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || ('CSS' in window && 'supports' in window.CSS && !window.CSS.supports('mix-blend-mode', 'screen'))) {
+ 
+ var bgColor = 'rgba(245, 245, 245, 0.5)';
+ //jQuery('.rev_slider .tp-caption[data-blendmode]').removeAttr('data-blendmode').css('background', bgColor);
+ jQuery('.rev_slider .tp-caption[data-blendmode]').remove();
+}	}
+	try{initSocialSharing("312")} catch(e){}
+});	/*ready*/
+</script>
+		
+
+				</article>
+		</section>
+		<div class="bottom-history-wrap" style="margin-top:150px">
+		
+		  <article class="small-history bottom-history" style="background:#f5f7f9;"> 
+            <h2 class="textaligncenter" style="margin-bottom:25px;">Your Slider Revolution jQuery Plugin</h2>
+            <p>Slider Revolution is an innovative, responsive Slider Plugin that displays your content the beautiful way. Whether it's a <strong>Slider, Carousel, Hero Scene</strong> or even a whole <strong>Front Page</strong>.<br>The <a href="https://codecanyon.net/item/slider-revolution-jquery-visual-editor-addon/13934907" target="_blank">visual drag &amp; drop editor</a> will help you to create your Sliders and tell your own stories in no time!</p>
+          </article>
+				
+        <article class="small-history bottom-history">
+            <i class="fa-icon-question tp-headicon"></i>
+            <h2 class="textaligncenter" style="margin-bottom:25px;">Find the Documentation ?</h2>
+            <p>We would always recommend to use our<a target="_blank" href="http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/"> online documentation</a> however you can find also our embeded local documentation zipped in the Documentation folder. Online Documentation and FAQ Page is regulary updated. You will find More examples, Visit us also at <a href="http://themepunch.com">http://themepunch.com</a> ! </p>
+            <div class="tp-smallinfo">Learn how to build your Slider!</div>
+
+        </article>
+
+        <article class="small-history bottom-history" style="background:#f5f7f9;">
+            <i class="fa-icon-arrows tp-headicon"></i>
+            <h2 class="textaligncenter" style="margin-bottom:25px;">Navigation Examples !</h2>
+            <p>You find many Examples for All Skins and Positions of Navigation examples in the <a target="_blank" href="file:../Navigation">examples/Navigation folder</a>. Based on these prepared examples you can build your own navigation skins. Feel free to copy and paste the markups after your requests in your own documents.</p>
+            <div class="tp-smallinfo">Customize the interaction with your visitor!</div>
+        </article>
+
+        <article class="small-history bottom-history">
+            <i class="fa-icon-cog tp-headicon"></i>
+            <h2 class="textaligncenter" style="margin-bottom:25px;">Layer and Slide Transitions</h2>
+            <p>We prepared a small List of Transition and a light weight Markup Builder in the <a target="_blank" href="file:../Transitions"> examples/Transitions folder</a>. This will help you to get an overview how the Slider and Layer Transitions works. Copy the Markups of the generated Slide and Layer Animation Examples and paste it into your own Documents.</p>
+            <div class="tp-smallinfo">Eye Catching Effects!</div>
+
+        </article>
+    </div>
+    <div class="clearfix"></div>
+
+    <footer>
+        <div class="footer_inner">
+            <div class="footerwidget">
+                <h3>Slider Revolution</h3>
+                <a href="http://revolution.themepunch.com/jquery/#features" target="_self">Features</a>
+                <a href="http://revolution.themepunch.com/examples-jquery/" target="_self">Usage Examples</a>
+                <a href="http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/" target="_blank">Online Documentation</a>
+            </div>
+            <div class="footerwidget">
+                <h3>Resources</h3>
+                <a href="http://www.themepunch.com/support-center/" target="_blank">FAQ Database</a>
+                <a href="http://themepunch.com" target="_blank">ThemePunch.com</a>
+                <a href="http://themepunch.us9.list-manage.com/subscribe?u=a5738148e5ec630766e28de16&amp;id=3e718acc63" target="_blank">Newsletter</a>
+                <a href="http://www.themepunch.com/products/" target="_blank">Plugins</a>
+                <a href="http://www.themepunch.com/products/" target="_blank">Themes</a>
+            </div>
+            <div class="footerwidget">
+                <h3>More Versions</h3>
+                <a href="http://revolution.themepunch.com" target="_blank">WordPress</a>
+                <a href="http://codecanyon.net/item/slider-revolution-responsive-prestashop-module/7140939?ref=themepunch" target="_blank">Prestashop</a>
+                <a href="http://codecanyon.net/item/slider-revolution-responsive-magento-extension/9332896?ref=themepunch" target="_blank">Magento</a>
+                <a href="http://codecanyon.net/item/slider-revolution-responsive-opencart-module/9994648?ref=themepunch" target="_blank">OpenCart</a>
+                <a href="http://codecanyon.net/item/slider-revolution-responsive-drupal-module/12041755?ref=themepunch" target="_blank">Drupal</a>
+            </div>
+            <div class="footerwidget social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/themepunchofficial" target="_blank" class="so_facebook" data-rel="tooltip" data-animation="false" data-placement="bottom" data-original-title="Facebook"><i class="s_icon fa-icon-facebook 
+						"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/themepunch" target="_blank" class="so_twitter" data-rel="tooltip" data-animation="false" data-placement="bottom" data-original-title="Twitter"><i class="s_icon fa-icon-twitter"></i></a>
+                    </li>
+                    <li><a href="https://plus.google.com/+ThemePunch/posts" target="_blank" class="so_gplus" data-rel="tooltip" data-animation="false" data-placement="bottom" data-original-title="Google+"><i class="s_icon fa-icon-google-plus"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </footer>
+ 	<script type="text/javascript" src="../../assets/warning.js"></script>
+		</body>
+</html>

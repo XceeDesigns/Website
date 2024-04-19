@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Food Carousel26 - Slider Revolution</title>
+		<meta name="description" content="Slider Revolution Example" />
+		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+		<meta name="author" content="ThemePunch" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- LOAD JQUERY LIBRARY -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+		
+		<!-- LOADING FONTS AND ICONS -->
+		<link href="http://fonts.googleapis.com/css?family=Raleway:500%2C700" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+		
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/font-awesome/css/font-awesome.css">
+		
+		<!-- REVOLUTION STYLE SHEETS -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/settings.css">
+		
+		<!-- FONT AND STYLE FOR BASIC DOCUMENTS, NO NEED FOR FURTHER USAGE IN YOUR PROJECTS-->
+		<link href="http://fonts.googleapis.com/css?family=Roboto%3A700%2C300" rel="stylesheet" property="stylesheet" type="text/css" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../assets/css/noneed.css">
+		
+		<!-- REVOLUTION LAYERS STYLES -->
+		<style>.tp-caption.FoodCarousel-Content,.FoodCarousel-Content{color:rgba(41,46,49,1.00);font-size:17px;line-height:28px;font-weight:500;font-style:normal;font-family:Raleway;text-decoration:none;background-color:rgba(255,255,255,1.00);border-color:rgba(41,46,49,1.00);border-style:solid;border-width:1px;border-radius:0 0 0 0px}.tp-caption.FoodCarousel-Button,.FoodCarousel-Button{color:rgba(41,46,49,1.00);font-size:13px;line-height:13px;font-weight:700;font-style:normal;font-family:Raleway;text-decoration:none;background-color:rgba(255,255,255,1.00);border-color:rgba(41,46,49,1.00);border-style:solid;border-width:1px;border-radius:0px 0px 0px 0px;letter-spacing:1px}.tp-caption.FoodCarousel-Button:hover,.FoodCarousel-Button:hover{color:rgba(255,255,255,1.00);text-decoration:none;background-color:rgba(41,46,49,1.00);border-color:rgba(41,46,49,1.00);border-style:solid;border-width:1px;border-radius:0px 0px 0px 0px;cursor:pointer}.tp-caption.FoodCarousel-CloseButton,.FoodCarousel-CloseButton{color:rgba(41,46,49,1.00);font-size:20px;line-height:20px;font-weight:700;font-style:normal;font-family:Raleway;text-decoration:none;background-color:rgba(0,0,0,0);border-color:rgba(41,46,49,0);border-style:solid;border-width:1px;border-radius:30px 30px 30px 30px;letter-spacing:1px}.tp-caption.FoodCarousel-CloseButton:hover,.FoodCarousel-CloseButton:hover{color:rgba(255,255,255,1.00);text-decoration:none;background-color:rgba(41,46,49,1.00);border-color:rgba(41,46,49,0);border-style:solid;border-width:1px;border-radius:30px 30px 30px 30px;cursor:pointer}</style>
+		<style type="text/css">.foodcarousel-headline{font-weight:800 !important}.FoodCarousel-Content a,.FoodCarousel-Content a:visited{color:#89c400 !important; text-decoration:underline !important}.FoodCarousel-Content a:hover{color:#3a2d58 !important}</style>
+		<style type="text/css">#rev_slider_41_1 .metis.tparrows{background:rgba(255,255,255,1); padding:10px; transition:all 0.3s; -webkit-transition:all 0.3s; width:60px; height:60px; box-sizing:border-box}#rev_slider_41_1 .metis.tparrows:hover{background:rgba(255,255,255,0.75)}#rev_slider_41_1 .metis.tparrows:before{color:rgb(0,0,0);   transition:all 0.3s; -webkit-transition:all 0.3s}#rev_slider_41_1 .metis.tparrows:hover:before{transform:scale(1.5)}.erinyen .tp-thumb{opacity:1}.erinyen .tp-thumb-over{background:rgba(0,0,0,0.25); width:100%; height:100%; position:absolute; top:0px; left:0px; z-index:1; -webkit-transition:all 0.3s; transition:all 0.3s}.erinyen .tp-thumb-more:before{font-family:"revicons"; font-size:12px; color:rgb(170,170,170); display:block; line-height:15px; text-align:left;   z-index:2; position:absolute; top:20px; right:20px; z-index:2}.erinyen .tp-thumb-more:before{content:"\e825"}.erinyen .tp-thumb-title{font-family:"Raleway"; letter-spacing:1px; font-size:12px; color:rgb(255,255,255); display:block; line-height:15px; text-align:left;   z-index:2; position:absolute; top:0px; left:0px; z-index:2; padding:20px 35px 20px 20px; width:100%; height:100%; box-sizing:border-box; transition:all 0.3s; -webkit-transition:all 0.3s; font-weight:500}.erinyen .tp-thumb.selected .tp-thumb-more:before,.erinyen .tp-thumb:hover .tp-thumb-more:before{color:rgb(170,170,170)}.erinyen .tp-thumb.selected .tp-thumb-over,.erinyen .tp-thumb:hover .tp-thumb-over{background:rgb(255,255,255)}.erinyen .tp-thumb.selected .tp-thumb-title,.erinyen .tp-thumb:hover .tp-thumb-title{color:rgb(0,0,0)}</style>
+				
+		<!-- REVOLUTION JS FILES -->
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.migration.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.video.min.js"></script>
+	</head>
+	
+	<body>
+		
+		<!-- HEADER -->
+		<article class="content">
+			<!-- Add your site or application content here -->
+			<section class="header">
+				<span class="logo" style="float:left"></span>
+				<a class="button" style="float:right" href="http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/"><i class="pe-7s-help2"></i>Online Documentation</a>
+				<div class="clearfix"></div>
+			</section>
+		</article>
+
+
+		<!-- SLIDER EXAMPLE -->
+		<section class="example">
+			<article class="content">
+
+		<div id="rev_slider_41_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="food-carousel26" data-source="gallery" style="margin:0px auto;background:#eef0f1;padding:0px;margin-top:0px;margin-bottom:0px;">
+		<!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
+			<div id="rev_slider_41_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+		<ul>	<!-- SLIDE  -->
+			<li data-index="rs-145" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/food1-150x100.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="The Healthy Bowl" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<!-- MAIN IMAGE -->
+				<img src="../../assets/images/food1.jpg"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+				<!-- LAYERS -->
+
+				<!-- LAYER NR. 1 -->
+				<div class="tp-caption FoodCarousel-Content   tp-resizeme" 
+					 id="slide-145-layer-3" 
+					 data-x="center" data-hoffset="" 
+					 data-y="center" data-voffset="" 
+								data-width="['420']"
+					data-height="['420']"
+		 
+					data-type="text" 
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[30,30,30,30]"
+					data-paddingright="[30,30,30,30]"
+					data-paddingbottom="[30,30,30,30]"
+					data-paddingleft="[30,30,30,30]"
+					data-lasttriggerstate="reset"
+					style="z-index: 5; min-width: 420px; max-width: 420px; max-width: 420px; max-width: 420px; white-space: normal;text-transform:left;"><span class="foodcarousel-headline">The Healthy Bowl</span><br/>
+		1 Large Green Bell Pepper<br/>
+		1 Small Onion<br/>
+		2 Dragon Fruits<br/>
+		1 Red Chili
+		<hr class="revslider-hr" style="border-top: 1px solid #292e31;">
+		Chop everything up into small bits and put into a bowl. That was easy huh?<br/>
+		Enjoy this special dish brought to you by <a href="http://revolution.themepunch.com/direct-customer-benefits/" target="_blank">Slider Revolution</a>. </div>
+
+				<!-- LAYER NR. 2 -->
+				<div class="tp-caption FoodCarousel-Button rev-btn " 
+					 id="slide-145-layer-1" 
+					 data-x="center" data-hoffset="" 
+					 data-y="bottom" data-voffset="50" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"startlayer","layer":"slide-145-layer-3","delay":""},{"event":"click","action":"startlayer","layer":"slide-145-layer-5","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-145-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+					data-responsive="off"
+					data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[15,15,15,15]"
+					data-paddingright="[70,70,70,70]"
+					data-paddingbottom="[15,15,15,15]"
+					data-paddingleft="[50,50,50,50]"
+					data-lasttriggerstate="reset"
+					style="z-index: 6; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="pe-7s-note2" style="font-size: 21px; float: left;margin-top:-6px;margin-right:10px;"></i> VIEW RECIPE </div>
+
+				<!-- LAYER NR. 3 -->
+				<div class="tp-caption FoodCarousel-CloseButton rev-btn  tp-resizeme" 
+					 id="slide-145-layer-5" 
+					 data-x="441" 
+					 data-y="110" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"stoplayer","layer":"slide-145-layer-3","delay":""},{"event":"click","action":"stoplayer","layer":"slide-145-layer-5","delay":""},{"event":"click","action":"startlayer","layer":"slide-145-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[14,14,14,14]"
+					data-paddingright="[14,14,14,14]"
+					data-paddingbottom="[14,14,14,14]"
+					data-paddingleft="[16,16,16,16]"
+					data-lasttriggerstate="reset"
+					style="z-index: 7; white-space: nowrap;text-transform:left;border-color:transparent;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="fa-icon-remove"></i> </div>
+			</li>
+			<!-- SLIDE  -->
+			<li data-index="rs-146" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/food6-150x100.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Spicy Chili Soup" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<!-- MAIN IMAGE -->
+				<img src="../../assets/images/food6.jpg"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+				<!-- LAYERS -->
+
+				<!-- LAYER NR. 4 -->
+				<div class="tp-caption FoodCarousel-Content   tp-resizeme" 
+					 id="slide-146-layer-3" 
+					 data-x="center" data-hoffset="" 
+					 data-y="center" data-voffset="" 
+								data-width="['420']"
+					data-height="['420']"
+		 
+					data-type="text" 
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[30,30,30,30]"
+					data-paddingright="[30,30,30,30]"
+					data-paddingbottom="[30,30,30,30]"
+					data-paddingleft="[30,30,30,30]"
+					data-lasttriggerstate="reset"
+					style="z-index: 8; min-width: 420px; max-width: 420px; max-width: 420px; max-width: 420px; white-space: normal;text-transform:left;"><span class="foodcarousel-headline">Spicy Chili Soup</span><br/>
+		2 Pieces of Baguette<br/>
+		3 Large Tomatoes<br/>
+		1 / 2 Cup of Mixed Herbs<br/>
+		1 Red Chili
+		<hr class="revslider-hr" style="border-top: 1px solid #292e31;">
+		Chop everything up into small bits and put into a bowl. That was easy huh?<br/>
+		Enjoy this special dish brought to you by <a href="http://revolution.themepunch.com/direct-customer-benefits/" target="_blank">Slider Revolution</a>. </div>
+
+				<!-- LAYER NR. 5 -->
+				<div class="tp-caption FoodCarousel-Button rev-btn " 
+					 id="slide-146-layer-1" 
+					 data-x="center" data-hoffset="" 
+					 data-y="bottom" data-voffset="50" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"startlayer","layer":"slide-146-layer-3","delay":""},{"event":"click","action":"startlayer","layer":"slide-146-layer-5","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-146-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+					data-responsive="off"
+					data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[15,15,15,15]"
+					data-paddingright="[70,70,70,70]"
+					data-paddingbottom="[15,15,15,15]"
+					data-paddingleft="[50,50,50,50]"
+					data-lasttriggerstate="reset"
+					style="z-index: 9; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="pe-7s-note2" style="font-size: 21px; float: left;margin-top:-6px;margin-right:10px;"></i> VIEW RECIPE </div>
+
+				<!-- LAYER NR. 6 -->
+				<div class="tp-caption FoodCarousel-CloseButton rev-btn  tp-resizeme" 
+					 id="slide-146-layer-5" 
+					 data-x="441" 
+					 data-y="110" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"stoplayer","layer":"slide-146-layer-3","delay":""},{"event":"click","action":"stoplayer","layer":"slide-146-layer-5","delay":""},{"event":"click","action":"startlayer","layer":"slide-146-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[14,14,14,14]"
+					data-paddingright="[14,14,14,14]"
+					data-paddingbottom="[14,14,14,14]"
+					data-paddingleft="[16,16,16,16]"
+					data-lasttriggerstate="reset"
+					style="z-index: 10; white-space: nowrap;text-transform:left;border-color:transparent;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="fa-icon-remove"></i> </div>
+			</li>
+			<!-- SLIDE  -->
+			<li data-index="rs-147" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/food3-150x100.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Classic Bolognese" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<!-- MAIN IMAGE -->
+				<img src="../../assets/images/food3.jpg"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+				<!-- LAYERS -->
+
+				<!-- LAYER NR. 7 -->
+				<div class="tp-caption FoodCarousel-Content   tp-resizeme" 
+					 id="slide-147-layer-3" 
+					 data-x="center" data-hoffset="" 
+					 data-y="center" data-voffset="" 
+								data-width="['420']"
+					data-height="['420']"
+		 
+					data-type="text" 
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[30,30,30,30]"
+					data-paddingright="[30,30,30,30]"
+					data-paddingbottom="[30,30,30,30]"
+					data-paddingleft="[30,30,30,30]"
+					data-lasttriggerstate="reset"
+					style="z-index: 11; min-width: 420px; max-width: 420px; max-width: 420px; max-width: 420px; white-space: normal;text-transform:left;"><span class="foodcarousel-headline">Classic Bolognese</span><br/>
+		250g Spaghettis<br/>
+		500g of Mixed Minced Beef<br/>
+		3 Large Tomatoes
+		<hr class="revslider-hr" style="border-top: 1px solid #292e31;">
+		Chop everything up into small bits and put into a bowl. That was easy huh?<br/>
+		Enjoy this special dish brought to you by <a href="http://revolution.themepunch.com/direct-customer-benefits/" target="_blank">Slider Revolution</a>. </div>
+
+				<!-- LAYER NR. 8 -->
+				<div class="tp-caption FoodCarousel-Button rev-btn " 
+					 id="slide-147-layer-1" 
+					 data-x="center" data-hoffset="" 
+					 data-y="bottom" data-voffset="50" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"startlayer","layer":"slide-147-layer-3","delay":""},{"event":"click","action":"startlayer","layer":"slide-147-layer-5","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-147-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+					data-responsive="off"
+					data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[15,15,15,15]"
+					data-paddingright="[70,70,70,70]"
+					data-paddingbottom="[15,15,15,15]"
+					data-paddingleft="[50,50,50,50]"
+					data-lasttriggerstate="reset"
+					style="z-index: 12; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="pe-7s-note2" style="font-size: 21px; float: left;margin-top:-6px;margin-right:10px;"></i> VIEW RECIPE </div>
+
+				<!-- LAYER NR. 9 -->
+				<div class="tp-caption FoodCarousel-CloseButton rev-btn  tp-resizeme" 
+					 id="slide-147-layer-5" 
+					 data-x="441" 
+					 data-y="110" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"stoplayer","layer":"slide-147-layer-3","delay":""},{"event":"click","action":"stoplayer","layer":"slide-147-layer-5","delay":""},{"event":"click","action":"startlayer","layer":"slide-147-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[14,14,14,14]"
+					data-paddingright="[14,14,14,14]"
+					data-paddingbottom="[14,14,14,14]"
+					data-paddingleft="[16,16,16,16]"
+					data-lasttriggerstate="reset"
+					style="z-index: 13; white-space: nowrap;text-transform:left;border-color:transparent;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="fa-icon-remove"></i> </div>
+			</li>
+			<!-- SLIDE  -->
+			<li data-index="rs-148" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/food2-150x100.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Cottage Cheese &amp; Chives" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<!-- MAIN IMAGE -->
+				<img src="../../assets/images/food2.jpg"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+				<!-- LAYERS -->
+
+				<!-- LAYER NR. 10 -->
+				<div class="tp-caption FoodCarousel-Content   tp-resizeme" 
+					 id="slide-148-layer-3" 
+					 data-x="center" data-hoffset="" 
+					 data-y="center" data-voffset="" 
+								data-width="['420']"
+					data-height="['420']"
+		 
+					data-type="text" 
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[30,30,30,30]"
+					data-paddingright="[30,30,30,30]"
+					data-paddingbottom="[30,30,30,30]"
+					data-paddingleft="[30,30,30,30]"
+					data-lasttriggerstate="reset"
+					style="z-index: 14; min-width: 420px; max-width: 420px; max-width: 420px; max-width: 420px; white-space: normal;text-transform:left;"><span class="foodcarousel-headline">Cottage Cheese & Chives</span><br/>
+		15g Chives<br/>
+		100g Cottage Cheese<br/>
+		1 Bun
+		<hr class="revslider-hr" style="border-top: 1px solid #292e31;">
+		Chop everything up into small bits and put into a bowl. That was easy huh?<br/>
+		Enjoy this special dish brought to you by <a href="http://revolution.themepunch.com/direct-customer-benefits/" target="_blank">Slider Revolution</a>. </div>
+
+				<!-- LAYER NR. 11 -->
+				<div class="tp-caption FoodCarousel-Button rev-btn " 
+					 id="slide-148-layer-1" 
+					 data-x="center" data-hoffset="" 
+					 data-y="bottom" data-voffset="50" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"startlayer","layer":"slide-148-layer-3","delay":""},{"event":"click","action":"startlayer","layer":"slide-148-layer-5","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-148-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+					data-responsive="off"
+					data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[15,15,15,15]"
+					data-paddingright="[70,70,70,70]"
+					data-paddingbottom="[15,15,15,15]"
+					data-paddingleft="[50,50,50,50]"
+					data-lasttriggerstate="reset"
+					style="z-index: 15; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="pe-7s-note2" style="font-size: 21px; float: left;margin-top:-6px;margin-right:10px;"></i> VIEW RECIPE </div>
+
+				<!-- LAYER NR. 12 -->
+				<div class="tp-caption FoodCarousel-CloseButton rev-btn  tp-resizeme" 
+					 id="slide-148-layer-5" 
+					 data-x="441" 
+					 data-y="110" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"stoplayer","layer":"slide-148-layer-3","delay":""},{"event":"click","action":"stoplayer","layer":"slide-148-layer-5","delay":""},{"event":"click","action":"startlayer","layer":"slide-148-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[14,14,14,14]"
+					data-paddingright="[14,14,14,14]"
+					data-paddingbottom="[14,14,14,14]"
+					data-paddingleft="[16,16,16,16]"
+					data-lasttriggerstate="reset"
+					style="z-index: 16; white-space: nowrap;text-transform:left;border-color:transparent;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="fa-icon-remove"></i> </div>
+			</li>
+			<!-- SLIDE  -->
+			<li data-index="rs-149" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/food5-150x100.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Colorful Salad" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<!-- MAIN IMAGE -->
+				<img src="../../assets/images/food5.jpg"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+				<!-- LAYERS -->
+
+				<!-- LAYER NR. 13 -->
+				<div class="tp-caption FoodCarousel-Content   tp-resizeme" 
+					 id="slide-149-layer-3" 
+					 data-x="center" data-hoffset="" 
+					 data-y="center" data-voffset="" 
+								data-width="['420']"
+					data-height="['420']"
+		 
+					data-type="text" 
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[30,30,30,30]"
+					data-paddingright="[30,30,30,30]"
+					data-paddingbottom="[30,30,30,30]"
+					data-paddingleft="[30,30,30,30]"
+					data-lasttriggerstate="reset"
+					style="z-index: 17; min-width: 420px; max-width: 420px; max-width: 420px; max-width: 420px; white-space: normal;text-transform:left;"><span class="foodcarousel-headline">Colorful Salad</span><br/>
+		250g Mixed Salad<br/>
+		50g Nuts<br/>
+		100g Beetroot<br/>
+		Your Favorite Dressing
+		<hr class="revslider-hr" style="border-top: 1px solid #292e31;">
+		Chop everything up into small bits and put into a bowl. That was easy huh?<br/>
+		Enjoy this special dish brought to you by <a href="http://revolution.themepunch.com/direct-customer-benefits/" target="_blank">Slider Revolution</a>. </div>
+
+				<!-- LAYER NR. 14 -->
+				<div class="tp-caption FoodCarousel-Button rev-btn " 
+					 id="slide-149-layer-1" 
+					 data-x="center" data-hoffset="" 
+					 data-y="bottom" data-voffset="50" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"startlayer","layer":"slide-149-layer-3","delay":""},{"event":"click","action":"startlayer","layer":"slide-149-layer-5","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-149-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+					data-responsive="off"
+					data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[15,15,15,15]"
+					data-paddingright="[70,70,70,70]"
+					data-paddingbottom="[15,15,15,15]"
+					data-paddingleft="[50,50,50,50]"
+					data-lasttriggerstate="reset"
+					style="z-index: 18; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="pe-7s-note2" style="font-size: 21px; float: left;margin-top:-6px;margin-right:10px;"></i> VIEW RECIPE </div>
+
+				<!-- LAYER NR. 15 -->
+				<div class="tp-caption FoodCarousel-CloseButton rev-btn  tp-resizeme" 
+					 id="slide-149-layer-5" 
+					 data-x="441" 
+					 data-y="110" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"stoplayer","layer":"slide-149-layer-3","delay":""},{"event":"click","action":"stoplayer","layer":"slide-149-layer-5","delay":""},{"event":"click","action":"startlayer","layer":"slide-149-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[14,14,14,14]"
+					data-paddingright="[14,14,14,14]"
+					data-paddingbottom="[14,14,14,14]"
+					data-paddingleft="[16,16,16,16]"
+					data-lasttriggerstate="reset"
+					style="z-index: 19; white-space: nowrap;text-transform:left;border-color:transparent;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="fa-icon-remove"></i> </div>
+			</li>
+			<!-- SLIDE  -->
+			<li data-index="rs-150" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/food4-150x100.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Its Just Cornflakes" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<!-- MAIN IMAGE -->
+				<img src="../../assets/images/food4.jpg"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+				<!-- LAYERS -->
+
+				<!-- LAYER NR. 16 -->
+				<div class="tp-caption FoodCarousel-Content   tp-resizeme" 
+					 id="slide-150-layer-3" 
+					 data-x="center" data-hoffset="" 
+					 data-y="center" data-voffset="" 
+								data-width="['420']"
+					data-height="['420']"
+		 
+					data-type="text" 
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[30,30,30,30]"
+					data-paddingright="[30,30,30,30]"
+					data-paddingbottom="[30,30,30,30]"
+					data-paddingleft="[30,30,30,30]"
+					data-lasttriggerstate="reset"
+					style="z-index: 20; min-width: 420px; max-width: 420px; max-width: 420px; max-width: 420px; white-space: normal;text-transform:left;"><span class="foodcarousel-headline">It's Just Cornflakes</span><br/>
+		150ml Milk<br/>
+		50g Cornflakes<br/>
+		That's it!
+		<hr class="revslider-hr" style="border-top: 1px solid #292e31;">
+		Chop everything up into small bits and put into a bowl. That was easy huh?<br/>
+		Enjoy this special dish brought to you by <a href="http://revolution.themepunch.com/direct-customer-benefits/" target="_blank">Slider Revolution</a>. </div>
+
+				<!-- LAYER NR. 17 -->
+				<div class="tp-caption FoodCarousel-Button rev-btn " 
+					 id="slide-150-layer-1" 
+					 data-x="center" data-hoffset="" 
+					 data-y="bottom" data-voffset="50" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"startlayer","layer":"slide-150-layer-3","delay":""},{"event":"click","action":"startlayer","layer":"slide-150-layer-5","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-150-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+					data-responsive="off"
+					data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[15,15,15,15]"
+					data-paddingright="[70,70,70,70]"
+					data-paddingbottom="[15,15,15,15]"
+					data-paddingleft="[50,50,50,50]"
+					data-lasttriggerstate="reset"
+					style="z-index: 21; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="pe-7s-note2" style="font-size: 21px; float: left;margin-top:-6px;margin-right:10px;"></i> VIEW RECIPE </div>
+
+				<!-- LAYER NR. 18 -->
+				<div class="tp-caption FoodCarousel-CloseButton rev-btn  tp-resizeme" 
+					 id="slide-150-layer-5" 
+					 data-x="441" 
+					 data-y="110" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"stoplayer","layer":"slide-150-layer-3","delay":""},{"event":"click","action":"stoplayer","layer":"slide-150-layer-5","delay":""},{"event":"click","action":"startlayer","layer":"slide-150-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[14,14,14,14]"
+					data-paddingright="[14,14,14,14]"
+					data-paddingbottom="[14,14,14,14]"
+					data-paddingleft="[16,16,16,16]"
+					data-lasttriggerstate="reset"
+					style="z-index: 22; white-space: nowrap;text-transform:left;border-color:transparent;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="fa-icon-remove"></i> </div>
+			</li>
+			<!-- SLIDE  -->
+			<li data-index="rs-151" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/muesli-150x100.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Tasty Muesli" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+				<!-- MAIN IMAGE -->
+				<img src="../../assets/images/muesli.jpg"  alt=""  data-bgposition="center center" data-bgfit="contain" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+				<!-- LAYERS -->
+
+				<!-- LAYER NR. 19 -->
+				<div class="tp-caption FoodCarousel-Content   tp-resizeme" 
+					 id="slide-151-layer-3" 
+					 data-x="center" data-hoffset="" 
+					 data-y="center" data-voffset="" 
+								data-width="['420']"
+					data-height="['420']"
+		 
+					data-type="text" 
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[30,30,30,30]"
+					data-paddingright="[30,30,30,30]"
+					data-paddingbottom="[30,30,30,30]"
+					data-paddingleft="[30,30,30,30]"
+					data-lasttriggerstate="reset"
+					style="z-index: 23; min-width: 420px; max-width: 420px; max-width: 420px; max-width: 420px; white-space: normal;text-transform:left;"><span class="foodcarousel-headline">Tasty Muesli</span><br/>
+		150ml Milk<br/>
+		50g Granola<br/>
+		50g Blueberries
+		<hr class="revslider-hr" style="border-top: 1px solid #292e31;">
+		Chop everything up into small bits and put into a bowl. That was easy huh?<br/>
+		Enjoy this special dish brought to you by <a href="http://revolution.themepunch.com/direct-customer-benefits/" target="_blank">Slider Revolution</a>. </div>
+
+				<!-- LAYER NR. 20 -->
+				<div class="tp-caption FoodCarousel-Button rev-btn " 
+					 id="slide-151-layer-1" 
+					 data-x="center" data-hoffset="" 
+					 data-y="bottom" data-voffset="50" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"startlayer","layer":"slide-151-layer-3","delay":""},{"event":"click","action":"startlayer","layer":"slide-151-layer-5","delay":"200"},{"event":"click","action":"stoplayer","layer":"slide-151-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+					data-responsive="off"
+					data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[15,15,15,15]"
+					data-paddingright="[70,70,70,70]"
+					data-paddingbottom="[15,15,15,15]"
+					data-paddingleft="[50,50,50,50]"
+					data-lasttriggerstate="reset"
+					style="z-index: 24; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="pe-7s-note2" style="font-size: 21px; float: left;margin-top:-6px;margin-right:10px;"></i> VIEW RECIPE </div>
+
+				<!-- LAYER NR. 21 -->
+				<div class="tp-caption FoodCarousel-CloseButton rev-btn  tp-resizeme" 
+					 id="slide-151-layer-5" 
+					 data-x="441" 
+					 data-y="110" 
+								data-width="['auto']"
+					data-height="['auto']"
+		 
+					data-type="button" 
+					data-actions='[{"event":"click","action":"stoplayer","layer":"slide-151-layer-3","delay":""},{"event":"click","action":"stoplayer","layer":"slide-151-layer-5","delay":""},{"event":"click","action":"startlayer","layer":"slide-151-layer-1","delay":""}]'
+					data-responsive_offset="on" 
+
+					data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":800,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":500,"to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(41,46,49,1);bw:1px 1px 1px 1px;"}]'
+					data-textAlign="['left','left','left','left']"
+					data-paddingtop="[14,14,14,14]"
+					data-paddingright="[14,14,14,14]"
+					data-paddingbottom="[14,14,14,14]"
+					data-paddingleft="[16,16,16,16]"
+					data-lasttriggerstate="reset"
+					style="z-index: 25; white-space: nowrap;text-transform:left;border-color:transparent;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><i class="fa-icon-remove"></i> </div>
+			</li>
+		</ul>
+		<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+		</div><!-- END REVOLUTION SLIDER -->
+		<script type="text/javascript">
+		
+			var tpj=jQuery;
+			var revapi41;
+			tpj(document).ready(function() {
+				if(tpj("#rev_slider_41_1").revolution == undefined){
+					revslider_showDoubleJqueryError("#rev_slider_41_1");
+				}else{
+					revapi41 = tpj("#rev_slider_41_1").show().revolution({
+						sliderType:"carousel",
+						jsFileLocation:"revolution/js/",
+						sliderLayout:"fullwidth",
+						dottedOverlay:"none",
+						delay:9000,
+						navigation: {
+							keyboardNavigation:"off",
+							keyboard_direction: "horizontal",
+							mouseScrollNavigation:"off",
+ 							mouseScrollReverse:"default",
+							onHoverStop:"off",
+							arrows: {
+								style:"metis",
+								enable:true,
+								hide_onmobile:true,
+								hide_under:768,
+								hide_onleave:false,
+								tmp:'',
+								left: {
+									h_align:"left",
+									v_align:"center",
+									h_offset:0,
+									v_offset:0
+								},
+								right: {
+									h_align:"right",
+									v_align:"center",
+									h_offset:0,
+									v_offset:0
+								}
+							}
+							,
+							thumbnails: {
+								style:"erinyen",
+								enable:true,
+								width:150,
+								height:100,
+								min_width:150,
+								wrapper_padding:20,
+								wrapper_color:"rgba(0,0,0,0.05)",
+								tmp:'<span class="tp-thumb-over"></span><span class="tp-thumb-image"></span><span class="tp-thumb-title">{{title}}</span><span class="tp-thumb-more"></span>',
+								visibleAmount:9,
+								hide_onmobile:false,
+								hide_onleave:false,
+								direction:"horizontal",
+								span:true,
+								position:"outer-bottom",
+								space:10,
+								h_align:"center",
+								v_align:"bottom",
+								h_offset:0,
+								v_offset:0
+							}
+						},
+						carousel: {
+							maxRotation: 65,
+							vary_rotation: "on",
+							minScale: 55,
+							vary_scale: "off",
+							horizontal_align: "center",
+							vertical_align: "center",
+							fadeout: "on",
+							vary_fade: "on",
+							maxVisibleItems: 5,
+							infinity: "on",
+							space: -150,
+							stretch: "off",
+ 							showLayersAllTime: "off",
+ 							easing: "Power3.easeInOut",
+ 							speed: "800"
+						},
+						visibilityLevels:[1240,1024,778,480],
+						gridwidth:600,
+						gridheight:600,
+						lazyType:"none",
+						shadow:0,
+						spinner:"off",
+						stopLoop:"on",
+						stopAfterLoops:0,
+						stopAtSlide:1,
+						shuffle:"off",
+						autoHeight:"off",
+						disableProgressBar:"on",
+						hideThumbsOnMobile:"off",
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						debugMode:false,
+						fallbacks: {
+							simplifyAll:"off",
+							nextSlideOnWindowFocus:"off",
+							disableFocusListener:false,
+						}
+					});
+				}
+			});	/*ready*/
+		</script>
+		</article>
+		</section>
+		<div class="bottom-history-wrap" style="margin-top:150px">
+			<article class="small-history bottom-history"> 
+				<i class="fa-icon-question tp-headicon"></i>
+				<h2 class="textaligncenter" style="margin-bottom:25px;">Find the Documentation ?</h2>
+				<p>We would always recommend to use our<a target="_blank" href="http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/"> online documentation</a> however you can find also our embeded local documentation zipped in the Documentation folder.  Online Documentation and FAQ Page is regulary updated. You will find More examples, Visit us also at <a href="http://themepunch.com">http://themepunch.com</a> ! </p>	
+				<div class="tp-smallinfo">Learn how to build your Slider!</div>		
+				
+			</article>
+
+			<article class="small-history bottom-history" style="background:#f5f7f9;"> 			
+					<i class="fa-icon-arrows tp-headicon"></i>
+					<h2 class="textaligncenter" style="margin-bottom:25px;">Navigation Examples !</h2>
+					<p>You find many Examples for All Skins and Positions of Navigation examples in the <a target="_blank" href="file:../Navigation">examples/Navigation folder</a>. Based on these prepared examples you can build your own navigation skins.  Feel free to copy and paste the markups after your requests in your own documents.</p>
+					<div class="tp-smallinfo">Customize the interaction with your visitor!</div>			
+			</article>
+
+			<article class="small-history bottom-history" > 
+				<i class="fa-icon-cog tp-headicon"></i>
+				<h2 class="textaligncenter" style="margin-bottom:25px;">Layer and Slide Transitions</h2>
+				<p>We prepared a small List of Transition and a light weight Markup Builder in the <a target="_blank" href="file:../Transitions"> examples/Transitions folder</a>. This will help you to get an overview how the Slider and Layer Transitions works. Copy the Markups of the generated Slide and Layer Animation Examples and paste it into your own Documents.</p>
+				<div class="tp-smallinfo">Eye Catching Effects!</div>
+				
+			</article>
+		</div>
+		<div class="clearfix"></div>		
+		
+		<footer>
+			<div class="footer_inner">
+				<div class="footerwidget">
+					<h3>Slider Revolution</h3>
+					<a href="http://revolution.themepunch.com/jquery/#features" target="_self">Features</a>
+					<a href="http://revolution.themepunch.com/examples-jquery/" target="_self">Usage Examples</a>
+					<a href="http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/" target="_blank">Online Documentation</a>
+				</div>
+				<div class="footerwidget">
+					<h3>Resources</h3>
+					<a href="http://www.themepunch.com/support-center/" target="_blank">FAQ Database</a>
+					<a href="http://themepunch.com" target="_blank">ThemePunch.com</a>
+					<a href="http://themepunch.us9.list-manage.com/subscribe?u=a5738148e5ec630766e28de16&amp;id=3e718acc63" target="_blank">Newsletter</a>
+					<a href="http://www.themepunch.com/products/" target="_blank">Plugins</a>
+					<a href="http://www.themepunch.com/products/" target="_blank">Themes</a>
+				</div>
+				<div class="footerwidget">
+					<h3>More Versions</h3>
+					<a href="http://revolution.themepunch.com" target="_blank">WordPress</a>
+					<a href="http://codecanyon.net/item/slider-revolution-responsive-prestashop-module/7140939?ref=themepunch" target="_blank">Prestashop</a>
+					<a href="http://codecanyon.net/item/slider-revolution-responsive-magento-extension/9332896?ref=themepunch" target="_blank">Magento</a>
+					<a href="http://codecanyon.net/item/slider-revolution-responsive-opencart-module/9994648?ref=themepunch" target="_blank">OpenCart</a>
+					<a href="http://codecanyon.net/item/slider-revolution-responsive-drupal-module/12041755?ref=themepunch" target="_blank">Drupal</a>
+				</div>
+				<div class="footerwidget social">
+					<h3>Follow Us</h3>
+					<ul>
+						<li><a href="https://www.facebook.com/themepunchofficial" target="_blank" class="so_facebook" data-rel="tooltip" data-animation="false" data-placement="bottom" data-original-title="Facebook"><i class="s_icon fa-icon-facebook 
+						"></i></a></li>
+						<li><a href="https://twitter.com/themepunch" target="_blank" class="so_twitter" data-rel="tooltip" data-animation="false" data-placement="bottom" data-original-title="Twitter"><i class="s_icon fa-icon-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/+ThemePunch/posts" target="_blank" class="so_gplus" data-rel="tooltip" data-animation="false" data-placement="bottom" data-original-title="Google+"><i class="s_icon fa-icon-google-plus"></i></a></li>
+					</ul>				
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="../../assets/warning.js"></script>
+
+		</body>
+</html>

@@ -1,0 +1,60 @@
+/**
+ * @author    ThemePunch <info@themepunch.com>
+ * @link      http://www.themepunch.com/
+ * @copyright 2017 ThemePunch
+ * @version   1.0.0
+ */
+
+.rs_addon_revealer {
+	
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	overflow: hidden;
+	
+}
+
+.rsaddon-revealer-overlay {
+	
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+
+.rs_addon_revealer div,
+.rs_addon_revealer svg {
+	
+	position: absolute;
+	
+}
+
+.rs_addon_reveal .tp-loader {
+	
+	visibility: visible !important;
+	display: inline-block !important;
+	pointer-events: none;
+	
+}
+
+.rs_addon_revealer svg {
+	
+	width: 100%;
+	height: 100%;
+	
+}
+
+.rs_addon_revealer_special .tp-revslider-mainul {
+	
+	opacity: 0 !important;
+	
+}
+
+
+
+
