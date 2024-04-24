@@ -3784,9 +3784,9 @@ background:none;
 	-o-transition: all .3s ease 0s;
 	transition: all .3s ease 0s;
 }
-/* .logo-container-2 {
+.logo-container-2 {
 	transition: all .3s ease 0s;
-} */
+}
 header .logo {
 	display: block;
 	padding-bottom: 15px;
