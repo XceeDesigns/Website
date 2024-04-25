@@ -3240,7 +3240,7 @@ select.input-border {
 	margin: 0 12px 17px 12px;
 	border-bottom: 2px solid rgba(45,78,83,0);
 	color:#4b4e53;
-  letter-spacing:2px;
+  letter-spacing:4px;
   background-color: transparent;
 }
 .affix.header-1 #main-menu .navbar .nav > li > a {
@@ -3784,9 +3784,9 @@ background:none;
 	-o-transition: all .3s ease 0s;
 	transition: all .3s ease 0s;
 }
-.logo-container-2 {
+/* .logo-container-2 {
 	transition: all .3s ease 0s;
-}
+} */
 header .logo {
 	display: block;
 	padding-bottom: 15px;
