@@ -8038,7 +8038,7 @@ h2.portfolio-timeline-title {
     bottom: 0;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 0%;
   }
   #main-menu .navbar .nav .open-sub:before {
     content: "\e232";
