@@ -164,6 +164,28 @@ Author: XceeD Crew
 /* This only works with JavaScript, 
 if it's not present, don't show loader */
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
 #loader-overflow{
   display:block;
   width: 100%;
@@ -9417,7 +9439,7 @@ img.mfp-img {
     display: none;
     position: relative;
     margin: 0;
-    padding: 0;#header-left 
+    padding: 0;
     background: #3e4045;
     -webkit-box-shadow: none;
     box-shadow: none;
