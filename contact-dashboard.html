@@ -365,6 +365,10 @@
 
                 const messageCell = document.createElement('td');
                 messageCell.textContent = entry.message;
+                messageCell.style.maxWidth = '300px';
+                messageCell.style.maxHeight = '100px'; // Set a maximum height for the message cell
+                messageCell.style.wordWrap = 'break-word'; // Wrap long words
+                messageCell.style.whiteSpace = 'normal';
                 tableRow.appendChild(messageCell);
 
                 const deleteCell = document.createElement('td');
