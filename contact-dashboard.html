@@ -207,7 +207,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div
                 </div>
             </div>
 
@@ -283,6 +283,33 @@
                 </div>
             </footer>
 
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+
+            <!-- modal starts here -->
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myModalLabel">Modal Title</h5>
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                        </div>
+                        <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- modal ends here -->
+
             <p id="back-top">
                 <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
             </p>
@@ -319,7 +346,13 @@
             });
             const authTokenData = await authToken.text();
             if (authTokenData != 'Admin Authenticated') {
-                alert('Authentication failed!');
+                const modalTitle = document.querySelector('.modal-title');
+                modalTitle.textContent = 'XceeDesigns LLC.';
+
+                const modalBody = document.querySelector('.modal-body');
+                modalBody.textContent = 'Authentication failed!';
+                modalBody.style.color = 'red';
+                $('#myModal').modal('show');
                 return;
             }
             const response = await fetch(`https://xceedesigns-backend.vercel.app/contact/fetch`);
