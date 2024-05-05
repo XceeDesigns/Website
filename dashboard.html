@@ -39,7 +39,16 @@
 <script>
     const fetchData = async () => {
         const input = document.getElementById('fetchInput').value;
-        if(input !== '@Admin123') {
+        const authToken = await fetch('https://xceedesigns-backend.vercel.app/contact/admin',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({adminAuth: input})
+        
+        });
+        const authTokenData = await authToken.text();
+        if(authTokenData != 'Admin Authenticated') {
             alert('Authentication failed!');
             return;
         }
