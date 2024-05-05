@@ -386,7 +386,11 @@
             });
             table.appendChild(tableBody);
 
-            document.getElementById('dashboard').appendChild(table);
+            const tableContainer = document.createElement('div');
+            tableContainer.classList.add('table-responsive');
+            tableContainer.appendChild(table);
+
+            document.getElementById('dashboard').appendChild(tableContainer);
         };
     </script>
 
