@@ -92,7 +92,10 @@
             const deleteIcon = document.createElement('div');
             deleteIcon.classList.add('delete-icon');
             deleteIcon.textContent = '🗑️';
-            deleteIcon.addEventListener('click', () => {
+            deleteIcon.addEventListener('click', async() => {
+                const res = await fetch(`https://xceedesigns-backend.vercel.app/contact/delete/${entry._id}`, {
+                    method: 'DELETE'
+                });
                 tableRow.remove();
                 
             });
