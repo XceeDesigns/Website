@@ -1,7 +1,8 @@
 
         const fetchData = async () => {
             const input = document.getElementById('fetchInput').value;
-            const authToken = await fetch('https://xceedesigns-backend.vercel.app/contact/admin', {
+            
+            const response = await fetch(`https://xceedesigns-backend.vercel.app/contact/fetch`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -9,8 +10,7 @@
                 body: JSON.stringify({ adminAuth: input })
 
             });
-            const authTokenData = await authToken.text();
-            if (authTokenData != 'Admin Authenticated') {
+            if(response.status === 401) {
                 const modalTitle = document.querySelector('.modal-title');
                 modalTitle.textContent = 'XceeDesigns LLC.';
                 modalTitle.style.fontWeight = 'bold';
@@ -19,7 +19,6 @@
                 $('#myModal').modal('show');
                 return;
             }
-            const response = await fetch(`https://xceedesigns-backend.vercel.app/contact/fetch`);
             const data = await response.json();
 
             const table = document.createElement('table');
