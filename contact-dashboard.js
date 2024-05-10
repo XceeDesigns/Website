@@ -1,7 +1,8 @@
 
         const fetchData = async () => {
             const input = document.getElementById('fetchInput').value;
-            
+            const fetchBtn = document.getElementById('fetchBtn');
+            fetchBtn.disabled = true;
             const response = await fetch(`https://xceedesigns-backend.vercel.app/contact/fetch`, {
                 method: 'POST',
                 headers: {
@@ -17,10 +18,11 @@
                 const modalBody = document.querySelector('.modal-body');
                 modalBody.textContent = 'Authentication failed, please try again.';
                 $('#myModal').modal('show');
+                fetchBtn.disabled = false;
                 return;
             }
             const data = await response.json();
-
+            fetchBtn.disabled = false;
             const table = document.createElement('table');
             table.classList.add('table');
 
