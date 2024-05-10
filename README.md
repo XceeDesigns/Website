@@ -32,10 +32,12 @@ Welcome to XceeDesigns, your one-stop solution for all your business website nee
 
 ### Contribution Guidelines
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b feature/new-feature`.
-3. Make your changes and test thoroughly.
-4. Commit your changes: `git commit -m "Add new feature"`.
-5. Push to the branch: `git push origin feature/new-feature`.
-6. Submit a pull request to the main repository.
-7. The pull request will be merged within 24 hrs provided it solves the issue.
+1. Find appropriate issue or raise issue.
+2. Get assigned by the moderator for any particular issue.
+3. Fork the repository.
+4. Create a new branch for your feature or bug fix: `git checkout -b feature/new-feature`.
+5. Make your changes and test thoroughly.
+6. Commit your changes: `git commit -m "Add new feature"`.
+7. Push to the branch: `git push origin feature/new-feature`.
+8. Submit a pull request to the main repository.
+9. The pull request will be merged within 24 hrs provided it solves the issue.
