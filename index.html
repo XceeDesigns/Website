@@ -574,10 +574,9 @@
 
   <div id="contact-link" class="page-section p-110-cont">
     <div class="container">
-      <div class="row">
-
-        <div class="col-md-4 col-sm-6">
-          <div class="cis-cont">
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="cis-cont bg-light rounded p-4 h-100 d-flex flex-column justify-content-between hover-shadow">
             <div class="cis-icon">
               <div class="icon icon-basic-map"></div>
             </div>
@@ -587,8 +586,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="cis-cont">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="cis-cont bg-light rounded p-4 h-100 d-flex flex-column justify-content-between hover-shadow">
             <div class="cis-icon">
               <div class="icon icon-basic-mail"></div>
             </div>
@@ -598,8 +597,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="cis-cont">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="cis-cont bg-dark rounded p-4 h-100 d-flex flex-column justify-content-between hover-shadow">
             <div class="cis-icon">
               <div class="icon icon-basic-smartphone"></div>
             </div>
@@ -609,11 +608,16 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
+  <style>.hover-shadow {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }</style>
   <footer class="page-section pt-80 pb-50">
     <div class="container">
       <div class="row">
