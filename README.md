@@ -32,7 +32,7 @@ Welcome to XceeDesigns, your one-stop solution for all your business website nee
 
 ### Contribution Guidelines
 
-1. Find appropriate issue or raise issue.
+1. Find an appropriate issue or raise the issue.
 2. Get assigned by the moderator for any particular issue.
 3. Fork the repository.
 4. Create a new branch for your feature or bug fix: `git checkout -b feature/new-feature`.
