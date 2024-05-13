@@ -153,7 +153,7 @@ html[xmlns] .slides{
 	margin:0 0 0 5px;
 	display:inline-block;
 	zoom:1;
-	*display:inline;
+	display:inline;
 }
 .flex-control-nav li:first-child{
 	margin:0;
