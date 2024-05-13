@@ -11239,3 +11239,37 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 .shop-ad-height {
   height:200px;
 }
+
+/* About us page */
+
+.mission-img{
+    background: url(../images/mission.png) 50% 50% no-repeat;
+  
+    width: 100%;
+    display: block;	
+    position: relative;
+    background-size: cover;
+       
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.expertise-img{
+    background: url(../images/expertise.png) 50% 50% no-repeat;
+    background-size: cover;
+    
+    width: 100%;
+    display: block;	
+    position: relative;
+    background-size: cover;
+       
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
