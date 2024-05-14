@@ -238,7 +238,13 @@
                 </div>
                 <div class="cis-text">
                   <h3><span class="bold">ADDRESS</span></h3>
-                  <p>Ghaziabad, India</p>
+                  <p onclick="redirectToGoogleMaps()" class="location">Ghaziabad, India</p>
+                  <script>
+                    function redirectToGoogleMaps() {
+                      var googleMapsUrl = "https://www.google.com/maps/place/Shastri+Nagar,+Ghaziabad,+Uttar+Pradesh/@28.67044,77.474447,14z/data=!4m6!3m5!1s0x390cf1f4ad5b59eb:0xd0e6b38805a9310b!8m2!3d28.6729014!4d77.4749378!16s%2Fg%2F1tf7kyhy?hl=en&entry=ttu";
+                      window.open(googleMapsUrl, "_blank");
+                    }
+                  </script>
                 </div>
               </div>
             </div>
