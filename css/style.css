@@ -10988,13 +10988,13 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 }
 .relative-important {position: relative !important;}
 
-.phone-number {
+.phone-number, .location {
   color: #4b4e53; /* Default color */
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.phone-number:hover {
+.phone-number:hover, .location:hover {
   color: #97999c; /* Hover color */
 
 }
