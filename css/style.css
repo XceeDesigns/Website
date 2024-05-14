@@ -10987,6 +10987,18 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
   font-size: 13px;
 }
 .relative-important {position: relative !important;}
+
+.phone-number, .location {
+  color: #4b4e53; /* Default color */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.phone-number:hover, .location:hover {
+  color: #97999c; /* Hover color */
+
+}
+
 /* @media (max-width: 767px) and (min-width: 480px){
   .container-2 {
 		width: 470px!important;
