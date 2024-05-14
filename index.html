@@ -71,78 +71,194 @@
 
 </head>
 
-<body>
 
+<style>
+  body {
+    color: black;
+    
+  }
+
+  .toggle-switch {
+      position: relative;
+      width: 100px;
+      height: 40px;
+      --light: #d8dbe0;
+      --dark: #28292c;
+  }
+  
+  .switch-label {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      background-color: var(--dark);
+      border-radius: 25px;
+      cursor: pointer;
+      border: 3px solid var(--dark);
+  }
+  
+  .checkbox {
+      position: absolute;
+      display: none;
+  }
+  
+  .slider {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      transition: 0.3s;
+  }
+  
+  .checkbox:checked ~ .slider {
+      background-color: var(--light);
+  }
+  
+  .slider::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      box-shadow: inset 12px -4px 0px 0px var(--light);
+      background-color: var(--dark);
+      transition: 0.3s;
+  }
+  
+  .checkbox:checked ~ .slider::before {
+      transform: translateX(50px);
+      box-shadow: none;
+  }
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .header-transporent-bg-black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #333;
+}
+
+.light-mode .header-transporent-bg-black {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+body {
+  color: black;
+  background-color: white; 
+}
+
+body.dark-mode {
+  color: white;
+  background-color: #333; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
+}
+
+
+body.dark-mode {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); }
+
+
+body.dark-mode .header-transporent-bg-black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .page-section {
+  background-color: #444;
+  color: #fff;
+}
+
+.header-wrapper {
+  position: relative; 
+}
+
+.toggle-switch {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  z-index: 1000; 
+}
+
+.toggle-switch {
+  display: inline-block;
+  margin-left: 10px; 
+  vertical-align: middle; }
+
+.toggle-dark-mode {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  z-index: 999;
+}
+
+</style>
+
+<body>
   <div id="loader-overflow">
     <div id="loader3">Please enable JS</div>
   </div>
 
   <div id="wrap" class="boxed ">
     <div class="grey-bg"> 
-
-
       <div class="header-transporent-bg-black">
+                <header id="nav" class="header header-1 header-black-white affix-on-mobile">
+                  <div class="header-wrapper">
+                    <div class="container-m-30 clearfix">
+                      <div class="logo-row">
+                        <div class="logo-container-2">
+                          <div class="logo-2">
+                            <a href="contact-dashboard.html" class="clearfix">
+                              <img src="images/logo-new.png" class="logo-img logo-color-change" alt="Logo">
+                            </a>
+                          </div>
+                        </div>
+                        <div class="menu-btn-respons-container">
+                          <button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target="#main-menu .navbar-collapse">
+                            <span aria-hidden="true" class="icon_menu hamb-mob-icon"></span>
+                          </button>
+                        </div>
+                        
 
 
-        <header id="nav" class="header header-1 header-black-white affix-on-mobile">
-          <div class="header-wrapper">
-            <div class="container-m-30 clearfix">
-              <div class="logo-row">
 
-                <div class="logo-container-2">
-                  <div class="logo-2">
-                    <a href="contact-dashboard.html" class="clearfix">
-                      <img src="images/logo-new.png" class="logo-img logo-color-change" alt="Logo">
-                    </a>
+                      </div>
+                    </div>
+                    <div class="main-menu-container">
+                      <div class="container-m-30 clearfix">
+                        <div id="main-menu">
+                          <div class="navbar navbar-default" role="navigation">
+                            <nav class="collapse collapsing navbar-collapse right-1024">
+                              <ul class="nav navbar-nav">
+                                <li class="parent">
+                                  <a href="index.html">
+                                    <div class="main-menu-title">HOME</div>
+                                  </a>
+                                </li>
+                                <li class="parent">
+                                  <a href="services.html">
+                                    <div class="main-menu-title">SERVICES</div>
+                                  </a>
+                                </li>
+                                <li id="menu-contact-info-big" class="parent megamenu">
+                                  <a href="contact.html">
+                                    <div class="main-menu-title">CONTACT</div>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="menu-btn-respons-container">
-                  <button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse"
-                    data-target="#main-menu .navbar-collapse">
-                    <span aria-hidden="true" class="icon_menu hamb-mob-icon"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
+                
 
-            <div class="main-menu-container">
-
-              <div class="container-m-30 clearfix">
-
-                <div id="main-menu">
-                  <div class="navbar navbar-default" role="navigation">
-
-                    <nav class="collapse collapsing navbar-collapse right-1024">
-                      <ul class="nav navbar-nav">
-
-                        <li class="parent">
-                          <a href="index.html">
-                            <div class="main-menu-title">HOME</div>
-                          </a>
-                        </li>
-
-                        <li class="parent">
-                          <a href="services.html">
-                            <div class="main-menu-title">SERVICES</div>
-                          </a>
-                        </li>
-
-                        <li id="menu-contact-info-big" class="parent megamenu">
-                          <a href="contact.html">
-                            <div class="main-menu-title">CONTACT</div>
-                          </a>
-                        </li>
-
-                      </ul>
-
-                    </nav>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
 
             <ul class="cd-header-buttons">
               <li><a class="cd-search-trigger" href="#cd-search"><span></span></a></li>
@@ -156,7 +272,12 @@
           </div>
 
         </header>
-
+<div class="toggle-switch">
+                          <label class="switch-label">
+                            <input type="checkbox" class="checkbox" id="modeSwitch">
+                            <span class="slider"></span>
+                          </label>
+                        </div>
 
         <div id="index-link" class="relative">
 
@@ -830,7 +951,49 @@
     });
   </script>
 
-  
+  <script>
+
+    // JavaScript for Dark Mode Toggle
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const modeSwitch = document.querySelector('#modeSwitch');
+      const body = document.body;
+    
+      const currentMode = localStorage.getItem('mode');
+      if (currentMode) {
+        body.classList.add(currentMode); 
+        modeSwitch.checked = currentMode === 'dark-mode';
+
+        setTextColor(currentMode);
+      }
+    
+      function setTextColor(mode) {
+        if (mode === 'dark-mode') {
+          document.querySelectorAll('.text-content').forEach(element => {
+            element.style.color = 'white';
+          });
+        } else {
+          document.querySelectorAll('.text-content').forEach(element => {
+            element.style.color = ''; 
+          });
+        }
+      }
+ 
+      modeSwitch.addEventListener('change', function() {
+        if (modeSwitch.checked) {
+          body.classList.remove('light-mode');
+          body.classList.add('dark-mode');
+          localStorage.setItem('mode', 'dark-mode');
+          setTextColor('dark-mode');
+        } else {
+          body.classList.remove('dark-mode');
+          body.classList.add('light-mode');
+          localStorage.setItem('mode', 'light-mode');
+          setTextColor('light-mode');
+        }
+      });
+    });
+</script>
 
 </body>
 
