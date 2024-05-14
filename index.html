@@ -8,16 +8,16 @@
   <title>XceeDesigns LLC</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta
-      content="xceeDesigns,Software company, development, web development, frontend development, backend development, programming, Java, JavaScript, ReactJS, HTML, CSS, portfolio"
-      name="keywords">
+    content="xceeDesigns,Software company, development, web development, frontend development, backend development, programming, Java, JavaScript, ReactJS, HTML, CSS, portfolio"
+    name="keywords">
   <meta
-      content="Xceedesigns: Where creativity meets functionality. Explore our digital haven for innovative design solutions and elevate your online presence today"
-      name="description">
+    content="Xceedesigns: Where creativity meets functionality. Explore our digital haven for innovative design solutions and elevate your online presence today"
+    name="description">
 
 
   <meta property="og:title" content="Home - XceeDesigns">
   <meta property="og:description"
-      content="Xceedesigns: Where creativity meets functionality. Explore our digital haven for innovative design solutions and elevate your online presence today">
+    content="Xceedesigns: Where creativity meets functionality. Explore our digital haven for innovative design solutions and elevate your online presence today">
   <meta property="og:image" content="https://www.xceedesigns.com/logo.png">
   <meta property="og:url" content="https://www.xceedesigns.com/logo.png">
   <meta property="og:type" content="website">
@@ -25,13 +25,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Home - XceeDesigns">
   <meta name="twitter:description"
-      content="Xceedesigns: Where creativity meets functionality. Explore our digital haven for innovative design solutions and elevate your online presence today">
+    content="Xceedesigns: Where creativity meets functionality. Explore our digital haven for innovative design solutions and elevate your online presence today">
   <meta name="twitter:image" content="https://www.xceedesigns.com/">
   <meta name="twitter:url" content="https://www.xceedesigns.com/">
   <meta name="robots" content="index, follow">
   <meta name="msvalidate.01" content="E29BA4EBABA604B28DF58A8094627074" />
-  <meta name="google-site-verification" content="0aNZP9sN22hbHo2_YDXcJpae1re64vQmxtKr7pLFTzs" />  
-  
+  <meta name="google-site-verification" content="0aNZP9sN22hbHo2_YDXcJpae1re64vQmxtKr7pLFTzs" />
+
 
   <link rel="canonical" href="https://www.xceedesigns.com/">
   <link href="images/favicons/apple-icon-72x72.png" rel="icon">
@@ -78,7 +78,7 @@
   </div>
 
   <div id="wrap" class="boxed ">
-    <div class="grey-bg"> 
+    <div class="grey-bg">
 
 
       <div class="header-transporent-bg-black">
@@ -146,7 +146,7 @@
 
             <ul class="cd-header-buttons">
               <li><a class="cd-search-trigger" href="#cd-search"><span></span></a></li>
-            </ul> 
+            </ul>
             <div id="cd-search" class="cd-search">
               <form class="form-search" id="searchForm">
                 <input type="text" value="" name="q" id="q" placeholder="Search...">
@@ -583,7 +583,13 @@
             </div>
             <div class="cis-text">
               <h3><span class="bold">ADDRESS</span></h3>
-              <p>Ghaziabad, India</p>
+              <p onclick="redirectToGoogleMaps()" class="location">Ghaziabad, India</p>
+              <script>
+                function redirectToGoogleMaps() {
+                  var googleMapsUrl = "https://www.google.com/maps/place/Shastri+Nagar,+Ghaziabad,+Uttar+Pradesh/@28.67044,77.474447,14z/data=!4m6!3m5!1s0x390cf1f4ad5b59eb:0xd0e6b38805a9310b!8m2!3d28.6729014!4d77.4749378!16s%2Fg%2F1tf7kyhy?hl=en&entry=ttu";
+                  window.open(googleMapsUrl, "_blank");
+                }
+              </script>
             </div>
           </div>
         </div>
@@ -605,7 +611,13 @@
             </div>
             <div class="cis-text">
               <h3><span class="bold">CALL US</span></h3>
-              <p>+91 95829 95138</p>
+              <p onclick="redirectToDialer()" class="phone-number">+91 95829 95138</p>
+              <script>
+                function redirectToDialer() {
+                  var phoneNumber = "+919582995138"; // Change this to the desired phone number
+                  window.location.href = "tel:" + phoneNumber;
+                }
+              </script>
             </div>
           </div>
         </div>
@@ -830,7 +842,7 @@
     });
   </script>
 
-  
+
 
 </body>
 
