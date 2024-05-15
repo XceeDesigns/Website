@@ -343,21 +343,6 @@ body {
 .relative {
   position: relative;
 }
-
-@media (prefers-color-scheme: dark) {
-
-  :root,
-  :before,
-  :after {
-    filter: invert(94%) hue-rotate(180deg);
-  }
-
-  img,.icon {
-    filter: invert(94%) hue-rotate(180deg);
-  }
-
-}
-
 /* #SEARCH NEW
 ================================================== */
 .gsc-selected-option-container.gsc-inline-block {
