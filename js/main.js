@@ -1,6 +1,37 @@
 /* --------------------------------------------
   DOCUMENT.READY
 --------------------------------------------- */
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to enable dark mode
+  function enableDarkMode() {
+      document.documentElement.classList.add('dark-mode'); // Add 'dark-mode' class to root element
+      localStorage.setItem('darkMode', 'true'); // Store dark mode preference in local storage
+  }
+
+  // Function to disable dark mode
+  function disableDarkMode() {
+      document.documentElement.classList.remove('dark-mode'); // Remove 'dark-mode' class from root element
+      localStorage.setItem('darkMode', 'false'); // Store light mode preference in local storage
+    }
+    
+  // Check user's dark mode preference from local storage
+  var darkModeEnabled = localStorage.getItem('darkMode') === "true";
+  if (darkModeEnabled) {
+      enableDarkMode(); // Enable dark mode if user preference is 'true'
+  }
+
+  // Toggle dark mode on button click
+  document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+      if (darkModeEnabled) {
+          disableDarkMode(); // Disable dark mode if it's already enabled
+          darkModeEnabled = false; // Update dark mode preference
+      } else {
+          enableDarkMode(); // Enable dark mode if it's currently disabled
+          darkModeEnabled = true; // Update dark mode preference
+      }
+  });
+});
+
 $(document).ready(function(){
   'use strict';
  
