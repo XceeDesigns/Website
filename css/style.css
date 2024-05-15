@@ -290,6 +290,16 @@ q:before,q:after {
 }
 abbr,acronym { border:0;
 } 
+.icon-arrows-down,.tp-mask-wrap{ 
+  filter:invert(94%) hue-rotate(180deg); 
+} 
+#dark-mode-toggle {
+  position: absolute;
+  right: 0px; 
+}
+.dark-mode {
+  filter:invert(94%) hue-rotate(180deg); 
+}
 body {
   border: 0 none;
   font-size: 100%;
