@@ -290,6 +290,16 @@ q:before,q:after {
 }
 abbr,acronym { border:0;
 } 
+.icon-arrows-down,.tp-mask-wrap{ 
+  filter:invert(94%) hue-rotate(180deg); 
+} 
+#dark-mode-toggle {
+  position: absolute;
+  right: 0px; 
+}
+.dark-mode {
+  filter:invert(94%) hue-rotate(180deg); 
+}
 body {
   border: 0 none;
   font-size: 100%;
@@ -333,21 +343,6 @@ body {
 .relative {
   position: relative;
 }
-
-@media (prefers-color-scheme: dark) {
-
-  :root,
-  :before,
-  :after {
-    filter: invert(94%) hue-rotate(180deg);
-  }
-
-  img,.icon {
-    filter: invert(94%) hue-rotate(180deg);
-  }
-
-}
-
 /* #SEARCH NEW
 ================================================== */
 .gsc-selected-option-container.gsc-inline-block {
@@ -11001,6 +10996,18 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
   font-size: 13px;
 }
 .relative-important {position: relative !important;}
+
+.phone-number, .location {
+  color: #4b4e53; /* Default color */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.phone-number:hover, .location:hover {
+  color: #97999c; /* Hover color */
+
+}
+
 /* @media (max-width: 767px) and (min-width: 480px){
   .container-2 {
 		width: 470px!important;
