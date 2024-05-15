@@ -1,0 +1,3078 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Wonderstruck - Slider Revolution</title>
+		<meta name="description" content="Slider Revolution Example" />
+		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+		<meta name="author" content="ThemePunch" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- LOAD JQUERY LIBRARY -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+		
+		<!-- LOADING FONTS AND ICONS -->
+		<link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:300%2C600" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+		
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/font-awesome/css/font-awesome.css">
+		
+		<!-- REVOLUTION STYLE SHEETS -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/settings.css">
+		
+		<!-- REVOLUTION LAYERS STYLES -->		
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/layers.css">
+		
+		<!-- REVOLUTION NAVIGATION STYLES -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/navigation.css">
+		
+		<!-- CUSTOM CSS -->
+		<style type="text/css">body{margin:0; overflow-x:hidden}#menu_forcefullwidth{z-index:5000; position:fixed !important;top:0px;left:0px;width:100%;height:140px !important;overflow:hidden}#menu_forcefullwidth.opened{height:100% !important}#menu_wrapper{height:100% !important}a.tp-caption:active,a.tp-caption:visited,a.tp-caption:focus{outline:none !important; box-shadow:none !important; text-shadow:none !important; border:none !important}a.ws-link:hover{text-decoration:line-through !important}</style>
+		
+		<style type="text/css">.ws-shadow{ -webkit-box-shadow:0px 30px 60px 0px rgba(0,0,0,0.25) !important;-moz-box-shadow:0px 30px 60px 0px rgba(0,0,0,0.25) !important;  box-shadow:0px 30px 60px 0px rgba(0,0,0,0.25) !important}</style>
+		
+		<!-- REVOLUTION JS FILES -->
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.migration.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.video.min.js"></script>
+		<script type="text/javascript">function setREVStartSize(e){
+				try{ var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;					
+					if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+				}catch(d){console.log("Failure at Presize of Slider:"+d)}
+			};</script>
+	</head>
+	
+	<body>
+
+<div id="menu_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="wonderstruck-menu" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- START REVOLUTION SLIDER 5.4.7.4 fullwidth mode -->
+	<div id="menu" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.7.4">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-620" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/transparent.png"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzt_620" class="rev_row_zone rev_row_zone_top" style="z-index: 5;">
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption  " 
+			 id="slide-620-layer-2" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="3" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[50,50,20,20]"
+			data-paddingright="[20,20,0,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,20,20]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption  " 
+			 id="slide-620-layer-3" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-fontsize="['20','20','20','20']"
+			data-lineheight="['22','22','22','22']"
+			data-fontweight="['400','400','400','400']"
+			data-letterspacing="['0','0','0','0']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="20%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; width: 100%;">
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption  " 
+			 id="slide-620-layer-1" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:-50px;opacity:0;fb:0;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 300; color: #ffffff; letter-spacing: 10px; display: inline-block;font-family:Source Code Pro;"><span style="font-weight:600;">W</span>ON<br/>
+DER<br/>
+<span style="font-weight:600;">S</span>TRUCK </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption  " 
+			 id="slide-620-layer-15" 
+			 data-x="['left','left','left','left']" data-hoffset="['5','5','5','5']" 
+			 data-y="['top','top','top','top']" data-voffset="['5','5','5','5']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+			data-visibility="['off','off','on','on']"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,10]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,10]"
+
+			style="z-index: 8; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 300; color: #ffffff; letter-spacing: 10px; display: inline-block;font-family:Source Code Pro;"><span style="font-weight:600;">W</span>S </div>
+				</div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption  " 
+			 id="slide-620-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="60%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['center','center','center','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; width: 100%;">
+		<!-- LAYER NR. 6 -->
+		<a class="tp-caption    tp-rs-menulink ws-link" 
+ href="#intro" target="_self"			 id="slide-620-layer-6" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions=''
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[20,20,20,20]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[20,20,20,20]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;cursor:pointer;text-decoration: none;">INTRO </a>
+
+		<!-- LAYER NR. 7 -->
+		<a class="tp-caption    tp-rs-menulink ws-link" 
+ href="#about" target="_self"			 id="slide-620-layer-7" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions=''
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[20,20,20,20]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[20,20,20,20]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 11; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;cursor:pointer;text-decoration: none;">ABOUT </a>
+
+		<!-- LAYER NR. 8 -->
+		<a class="tp-caption    tp-rs-menulink ws-link" 
+ href="#works" target="_self"			 id="slide-620-layer-8" 
+			 data-x="['left','left','left','left']" data-hoffset="['10','10','10','10']" 
+			 data-y="['top','top','top','top']" data-voffset="['10','10','10','10']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions=''
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[20,20,20,20]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[20,20,20,20]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;cursor:pointer;text-decoration: none;">WORKS </a>
+
+		<!-- LAYER NR. 9 -->
+		<a class="tp-caption    tp-rs-menulink ws-link" 
+ href="#contact" target="_self"			 id="slide-620-layer-9" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions=''
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[20,20,20,20]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[20,20,20,20]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 13; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;cursor:pointer;text-decoration: none;">CONTACT </a>
+				</div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption  " 
+			 id="slide-620-layer-5" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="20%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['right','right','right','right']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 14; width: 100%;">
+		<!-- LAYER NR. 11 -->
+		<a class="tp-caption    ws-link" 
+ href="https://www.facebook.com/themepunchofficial" target="_blank"			 id="slide-620-layer-11" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+			data-visibility="['on','on','on','off']"
+ 
+			data-type="text" 
+			data-actions=''
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[30,30,20,30]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 15; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;cursor:pointer;text-decoration: none;">FB </a>
+
+		<!-- LAYER NR. 12 -->
+		<a class="tp-caption    ws-link" 
+ href="https://twitter.com/themepunch" target="_blank"			 id="slide-620-layer-12" 
+			 data-x="['left','left','left','left']" data-hoffset="['5','5','5','5']" 
+			 data-y="['top','top','top','top']" data-voffset="['5','5','5','5']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+			data-visibility="['on','on','on','off']"
+ 
+			data-type="text" 
+			data-actions=''
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[30,30,20,30]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 16; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;cursor:pointer;text-decoration: none;">TW </a>
+
+		<!-- LAYER NR. 13 -->
+		<a class="tp-caption    ws-link" 
+ href="https://www.instagram.com/themepunch/" target="_blank"			 id="slide-620-layer-13" 
+			 data-x="['left','left','left','left']" data-hoffset="['10','10','10','10']" 
+			 data-y="['top','top','top','top']" data-voffset="['10','10','10','10']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+			data-visibility="['on','on','on','off']"
+ 
+			data-type="text" 
+			data-actions=''
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[30,30,20,30]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 17; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;cursor:pointer;text-decoration: none;">IN </a>
+
+		<!-- LAYER NR. 14 -->
+		<a class="tp-caption    ws-link" 
+ href="https://www.youtube.com/user/ThemePunch" target="_blank"			 id="slide-620-layer-14" 
+			 data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+			 data-y="['top','top','top','top']" data-voffset="['15','15','15','15']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+			data-visibility="['on','on','on','off']"
+ 
+			data-type="text" 
+			data-actions=''
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[30,30,20,30]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 18; white-space: normal; font-size: 13px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;cursor:pointer;text-decoration: none;">YT </a>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+</div><!-- END REVOLUTION SLIDER -->
+
+<div id="intro_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="wonderstruck-header" data-source="gallery" style="background:#000060;padding:0px;">
+<!-- START REVOLUTION SLIDER 5.4.7.4 fullscreen mode -->
+	<div id="intro" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.7.4">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-622" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/Clouds_Fly_By.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- BACKGROUND VIDEO LAYER -->
+		<div class="rs-background-video-layer" 
+			data-forcerewind="on" 
+			data-volume="mute" 
+			data-videowidth="100%" 
+			data-videoheight="100%" 
+			data-videomp4="../../assets/videos/Clouds_Fly_By.mp4" 
+			data-videopreload="auto" 
+			data-videoloop="loop" 
+			data-forceCover="1" 
+			data-aspectratio="16:9" 
+			data-autoplay="true" 
+			data-autoplayonlyfirsttime="false" 
+></div>
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-622-layer-1" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="multiply"
+
+			style="z-index: 5;background:linear-gradient(90deg, rgba(0,0,130,1) 0%, rgba(255,134,132,1) 100%);"> </div>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-622-layer-2" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6;background:linear-gradient(90deg, rgba(0,0,130,0) 0%, rgba(64,34,131,0) 25%, rgba(255,134,132,1.00) 100%, rgba(255,134,132,1) 100%);"> </div>
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-622-layer-3" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="600"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7;background:linear-gradient(180deg, rgba(255,134,132,0) 0%, rgba(136,72,116,1.00) 100%, rgba(136,72,116,1) 100%);"> </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-10" 
+			 id="slide-622-layer-5" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-286','-286','-236','-183']" 
+						data-fontsize="['180','180','150','150']"
+			data-lineheight="['180','180','150','150']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500,"speed":3000,"frame":"0","from":"y:50px;rX:5deg;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"bytrigger","speed":1000,"frame":"999","to":"y:50px;opacity:0;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-lasttriggerstate="reset"
+			style="z-index: 8; white-space: nowrap; font-size: 180px; line-height: 180px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Source Code Pro;pointer-events:none;">W </div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-9" 
+			 id="slide-622-layer-6" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-123','-123','-93','-43']" 
+						data-fontsize="['180','180','150','150']"
+			data-lineheight="['180','180','150','150']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":3000,"frame":"0","from":"y:50px;rX:5deg;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"bytrigger","speed":1000,"frame":"999","to":"y:50px;opacity:0;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-lasttriggerstate="reset"
+			style="z-index: 9; white-space: nowrap; font-size: 180px; line-height: 180px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Source Code Pro;pointer-events:none;">O </div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-11" 
+			 id="slide-622-layer-8" 
+			 data-x="['center','center','center','center']" data-hoffset="['320','320','241','242']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['60','50','69','126']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":3000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"bytrigger","speed":1000,"frame":"999","to":"x:50px;opacity:0;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-lasttriggerstate="reset"
+			style="z-index: 10;pointer-events:none;"><img src="../../assets/images/poly_2.png" alt="" data-ww="['320px','320px','320px','320px']" data-hh="['276px','276px','276','276px']" width="640" height="552" data-no-retina> </div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-622-layer-10" 
+			 data-x="['center','center','center','center']" data-hoffset="['31','31','23','7']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['301','301','229','224']" 
+						data-fontsize="['180','180','150','150']"
+			data-lineheight="['180','180','150','150']"
+			data-letterspacing="['60','60','40','10']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000,"speed":3000,"frame":"0","from":"y:50px;rX:5deg;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"bytrigger","speed":1000,"frame":"999","to":"y:-50px;opacity:0;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-lasttriggerstate="reset"
+			style="z-index: 11; white-space: nowrap; font-size: 180px; line-height: 180px; font-weight: 600; color: #ffffff; letter-spacing: 60px;font-family:Source Code Pro;pointer-events:none;">NDER </div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption   tp-resizeme  ws-shadow" 
+			 id="slide-622-layer-4" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['90','90','70','93']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-actions='[{"event":"mouseenter","action":"stoplayer","layer":"slide-622-layer-7","delay":""},{"event":"mouseenter","action":"stoplayer","layer":"slide-622-layer-8","delay":""},{"event":"mouseenter","action":"stoplayer","layer":"slide-622-layer-5","delay":""},{"event":"mouseenter","action":"stoplayer","layer":"slide-622-layer-6","delay":""},{"event":"mouseenter","action":"stoplayer","layer":"slide-622-layer-10","delay":""},{"event":"mouseleave","action":"startlayer","layer":"slide-622-layer-7","delay":""},{"event":"mouseleave","action":"startlayer","layer":"slide-622-layer-8","delay":""},{"event":"mouseleave","action":"startlayer","layer":"slide-622-layer-5","delay":""},{"event":"mouseleave","action":"startlayer","layer":"slide-622-layer-6","delay":""},{"event":"mouseleave","action":"startlayer","layer":"slide-622-layer-10","delay":""},{"event":"mouseenter","action":"startlayer","layer":"slide-622-layer-12","delay":""},{"event":"mouseleave","action":"stoplayer","layer":"slide-622-layer-12","delay":""},{"event":"click","action":"scrollbelow","offset":"px","delay":"","speed":"1000","ease":"Power2.easeInOut"}]'
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":100,"speed":3000,"frame":"0","from":"y:50px;rX:-5deg;opacity:0;fg:0;","to":"o:1;fg:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fg:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"500","ease":"Power2.easeInOut","to":"o:1;sX:1.1;sY:1.1;rX:0;rY:0;rZ:0;z:0;fg:100%;","style":"c:rgb(255,255,255);"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12;cursor:pointer;"><img src="../../assets/images/ws_bg1.jpg" alt="" data-ww="['640px','640px','480px','400px']" data-hh="['427px','427px','320px','267']" width="1600" height="1067" data-no-retina> </div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-13" 
+			 id="slide-622-layer-7" 
+			 data-x="['center','center','center','center']" data-hoffset="['-320','-320','-241','-239']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-125','-125','-92','-11']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":3000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"bytrigger","speed":1000,"frame":"999","to":"x:-50px;opacity:0;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-lasttriggerstate="reset"
+			style="z-index: 13;pointer-events:none;"><img src="../../assets/images/poly_1.png" alt="" data-ww="['320px','320px','320px','320px']" data-hh="['276px','276px','276','276px']" width="640" height="552" data-no-retina> </div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-622-layer-12" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['90','90','70','97']" 
+						data-fontsize="['40','40','30','30']"
+			data-lineheight="['40','40','30','30']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"bytrigger","speed":1000,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"bytrigger","speed":500,"frame":"999","to":"auto:auto;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','center','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[10,10,10,10]"
+			data-lasttriggerstate="reset"
+			style="z-index: 14; white-space: nowrap; font-size: 40px; line-height: 40px; font-weight: 600; color: #ff8684; letter-spacing: 10px;font-family:Source Code Pro;border-color:rgb(255,134,132);border-style:solid;border-width:0px 0px 3px 0px;pointer-events:none;">DISCOVER </div>
+	</li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+</div><!-- END REVOLUTION SLIDER -->
+
+<div id="about_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="wonderstruck-about" data-source="gallery" style="margin:0px auto;background:#000060;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- START REVOLUTION SLIDER 5.4.7.4 fullwidth mode -->
+	<div id="about" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.7.4">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-627" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="ONE" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/transparent.png" data-bgcolor='linear-gradient(180deg,rgba(136,72,116,1)0%,rgba(136,72,116,1)0%,rgba(0,0,96,1)100%,rgba(0,0,96,1)100%)' style='background:linear-gradient(180deg,rgba(136,72,116,1)0%,rgba(136,72,116,1)0%,rgba(0,0,96,1)100%,rgba(0,0,96,1)100%)' alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzt_627" class="rev_row_zone rev_row_zone_top" style="z-index: 5;">
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption  " 
+			 id="slide-627-layer-1" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[100,100,100,100]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[150,150,100,100]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,20,20]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption  " 
+			 id="slide-627-layer-2" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; width: 100%;">
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption  " 
+			 id="slide-627-layer-8" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ff8684; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;"><span style="color:#ff8684;">1.</span>What's This? </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption  " 
+			 id="slide-627-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['5','5','5','5']" 
+			 data-y="['top','top','top','top']" data-voffset="['5','5','5','5']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-628","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">2.</span>RVSLDRS Features </div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption  " 
+			 id="slide-627-layer-11" 
+			 data-x="['left','left','left','left']" data-hoffset="['10','10','10','10']" 
+			 data-y="['top','top','top','top']" data-voffset="['10','10','10','10']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-629","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">3.</span>Fast Loading Times </div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption  " 
+			 id="slide-627-layer-12" 
+			 data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+			 data-y="['top','top','top','top']" data-voffset="['15','15','15','15']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-630","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+80","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">4.</span>ON PAR SEO </div>
+				</div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption  " 
+			 id="slide-627-layer-3" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-fontsize="['20','20','20','20']"
+			data-lineheight="['22','22','22','22']"
+			data-fontweight="['400','400','400','400']"
+			data-letterspacing="['0','0','0','0']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,50,50]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 11; width: 100%;">
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption  " 
+			 id="slide-627-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 600; color: #ff8684; letter-spacing: 0px; display: block;font-family:Source Code Pro;">What's this? </div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption  " 
+			 id="slide-627-layer-5" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 13; white-space: normal; font-size: 15px; line-height: 26px; font-weight: 400; color: #ffffff; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Enamel pin coloring book adaptogen, hashtag listicle sriracha occupy helvetica hammock prism live-edge. Pinterest franzen iceland tilde wayfarers roof party palo santo butcher asymmetrical kitsch pok pok man braid prism kinfolk.<br/><br/>
+
+La croix pop-up kinfolk live-edge kale chips kombucha cronut hoodie. Wayfarers poutine butcher succulents, chambray sartorial sriracha keytar raw denim sustainable fashion axe retro wolf banjo venmo. </div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-628" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="TWO" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/transparent.png" data-bgcolor='linear-gradient(180deg,rgba(136,72,116,1)0%,rgba(136,72,116,1)0%,rgba(0,0,96,1)100%,rgba(0,0,96,1)100%)' style='background:linear-gradient(180deg,rgba(136,72,116,1)0%,rgba(136,72,116,1)0%,rgba(0,0,96,1)100%,rgba(0,0,96,1)100%)' alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzt_628" class="rev_row_zone rev_row_zone_top" style="z-index: 5;">
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption  " 
+			 id="slide-628-layer-1" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[100,100,100,100]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[150,150,100,100]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,20,20]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption  " 
+			 id="slide-628-layer-2" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; width: 100%;">
+		<!-- LAYER NR. 12 -->
+		<div class="tp-caption  " 
+			 id="slide-628-layer-8" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-627","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">1.</span>What's This? </div>
+
+		<!-- LAYER NR. 13 -->
+		<div class="tp-caption  " 
+			 id="slide-628-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['5','5','5','5']" 
+			 data-y="['top','top','top','top']" data-voffset="['5','5','5','5']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ff8684; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;"><span style="color:#ff8684;">2.</span>RVSLDRS Features </div>
+
+		<!-- LAYER NR. 14 -->
+		<div class="tp-caption  " 
+			 id="slide-628-layer-11" 
+			 data-x="['left','left','left','left']" data-hoffset="['10','10','10','10']" 
+			 data-y="['top','top','top','top']" data-voffset="['10','10','10','10']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-629","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">3.</span>Fast Loading Times </div>
+
+		<!-- LAYER NR. 15 -->
+		<div class="tp-caption  " 
+			 id="slide-628-layer-12" 
+			 data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+			 data-y="['top','top','top','top']" data-voffset="['15','15','15','15']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-630","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+80","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">4.</span>ON PAR SEO </div>
+				</div>
+
+		<!-- LAYER NR. 16 -->
+		<div class="tp-caption  " 
+			 id="slide-628-layer-3" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-fontsize="['20','20','20','20']"
+			data-lineheight="['22','22','22','22']"
+			data-fontweight="['400','400','400','400']"
+			data-letterspacing="['0','0','0','0']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,50,50]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 11; width: 100%;">
+		<!-- LAYER NR. 17 -->
+		<div class="tp-caption  " 
+			 id="slide-628-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 600; color: #ff8684; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Rvsldrs Exciting Features </div>
+
+		<!-- LAYER NR. 18 -->
+		<div class="tp-caption  " 
+			 id="slide-628-layer-5" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 13; white-space: normal; font-size: 15px; line-height: 26px; font-weight: 400; color: #ffffff; letter-spacing: 0px; display: block;font-family:Source Code Pro;">+1 fam brunch, bushwick slow-carb glossier pug pickled. Chartreuse selvage forage freegan try-hard, bitters literally wolf gentrify. 
+<br/><br/>Actually kinfolk unicorn VHS squid, echo park four dollar toast bespoke pop-up gochujang. Hexagon cold-pressed adaptogen freegan williamsburg sustainable offal tattooed distillery slow-carb portland. Paleo coloring book try-hard, activated charcoal leggings food truck succulents offal gentrify tattooed blue bottle small batch taxidermy pickled disrupt. Cloud bread slow-carb VHS enamel pin, readymade swag jianbing poutine chartreuse tbh heirloom skateboard locavore pabst. </div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-629" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="THREE" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/transparent.png" data-bgcolor='linear-gradient(180deg,rgba(136,72,116,1)0%,rgba(136,72,116,1)0%,rgba(0,0,96,1)100%,rgba(0,0,96,1)100%)' style='background:linear-gradient(180deg,rgba(136,72,116,1)0%,rgba(136,72,116,1)0%,rgba(0,0,96,1)100%,rgba(0,0,96,1)100%)' alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzt_629" class="rev_row_zone rev_row_zone_top" style="z-index: 5;">
+
+		<!-- LAYER NR. 19 -->
+		<div class="tp-caption  " 
+			 id="slide-629-layer-1" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[100,100,100,100]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[150,150,100,100]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,20,20]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 20 -->
+		<div class="tp-caption  " 
+			 id="slide-629-layer-2" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; width: 100%;">
+		<!-- LAYER NR. 21 -->
+		<div class="tp-caption  " 
+			 id="slide-629-layer-8" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-627","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">1.</span>What's This? </div>
+
+		<!-- LAYER NR. 22 -->
+		<div class="tp-caption  " 
+			 id="slide-629-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['5','5','5','5']" 
+			 data-y="['top','top','top','top']" data-voffset="['5','5','5','5']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-628","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">2.</span>RVSLDRS Features </div>
+
+		<!-- LAYER NR. 23 -->
+		<div class="tp-caption  " 
+			 id="slide-629-layer-11" 
+			 data-x="['left','left','left','left']" data-hoffset="['10','10','10','10']" 
+			 data-y="['top','top','top','top']" data-voffset="['10','10','10','10']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ff8684; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;"><span style="color:#ff8684;">3.</span>Fast Loading Times </div>
+
+		<!-- LAYER NR. 24 -->
+		<div class="tp-caption  " 
+			 id="slide-629-layer-12" 
+			 data-x="['left','left','left','left']" data-hoffset="['15','15','15','15']" 
+			 data-y="['top','top','top','top']" data-voffset="['15','15','15','15']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-630","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+80","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">4.</span>ON PAR SEO </div>
+				</div>
+
+		<!-- LAYER NR. 25 -->
+		<div class="tp-caption  " 
+			 id="slide-629-layer-3" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-fontsize="['20','20','20','20']"
+			data-lineheight="['22','22','22','22']"
+			data-fontweight="['400','400','400','400']"
+			data-letterspacing="['0','0','0','0']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,50,50]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 11; width: 100%;">
+		<!-- LAYER NR. 26 -->
+		<div class="tp-caption  " 
+			 id="slide-629-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 600; color: #ff8684; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Fast Loading Times </div>
+
+		<!-- LAYER NR. 27 -->
+		<div class="tp-caption  " 
+			 id="slide-629-layer-5" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 13; white-space: normal; font-size: 15px; line-height: 26px; font-weight: 400; color: #ffffff; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Asymmetrical ennui bitters cronut kickstarter tacos. Ugh tumblr whatever palo santo disrupt banjo. Readymade bitters twee tbh pork belly beard.<br/><br/>Viral health goth fam locavore mustache fixie chia XOXO cornhole vexillologist prism umami migas occupy. Gochujang leggings roof party live-edge salvia keytar direct trade artisan. Lo-fi pickled bitters, farm-to-table shoreditch kinfolk roof party mumblecore YOLO microdosing PBR&B pitchfork wolf glossier. </div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-630" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="FOUR" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/transparent.png" data-bgcolor='linear-gradient(180deg,rgba(136,72,116,1)0%,rgba(136,72,116,1)0%,rgba(0,0,96,1)100%,rgba(0,0,96,1)100%)' style='background:linear-gradient(180deg,rgba(136,72,116,1)0%,rgba(136,72,116,1)0%,rgba(0,0,96,1)100%,rgba(0,0,96,1)100%)' alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzt_630" class="rev_row_zone rev_row_zone_top" style="z-index: 5;">
+
+		<!-- LAYER NR. 28 -->
+		<div class="tp-caption  " 
+			 id="slide-630-layer-1" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[100,100,100,100]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[150,150,100,100]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,20,20]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 29 -->
+		<div class="tp-caption  " 
+			 id="slide-630-layer-2" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; width: 100%;">
+		<!-- LAYER NR. 30 -->
+		<div class="tp-caption  " 
+			 id="slide-630-layer-8" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-627","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">1.</span>What's This? </div>
+
+		<!-- LAYER NR. 31 -->
+		<div class="tp-caption  " 
+			 id="slide-630-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['5','5','5','5']" 
+			 data-y="['top','top','top','top']" data-voffset="['5','5','5','5']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-628","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">2.</span>RVSLDRS Features </div>
+
+		<!-- LAYER NR. 32 -->
+		<div class="tp-caption  " 
+			 id="slide-630-layer-11" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-629","delay":""}]'
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+90","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ffffff; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;cursor:pointer;"><span style="color:#ff8684;">3.</span>Fast Loading Times </div>
+
+		<!-- LAYER NR. 33 -->
+		<div class="tp-caption  " 
+			 id="slide-630-layer-12" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+80","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10; white-space: normal; font-size: 13px; line-height: 30px; font-weight: 600; color: #ff8684; letter-spacing: 5px; display: block;font-family:Source Code Pro;text-transform:uppercase;"><span style="color:#ff8684;">4.</span>ON PAR SEO </div>
+				</div>
+
+		<!-- LAYER NR. 34 -->
+		<div class="tp-caption  " 
+			 id="slide-630-layer-3" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,50,50]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 11; width: 100%;">
+		<!-- LAYER NR. 35 -->
+		<div class="tp-caption  " 
+			 id="slide-630-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 600; color: #ff8684; letter-spacing: 0px; display: block;font-family:Source Code Pro;">On Par SEO </div>
+
+		<!-- LAYER NR. 36 -->
+		<div class="tp-caption  " 
+			 id="slide-630-layer-5" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 13; white-space: normal; font-size: 15px; line-height: 26px; font-weight: 400; color: #ffffff; letter-spacing: 0px; display: block;font-family:Source Code Pro;">IPhone copper mug narwhal tumeric, woke put a bird on it live-edge pop-up hammock cliche unicorn dreamcatcher. <br/><br/>Brunch mustache vegan, vinyl four dollar toast 3 wolf moon activated charcoal small batch tumeric pork belly. Helvetica sriracha viral art party, cred hella live-edge hashtag ennui blog. Copper mug readymade cliche, butcher keffiyeh hella chicharrones chambray green juice lo-fi sustainable wayfarers brunch 90's.<br/><br/>Leggings meditation pickled venmo, tattooed taxidermy four dollar toast echo park. Vape slow-carb street art meggings etsy fashion axe selfies kombucha church-key snackwave health goth quinoa. </div>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
+<div style="" class="tp-static-layers">
+
+		<!-- LAYER NR. 37 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2 tp-static-layer" 
+			 id="slider-257-layer-1" 
+			 data-x="['left','left','right','right']" data-hoffset="['100','100','0','0']" 
+			 data-y="['bottom','bottom','top','top']" data-voffset="['-1','-1','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-responsive_offset="on" 
+
+			data-startslide="0" 
+			data-endslide="3" 
+			data-frames='[{"delay":0,"speed":3000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;"><img src="../../assets/images/poly_3.png" alt="" data-ww="['250px','250px','250px','250px']" data-hh="['289px','289px','289px','289px']" width="500" height="578" data-no-retina> </div>
+</div>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+</div><!-- END REVOLUTION SLIDER -->
+
+<div id="works_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="wonderstruck-works70" data-source="gallery" style="margin:0px auto;background:#000060;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- START REVOLUTION SLIDER 5.4.7.4 fullwidth mode -->
+	<div id="works" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.7.4">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-632" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="ONE" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/transparent.png" data-bgcolor='#000060' style='background:#000060' alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzt_632" class="rev_row_zone rev_row_zone_top" style="z-index: 19;">
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-1" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[150,150,100,100]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,20,20]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-2" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,0,0,0]"
+
+			style="z-index: 6; width: 100%;">
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption   tp-resizeme  ws-shadow" 
+			 id="slide-632-layer-14" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="image" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":3000,"frame":"0","from":"x:-50px;rY:-5deg;opacity:0;fbr:200%;","to":"o:1;fbr:100;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; display: block;"><img src="../../assets/images/cool.jpg" alt="" data-ww="['100%','100%','100%','100%']" data-hh="" width="1600" height="1067" data-no-retina> </div>
+				</div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-3" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,50,50]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,0,0]"
+
+			style="z-index: 8; width: 100%;">
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-fontsize="['70','70','50','50']"
+			data-lineheight="['60','60','40','40']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; white-space: normal; font-size: 70px; line-height: 60px; font-weight: 600; color: #ff8684; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Classy Visuals </div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-5" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="100%"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[50,50,50,50]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10; min-width: 100%px; max-width: 100%px; white-space: normal; font-size: 15px; line-height: 26px; font-weight: 400; color: #ffffff; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Wayfarers poutine butcher succulents, chambray sartorial<br/>sriracha keytar raw denim. </div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption rev-btn   ws-shadow" 
+			 id="slide-632-layer-17" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="button" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":1000,"frame":"0","from":"x:50px;opacity:0;fbr:100;","to":"o:1;fbr:100;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fbr:120%;","style":"c:rgba(255,255,255,1);bg:linear-gradient(150deg, rgba(255,134,132,1) 0%, rgba(98,51,110,1) 100%);bs:solid;bw:0 0 0 0;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[35,35,35,35]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[35,35,35,35]"
+
+			style="z-index: 11; white-space: normal; font-size: 13px; line-height: 50px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;background:linear-gradient(150deg, rgba(255,134,132,1) 0%, rgba(98,51,110,1) 100%);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">VIEW PROJECT </div>
+				</div>
+			</div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-19" 
+			 data-x="['left','left','left','left']" data-hoffset="['105','105','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['105','105','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[150,150,100,100]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,20,20]"
+
+			style="z-index: 19; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-20" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['right','right','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 20; width: 100%;">
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-23" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-fontsize="['70','70','50','50']"
+			data-lineheight="['60','60','40','40']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 21; white-space: normal; font-size: 70px; line-height: 60px; font-weight: 600; color: #ff8684; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Game Changing Stuff </div>
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-24" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="100%"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[50,50,50,50]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 22; min-width: 100%px; max-width: 100%px; white-space: normal; font-size: 15px; line-height: 26px; font-weight: 400; color: #ffffff; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Unicorn iceland mlkshk kombucha yuccie cornhole vice<br/> iPhone tattooed swag banh mi synth literally.  </div>
+
+		<!-- LAYER NR. 12 -->
+		<div class="tp-caption rev-btn   ws-shadow" 
+			 id="slide-632-layer-25" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="button" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":1000,"frame":"0","from":"x:-50px;opacity:0;fbr:100;","to":"o:1;fbr:100;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fbr:120%;","style":"c:rgba(255,255,255,1);bg:linear-gradient(150deg, rgba(255,134,132,1) 0%, rgba(98,51,110,1) 100%);bs:solid;bw:0 0 0 0;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[35,35,35,35]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[35,35,35,35]"
+
+			style="z-index: 23; white-space: normal; font-size: 13px; line-height: 50px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;background:linear-gradient(150deg, rgba(255,134,132,1) 0%, rgba(98,51,110,1) 100%);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">VIEW PROJECT </div>
+				</div>
+
+		<!-- LAYER NR. 13 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-22" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,50,50]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,0,0,0]"
+
+			style="z-index: 24; width: 100%;">
+		<!-- LAYER NR. 14 -->
+		<div class="tp-caption   tp-resizeme  ws-shadow" 
+			 id="slide-632-layer-21" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="image" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":3000,"frame":"0","from":"x:50px;rY:5deg;opacity:0;fbr:200%;","to":"o:1;fbr:100;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 25; display: block;"><img src="../../assets/images/ws3.jpg" alt="" data-ww="['100%','100%','100%','100%']" data-hh="" width="1200" height="795" data-no-retina> </div>
+				</div>
+			</div>
+
+		<!-- LAYER NR. 15 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-28" 
+			 data-x="['left','left','left','left']" data-hoffset="['105','105','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['105','105','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[150,150,100,100]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,20,20]"
+
+			style="z-index: 12; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 16 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-29" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,0,0,0]"
+
+			style="z-index: 13; width: 100%;">
+		<!-- LAYER NR. 17 -->
+		<div class="tp-caption   tp-resizeme  ws-shadow" 
+			 id="slide-632-layer-30" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="image" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":3000,"frame":"0","from":"x:-50px;rY:-5deg;opacity:0;fbr:200%;","to":"o:1;fbr:100;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 14; display: block;"><img src="../../assets/images/ws_pic2.jpg" alt="" data-ww="['100%','100%','100%','100%']" data-hh="" width="1200" height="800" data-no-retina> </div>
+				</div>
+
+		<!-- LAYER NR. 18 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-31" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,50,50]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,0,0]"
+
+			style="z-index: 15; width: 100%;">
+		<!-- LAYER NR. 19 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-32" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-fontsize="['70','70','50','50']"
+			data-lineheight="['60','60','40','40']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 16; white-space: normal; font-size: 70px; line-height: 60px; font-weight: 600; color: #ff8684; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Flow State </div>
+
+		<!-- LAYER NR. 20 -->
+		<div class="tp-caption  " 
+			 id="slide-632-layer-33" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="100%"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[50,50,50,50]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 17; min-width: 100%px; max-width: 100%px; white-space: normal; font-size: 15px; line-height: 26px; font-weight: 400; color: #ffffff; letter-spacing: 0px; display: block;font-family:Source Code Pro;">Wolf church-key direct trade, swag mumblecore beard drinking vinegar art party crucifix kale chips man bun chillwave tumeric. </div>
+
+		<!-- LAYER NR. 21 -->
+		<div class="tp-caption rev-btn   ws-shadow" 
+			 id="slide-632-layer-34" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="button" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":1000,"frame":"0","from":"x:50px;opacity:0;fbr:100;","to":"o:1;fbr:100;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fbr:100;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fbr:120%;","style":"c:rgba(255,255,255,1);bg:linear-gradient(150deg, rgba(255,134,132,1) 0%, rgba(98,51,110,1) 100%);bs:solid;bw:0 0 0 0;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[35,35,35,35]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[35,35,35,35]"
+
+			style="z-index: 18; white-space: normal; font-size: 13px; line-height: 50px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: 5px; display: inline-block;font-family:Source Code Pro;background:linear-gradient(150deg, rgba(255,134,132,1) 0%, rgba(98,51,110,1) 100%);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">VIEW PROJECT </div>
+				</div>
+			</div>
+		</div>
+
+		<!-- LAYER NR. 22 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-632-layer-26" 
+			 data-x="['right','center','center','center']" data-hoffset="['-1','-320','-241','-239']" 
+			 data-y="['top','middle','middle','middle']" data-voffset="['150','-125','-92','-11']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":3000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:-50px;opacity:0;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 26;pointer-events:none;"><img src="../../assets/images/poly_1.png" alt="" data-ww="['320px','320px','320px','320px']" data-hh="['276px','276px','276','276px']" width="640" height="552" data-no-retina> </div>
+
+		<!-- LAYER NR. 23 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-632-layer-27" 
+			 data-x="['right','center','center','center']" data-hoffset="['318','-320','-241','-239']" 
+			 data-y="['top','middle','middle','middle']" data-voffset="['365','-125','-92','-11']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":3000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:-50px;opacity:0;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 27;pointer-events:none;"><img src="../../assets/images/poly_1.png" alt="" data-ww="['320px','320px','320px','320px']" data-hh="['276px','276px','276','276px']" width="640" height="552" data-no-retina> </div>
+
+		<!-- LAYER NR. 24 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-11" 
+			 id="slide-632-layer-35" 
+			 data-x="['left','center','center','center']" data-hoffset="['-1','320','241','242']" 
+			 data-y="['top','middle','middle','middle']" data-voffset="['1000','50','69','126']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":3000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:50px;opacity:0;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 28;pointer-events:none;"><img src="../../assets/images/poly_2.png" alt="" data-ww="['320px','320px','320px','320px']" data-hh="['276px','276px','276','276px']" width="640" height="552" data-no-retina> </div>
+	</li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+</div><!-- END REVOLUTION SLIDER -->
+
+<div id="contact_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="wonderstruck-contact72" data-source="gallery" style="margin:0px auto;background:#000060;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- START REVOLUTION SLIDER 5.4.7.4 fullwidth mode -->
+	<div id="contact" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.7.4">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-634" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="CONTACT" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/transparent.png" data-bgcolor='#000060' style='background:#000060' alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+		<div id="rrzt_634" class="rev_row_zone rev_row_zone_top" style="z-index: 5;">
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-1" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="row" 
+			data-columnbreak="2" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[100,100,50,50]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[200,200,100,100]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,20,20]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[50,50,20,20]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-2" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['right','right','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[100,50,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; width: 100%;">
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption tp-layer-selectable " 
+			 id="slide-634-layer-5" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="['360','360','100%','100%']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+290","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[50,50,50,50]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['left','left','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; min-width: 360px; max-width: 360px; white-space: normal; font-size: 15px; line-height: 26px; font-weight: 400; color: #ffffff; letter-spacing: 0px; display: inline-block;font-family:Source Code Pro;">Wonderstruck <br/>31st East Street, New York, NY <br/><span style="color:#ff8684;">T.</span> 987 2345 743<br/> <span style="color:#ff8684;">E.</span> <span style="font-weight:600;font-size:13px;letter-spacing:3px;">INFO@YOURWEB.COM</span> </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
+			 id="slide-634-layer-44" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="100%"
+			data-height="1"
+			data-whitespace="normal"
+ 
+			data-type="shape" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; display: inline-block;"> </div>
+
+		<!-- LAYER NR. 5 -->
+		<a class="tp-caption  " 
+ href="https://revolution.themepunch.com/direct-customer-benefits/" target="_blank"			 id="slide-634-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="['360','360','none','none']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-actions=''
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,134,132);td:line-through;"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['left','left','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; min-width: 360px; max-width: 360px; white-space: normal; font-size: 30px; line-height: 30px; font-weight: 600; color: #ff8684; letter-spacing: 0px; display: inline-block;font-family:Source Code Pro;cursor:pointer;text-decoration: none;">Get this Slider Revolution Template. </a>
+				</div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-3" 
+			 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" 
+			 data-y="['top','top','top','top']" data-voffset="['100','100','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="column" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-columnwidth="50%"
+ data-verticalalign="top"
+			data-margintop="[0,0,50,50]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[0,0,0,0]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[50,50,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10; width: 100%;">
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-37" 
+			 data-x="['left','left','left','left']" data-hoffset="['0','0','253','253']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','407','407']" 
+						data-fontsize="['200','150','150','150']"
+			data-lineheight="['170','150','150','150']"
+			data-width="['180','130','130','130']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 11; min-width: 180px; max-width: 180px; white-space: normal; font-size: 200px; line-height: 170px; font-weight: 600; color: #ff8684; letter-spacing: 0px; display: inline-block;font-family:Source Code Pro;">C </div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-38" 
+			 data-x="['left','left','left','left']" data-hoffset="['5','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['5','0','0','0']" 
+						data-fontsize="['200','150','150','150']"
+			data-lineheight="['170','150','150','150']"
+			data-width="['180','130','130','130']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 12; min-width: 180px; max-width: 180px; white-space: normal; font-size: 200px; line-height: 170px; font-weight: 600; color: #ffffff; letter-spacing: 0px; display: inline-block;font-family:Source Code Pro;">O </div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-39" 
+			 data-x="['left','left','left','left']" data-hoffset="['10','0','253','253']" 
+			 data-y="['top','top','top','top']" data-voffset="['10','0','407','407']" 
+						data-fontsize="['200','150','150','150']"
+			data-lineheight="['170','150','150','150']"
+			data-width="['180','130','130','130']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 13; min-width: 180px; max-width: 180px; white-space: normal; font-size: 200px; line-height: 170px; font-weight: 600; color: #ffffff; letter-spacing: 0px; display: inline-block;font-family:Source Code Pro;">N </div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-40" 
+			 data-x="['left','left','left','left']" data-hoffset="['15','15','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['15','15','0','0']" 
+						data-fontsize="['200','150','150','150']"
+			data-lineheight="['170','150','150','150']"
+			data-width="['180','150','130','130']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 14; min-width: 180px; max-width: 180px; white-space: normal; font-size: 200px; line-height: 170px; font-weight: 600; color: #ffffff; letter-spacing: 0px; display: inline-block;font-family:Source Code Pro;">T </div>
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-41" 
+			 data-x="['left','left','left','left']" data-hoffset="['20','20','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['20','20','0','0']" 
+						data-fontsize="['200','150','150','150']"
+			data-lineheight="['170','150','150','150']"
+			data-width="['180','130','130','130']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 15; min-width: 180px; max-width: 180px; white-space: normal; font-size: 200px; line-height: 170px; font-weight: 600; color: #ffffff; letter-spacing: 0px; display: inline-block;font-family:Source Code Pro;">A </div>
+
+		<!-- LAYER NR. 12 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-42" 
+			 data-x="['left','left','left','left']" data-hoffset="['25','25','253','253']" 
+			 data-y="['top','top','top','top']" data-voffset="['25','25','407','407']" 
+						data-fontsize="['200','150','150','150']"
+			data-lineheight="['170','150','150','150']"
+			data-width="['180','130','130','130']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 16; min-width: 180px; max-width: 180px; white-space: normal; font-size: 200px; line-height: 170px; font-weight: 600; color: #ffffff; letter-spacing: 0px; display: inline-block;font-family:Source Code Pro;">C </div>
+
+		<!-- LAYER NR. 13 -->
+		<div class="tp-caption  " 
+			 id="slide-634-layer-43" 
+			 data-x="['left','left','left','left']" data-hoffset="['30','30','253','253']" 
+			 data-y="['top','top','top','top']" data-voffset="['30','30','407','407']" 
+						data-fontsize="['200','150','150','150']"
+			data-lineheight="['170','150','150','150']"
+			data-width="['180','130','130','130']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":"+190","speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-margintop="[0,0,0,0]"
+			data-marginright="[0,0,0,0]"
+			data-marginbottom="[40,40,40,40]"
+			data-marginleft="[0,0,0,0]"
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 17; min-width: 180px; max-width: 180px; white-space: normal; font-size: 200px; line-height: 170px; font-weight: 600; color: #ffffff; letter-spacing: 0px; display: inline-block;font-family:Source Code Pro;">T </div>
+				</div>
+			</div>
+		</div>
+
+		<!-- LAYER NR. 14 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme rs-parallaxlevel-11" 
+			 id="slide-634-layer-35" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['-60','-60','-60','-60']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":3000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:50px;opacity:0;","ease":"Power4.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 18;pointer-events:none;"><img src="../../assets/images/poly_1.png" alt="" data-ww="['320px','320px','320px','320px']" data-hh="['276px','276px','276px','276px']" width="640" height="552" data-no-retina> </div>
+	</li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+</div><!-- END REVOLUTION SLIDER -->
+
+		<script type="text/javascript">
+var revapi253,
+	tpj;	
+(function() {			
+	if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();	
+	function onLoad() {				
+		if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
+	if(tpj("#menu").revolution == undefined){
+		revslider_showDoubleJqueryError("#menu");
+	}else{
+		revapi253 = tpj("#menu").show().revolution({
+			sliderType:"hero",
+			jsFileLocation:"revolution/js/",
+			sliderLayout:"fullwidth",
+			dottedOverlay:"none",
+			delay:9000,
+			responsiveLevels:[1240,1024,778,480],
+			visibilityLevels:[1240,1024,778,480],
+			gridwidth:[1240,1024,778,480],
+			gridheight:[140,140,140,140],
+			lazyType:"none",
+			minHeight:"100",
+			shadow:0,
+			spinner:"off",
+			autoHeight:"off",
+			disableProgressBar:"on",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				disableFocusListener:false,
+			}
+		});
+function sliderAnchors() {
+
+	var anchorarray = new Array;
+		lastknowheaderheight = 0; //jQuery('').height();
+
+	// ANCHOR AND ITS HIGHLITS
+	jQuery('.tp-rs-menulink').each(function(i) {
+		var a = jQuery(this),
+			obj = new Object();
+
+		obj.button = a;
+		obj.href = a.attr("href");
+		if(obj.href!=undefined){
+			obj.fakehref = obj.href.replace("#","#!");
+
+			if (obj.href!=undefined && obj.href.split("http").length<2 && obj.href!="#wp-toolbar") {
+				obj.target = jQuery(obj.href);
+				obj.offset = obj.target.data('offset') == undefined ? 0 : obj.target.data('offset');				
+			}
+			
+			if (obj.target!=undefined && obj.target.length>0)
+				anchorarray.push(obj);
+		}
+	});
+
+	jQuery('.tp-rs-menulink').each(function(i) {
+		var a = jQuery(this);
+		a.click(function() {
+
+			var obj = new Object(),
+				ypos = 0;
+				
+				if (a.attr('href') != undefined) {
+					obj.href = a.attr("href");
+					obj.target = jQuery(obj.href);
+					if (obj.href!=undefined && obj.target!=undefined && jQuery(obj.target).length>0) {
+
+						
+						//if (jQuery(this).hasClass("tp-rs-menu-selected")) return false;
+						
+						obj.offset = obj.target.data('offset') == undefined ? 0 : obj.target.data('offset');
+						obj.top = jQuery(obj.target).offset().top;
+						ypos = obj.top+obj.offset;
+						var counter = {val:jQuery(document).scrollTop()};
+
+							
+						if (jQuery('body').data('currenscrollanim')!=undefined)
+								jQuery('body').data('currenscrollanim').pause();				
+
+						
+						var sanim = punchgs.TweenLite.to(counter,1,{val:ypos,ease:punchgs.Power4.easeOut,
+								onUpdate:function() {
+									forcescrolled = true;									
+									punchgs.TweenLite.set(jQuery('body, html'),{scrollTop:counter.val});
+								},
+								onComplete:function(){
+									forcescrolled = false;
+									jQuery(window).trigger("scroll.tprsmenu");
+								}
+						});
+
+						forcescrolled = true;
+						jQuery.each(anchorarray,function(index,o) {							
+							if (obj.href!==o.href) {												
+								o.button.removeClass("tp-rs-menu-selected");
+							} else {								
+								o.button.addClass("tp-rs-menu-selected");
+								window.history.pushState('','',obj.href)
+							}
+						});
+						
+
+						jQuery('body').data('currenscrollanim',sanim);
+						return false;
+					} else {
+						return true;
+					}
+				} else {
+					return true;
+				}			
+		})
+	});
+
+}
+
+sliderAnchors();
+jQuery('body').on('click','.menutoggle',function() {
+  var _ = jQuery('#menu_forcefullwidth');
+  clearTimeout(jQuery('body').data('menutimer'));
+
+  if (_.hasClass("opened")) 
+      jQuery('body').data('menutimer',setTimeout(function() {_.removeClass("opened")}, 400));
+  else 
+     _.addClass("opened");
+revapi253.revredraw();
+ return false;
+});	}; /* END OF revapi call */
+	
+ }; /* END OF ON LOAD FUNCTION */
+}()); /* END OF WRAPPING FUNCTION */
+</script>
+
+<script type="text/javascript">
+var revapi255,
+	tpj;	
+(function() {			
+	if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();	
+	function onLoad() {				
+		if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
+	if(tpj("#intro").revolution == undefined){
+		revslider_showDoubleJqueryError("#intro");
+	}else{
+		revapi255 = tpj("#intro").show().revolution({
+			sliderType:"hero",
+			jsFileLocation:"revolution/js/",
+			sliderLayout:"fullscreen",
+			dottedOverlay:"none",
+			delay:9000,
+			responsiveLevels:[1240,1024,778,480],
+			visibilityLevels:[1240,1024,778,480],
+			gridwidth:[1240,1024,778,480],
+			gridheight:[868,768,960,720],
+			lazyType:"none",
+			parallax: {
+				type:"scroll",
+				origo:"slidercenter",
+				speed:4000,
+				speedbg:0,
+				speedls:0,
+				levels:[5,10,15,20,25,30,35,40,-5,-10,-15,-20,-25,-30,-35,55],
+			},
+			shadow:0,
+			spinner:"off",
+			autoHeight:"off",
+			fullScreenAutoWidth:"off",
+			fullScreenAlignForce:"off",
+			fullScreenOffsetContainer: "",
+			fullScreenOffset: "",
+			disableProgressBar:"on",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				disableFocusListener:false,
+			}
+		});
+	}; /* END OF revapi call */
+	
+ }; /* END OF ON LOAD FUNCTION */
+}()); /* END OF WRAPPING FUNCTION */
+</script>
+
+<script type="text/javascript">
+var revapi257,
+	tpj;	
+(function() {			
+	if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();	
+	function onLoad() {				
+		if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
+	if(tpj("#about").revolution == undefined){
+		revslider_showDoubleJqueryError("#about");
+	}else{
+		revapi257 = tpj("#about").show().revolution({
+			sliderType:"standard",
+			jsFileLocation:"revolution/js/",
+			sliderLayout:"fullwidth",
+			dottedOverlay:"none",
+			delay:9000,
+			navigation: {
+				onHoverStop:"off",
+			},
+			responsiveLevels:[1240,1024,778,480],
+			visibilityLevels:[1240,1024,778,480],
+			gridwidth:[1240,1024,778,480],
+			gridheight:[600,600,600,500],
+			lazyType:"none",
+			parallax: {
+				type:"scroll",
+				origo:"slidercenter",
+				speed:400,
+				speedbg:0,
+				speedls:0,
+				levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
+			},
+			shadow:0,
+			spinner:"off",
+			stopLoop:"on",
+			stopAfterLoops:0,
+			stopAtSlide:1,
+			shuffle:"off",
+			autoHeight:"off",
+			disableProgressBar:"on",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				nextSlideOnWindowFocus:"off",
+				disableFocusListener:false,
+			}
+		});
+	}; /* END OF revapi call */
+	
+ }; /* END OF ON LOAD FUNCTION */
+}()); /* END OF WRAPPING FUNCTION */
+</script>
+
+<script type="text/javascript">
+var revapi259,
+	tpj;	
+(function() {			
+	if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();	
+	function onLoad() {				
+		if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
+	if(tpj("#works").revolution == undefined){
+		revslider_showDoubleJqueryError("#works");
+	}else{
+		revapi259 = tpj("#works").show().revolution({
+			sliderType:"hero",
+			jsFileLocation:"revolution/js/",
+			sliderLayout:"fullwidth",
+			dottedOverlay:"none",
+			delay:9000,
+			responsiveLevels:[1240,1024,778,480],
+			visibilityLevels:[1240,1024,778,480],
+			gridwidth:[1240,1024,778,480],
+			gridheight:[600,768,960,720],
+			lazyType:"none",
+			parallax: {
+				type:"scroll",
+				origo:"slidercenter",
+				speed:400,
+				speedbg:0,
+				speedls:0,
+				levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
+			},
+			shadow:0,
+			spinner:"off",
+			autoHeight:"off",
+			disableProgressBar:"on",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				disableFocusListener:false,
+			}
+		});
+	}; /* END OF revapi call */
+	
+ }; /* END OF ON LOAD FUNCTION */
+}()); /* END OF WRAPPING FUNCTION */
+</script>
+
+<script type="text/javascript">
+var revapi261,
+	tpj;	
+(function() {			
+	if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();	
+	function onLoad() {				
+		if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
+	if(tpj("#contact").revolution == undefined){
+		revslider_showDoubleJqueryError("#contact");
+	}else{
+		revapi261 = tpj("#contact").show().revolution({
+			sliderType:"hero",
+			jsFileLocation:"revolution/js/",
+			sliderLayout:"fullwidth",
+			dottedOverlay:"none",
+			delay:9000,
+			responsiveLevels:[1240,1024,778,480],
+			visibilityLevels:[1240,1024,778,480],
+			gridwidth:[1240,1024,778,480],
+			gridheight:[600,768,960,720],
+			lazyType:"none",
+			parallax: {
+				type:"scroll",
+				origo:"slidercenter",
+				speed:400,
+				speedbg:0,
+				speedls:0,
+				levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
+			},
+			shadow:0,
+			spinner:"off",
+			autoHeight:"off",
+			disableProgressBar:"on",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				disableFocusListener:false,
+			}
+		});
+	}; /* END OF revapi call */
+	
+ }; /* END OF ON LOAD FUNCTION */
+}()); /* END OF WRAPPING FUNCTION */
+</script>
+
+ 	<script type="text/javascript" src="../../assets/warning.js"></script>
+		</body>
+</html>

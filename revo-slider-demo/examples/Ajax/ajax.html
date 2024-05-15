@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Ajax Example</title>
+        
+        <!-- LOAD JQUERY LIBRARY -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+		
+		<!-- LOADING FONTS AND ICONS -->
+		<link href="http://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet" property="stylesheet" type="text/css" media="all" />
+		
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/font-awesome/css/font-awesome.min.css">
+		
+		<!-- REVOLUTION STYLE SHEETS -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/settings.css">
+		<!-- REVOLUTION LAYERS STYLES -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/layers.css">
+			
+		<!-- REVOLUTION NAVIGATION STYLES -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/navigation.css">
+		
+		<link rel="stylesheet" type="text/css" href="../../assets/css/noneed.css">
+		
+		<!-- REVOLUTION JS FILES -->
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.revolution.min.js"></script>
+        
+        <style type="text/css">
+			
+			#menu {margin-top: 50px; text-align: center}
+			
+			#menu a {
+			
+				display: inline-block;
+				padding: 10px 20px 10px 20px;
+				margin: 0 10px 0 10px;
+				background: #06F;
+				color: white;
+				text-decoration: none;
+				
+			}
+			
+			#menu a:visited {color: white}
+			#menu a.active {background: black}
+			#content {margin-top: 50px}
+		
+		</style>
+        
+        <script type="text/javascript">
+		
+			var masterAPI, loading, menuItems;
+			
+			jQuery(document).ready(function() {
+				
+				menuItems = jQuery('#menu a').on('click', loadSlider);
+				menuItems.eq(0).click();
+				
+			});
+			
+			function loadSlider() {
+				
+				if(loading) return false;
+				if(masterAPI) masterAPI.revkill();
+				
+				loading = true;
+				menuItems.removeClass('active');
+				
+				jQuery('#content').load(jQuery(this).addClass('active').attr('href'), sliderLoaded);
+				return false;
+				
+			}
+			
+			function sliderLoaded() {
+			
+				loading = false;
+				
+			}
+		
+		</script>
+        
+    </head>
+    
+    <body>
+    
+    	<div id="menu">
+        
+        	<a href="slider-ajax-1.html" class="active">Slider #1</a> <a href="slider-ajax-2.html">Slider #2</a> <a href="slider-ajax-3.html">Slider #3</a>
+        
+        </div>
+    
+    	<div id="content"></div>
+    
+    </body>
+    
+</html>

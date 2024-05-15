@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Duotone - Slider Revolution</title>
+		<meta name="description" content="Slider Revolution Example" />
+		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+		<meta name="author" content="ThemePunch" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- LOAD JQUERY LIBRARY -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+		
+		<!-- LOADING FONTS AND ICONS -->
+		<link href="http://fonts.googleapis.com/css?family=Poppins:700%2C300%2C500%7COpen+Sans:400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+		
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/font-awesome/css/font-awesome.css">
+		
+		<!-- REVOLUTION STYLE SHEETS -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/settings.css">
+		<!-- REVOLUTION LAYERS STYLES -->		
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/layers.css">
+		
+		<!-- REVOLUTION NAVIGATION STYLES -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/navigation.css">
+		
+		<!-- FONT AND STYLE FOR BASIC DOCUMENTS, NO NEED FOR FURTHER USAGE IN YOUR PROJECTS-->
+		<link href="http://fonts.googleapis.com/css?family=Roboto%3A700%2C300" rel="stylesheet" property="stylesheet" type="text/css" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../assets/css/noneed.css">
+
+		<!-- DUOTONE ADD-ON FILES -->
+		<link rel='stylesheet' href='../../revolution-addons/duotone/css/revolution.addon.duotonefilters.css?ver=1.0.0' type='text/css' media='all' />
+		<script type='text/javascript' src='../../revolution-addons/duotone/js/revolution.addon.duotonefilters.js?ver=1.0.0'></script>
+		
+		<!-- PARTICLES ADD-ON FILES -->
+		<link rel='stylesheet' href='../../revolution-addons/particles/css/revolution.addon.particles.css?ver=1.0.3' type='text/css' media='all' />
+		<script type='text/javascript' src='../../revolution-addons/particles/js/revolution.addon.particles.min.js?ver=1.0.3'></script>
+		
+		<!-- CUSTOM NAVIGATION STYLES -->
+		<style type="text/css">#rev_slider_168_1 .uranus.tparrows{width:50px; height:50px; background:rgba(255,255,255,0)}#rev_slider_168_1 .uranus.tparrows:before{width:50px; height:50px; line-height:50px; font-size:40px; transition:all 0.3s;-webkit-transition:all 0.3s}#rev_slider_168_1 .uranus.tparrows:hover:before{opacity:0.75}</style>
+		
+		<!-- REVOLUTION JS FILES -->
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.migration.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.video.min.js"></script>
+		<script type="text/javascript">function setREVStartSize(e){
+				try{ var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;					
+					if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+				}catch(d){console.log("Failure at Presize of Slider:"+d)}
+			};</script>
+	</head>
+	
+	<body>
+				<!-- HEADER -->
+		<article class="content">
+			<!-- Add your site or application content here -->
+			<section class="header">
+				<span class="logo" style="float:left"></span>
+				<a class="button" style="float:right" target="_blank" href="http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/"><i class="pe-7s-help2"></i>Online Documentation</a>
+				<div class="clearfix"></div>
+			</section>
+		</article>
+		
+				  <article class="small-history"> 
+            <h2 class="textaligncenter" style="margin-bottom:25px;">Your Slider Revolution jQuery Plugin</h2>
+            <p>Slider Revolution is an innovative, responsive Slider Plugin that displays your content the beautiful way. Whether it's a <strong>Slider, Carousel, Hero Scene</strong> or even a whole <strong>Front Page</strong>.<br>The <a href="https://codecanyon.net/item/slider-revolution-jquery-visual-editor-addon/13934907" target="_blank">visual drag &amp; drop editor</a> will help you to create your Sliders and tell your own stories in no time!</p>
+        </article>
+				<!-- SLIDER EXAMPLE -->
+		<section class="example">
+			<article class="content">
+			
+
+<div id="rev_slider_168_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="duotone-add-on72" data-source="gallery" style="background:transparent;padding:0px;">
+<!-- START REVOLUTION SLIDER 5.4.7.1 fullscreen mode -->
+	<div id="rev_slider_168_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.7.1">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-359" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="../../assets/images/Fire-Snow-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-duotonefilter='rs-duotone-red-blue-light'>
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/Fire-Snow.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgparallax="12" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- BACKGROUND VIDEO LAYER -->
+		<div class="rs-background-video-layer" 
+			data-forcerewind="on" 
+			data-volume="mute" 
+			data-videowidth="100%" 
+			data-videoheight="100%" 
+			data-videomp4="../../assets/videos/Fire-Snow.mp4" 
+			data-videopreload="auto" 
+			data-videoloop="loop" 
+			data-forceCover="1" 
+			data-aspectratio="16:9" 
+			data-autoplay="true" 
+			data-autoplayonlyfirsttime="false" 
+></div>
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme  tp-iefixlayer" 
+			 id="slide-359-layer-23" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+			data-visibility="['off','off','off','off']"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgba(204,204,204,0.75);"> </div>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption tp-shape tp-shapewrapper " 
+			 id="slide-359-layer-7" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":0,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Linear.easeNone"},{"delay":"+240","speed":3000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6;background-color:rgb(255,255,255);"> </div>
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-359-layer-1" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-140','-130','-130','-160']" 
+						data-fontsize="['200','150','100','75']"
+			data-lineheight="['200','150','100','75']"
+			data-letterspacing="['-5','-5','-3','-3']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"split":"chars","splitdelay":0.05,"speed":3000,"split_direction":"middletoedge","frame":"0","from":"x:-50px;opacity:0;","color":"#ffffff","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":650,"frame":"999","color":"transparent","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[5,5,3,3]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 7; white-space: nowrap; font-size: 200px; line-height: 200px; font-weight: 700; color: #000000; letter-spacing: -5px;font-family:Poppins;text-transform:uppercase;">DUOTONE </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-359-layer-2" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','-2']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-30','-40','-65','-105']" 
+						data-fontsize="['45','45','35','25']"
+			data-lineheight="['45','45','35','25']"
+			data-letterspacing="['52','32','18','14']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":850,"split":"chars","splitdelay":0.05,"speed":3000,"split_direction":"middletoedge","frame":"0","from":"x:50px;opacity:0;","color":"#ffffff","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":650,"frame":"999","color":"transparent","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[52,32,18,18]"
+			data-blendmode="overlay"
+
+			style="z-index: 8; white-space: nowrap; font-size: 45px; line-height: 45px; font-weight: 300; color: #000000; letter-spacing: 52px;font-family:Poppins;text-transform:uppercase;">FILTER ADD-ON </div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption rev-btn  tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-359-layer-5" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['70','70','70','70']" 
+						data-fontsize="['20','20','15','15']"
+			data-lineheight="['60','60','50','50']"
+			data-letterspacing="['10','10','5','5']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="button" 
+			data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":"","speed":"1000","ease":"Power1.easeInOut"}]'
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1800,"speed":2000,"frame":"0","from":"y:50px;sX:1;sY:1;opacity:0;fb:5px;","to":"o:1;fb:0;","ease":"easeInOutQuint"},{"delay":"wait","speed":650,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"750","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgb(255,255,255);bg:rgb(0,0,0);"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[90,90,45,35]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[100,100,50,40]"
+			data-blendmode="overlay"
+
+			style="z-index: 9; white-space: nowrap; font-size: 20px; line-height: 60px; font-weight: 500; color: #000000; letter-spacing: 10px;font-family:Poppins;background-color:rgba(0,0,0,0);border-color:rgb(0,0,0);border-style:solid;border-width:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">GET IT NOW <i class="fa-icon-diamond"></i> </div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-359-layer-9" 
+			 data-x="['center','center','center','center']" data-hoffset="['-618','-618','-374','-112']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['149','149','151','57']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2000,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:45;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 10; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-359-layer-10" 
+			 data-x="['center','center','center','center']" data-hoffset="['643','643','268','248']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-290','-290','-276','-195']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2100,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:25;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 11; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-359-layer-11" 
+			 data-x="['center','center','center','center']" data-hoffset="['-89','-89','-89','-89']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-343','-343','-343','-343']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2200,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:90;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 12; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-3" 
+			 id="slide-359-layer-12" 
+			 data-x="['center','center','center','center']" data-hoffset="['-458','-458','-308','-235']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-309','-309','-245','-218']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2300,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:-45;fb:5px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 13; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-3" 
+			 id="slide-359-layer-13" 
+			 data-x="['center','center','center','center']" data-hoffset="['396','396','338','229']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['116','116','67','33']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2400,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:120;fb:5px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 14; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 65px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-359-layer-14" 
+			 data-x="['center','center','center','center']" data-hoffset="['299','299','357','188']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-355','-355','-392','-333']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2500,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:45;fb:10px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 15; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 50px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 12 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-359-layer-15" 
+			 data-x="['center','center','center','center']" data-hoffset="['-644','-644','-394','-233']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-116','-116','-66','-4']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2600,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:65;fb:10px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 16; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 13 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-5" 
+			 id="slide-359-layer-16" 
+			 data-x="['center','center','center','center']" data-hoffset="['676','676','435','308']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['266','266','321','292']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2700,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:65;fb:20px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 17; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 135px solid transparent;
+  border-right: 170px solid transparent;
+  border-bottom: 250px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 14 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-5" 
+			 id="slide-359-layer-17" 
+			 data-x="['center','center','center','center']" data-hoffset="['-567','-567','-311','-197']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-397','-397','-411','-380']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2800,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:150;fb:20px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 18; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 235px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 150px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 15 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-359-layer-19" 
+			 data-x="['center','center','center','center']" data-hoffset="['88','88','88','89']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['209','209','209','195']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2900,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:15;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 19; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 16 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-359-layer-20" 
+			 data-x="['center','center','center','center']" data-hoffset="['-219','-219','-219','-209']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['214','214','214','207']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":3000,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:150;fb:10px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 20; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 80px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 17 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-7" 
+			 id="slide-359-layer-21" 
+			 data-x="['center','center','center','center']" data-hoffset="['-731','-731','-366','-186']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['378','378','427','383']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":3100,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:15;fb:30px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 21; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 285px solid transparent;
+  border-right: 220px solid transparent;
+  border-bottom: 290px solid #000;"></div> </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-358" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="../../assets/images/Clouds_Fly_By-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-duotonefilter='rs-duotone-red-blue'>
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/Clouds_Fly_By.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgparallax="12" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- BACKGROUND VIDEO LAYER -->
+		<div class="rs-background-video-layer" 
+			data-forcerewind="on" 
+			data-volume="mute" 
+			data-videowidth="100%" 
+			data-videoheight="100%" 
+			data-videomp4="../../assets/videos/Clouds_Fly_By.mp4" 
+			data-videopreload="auto" 
+			data-videoloop="loop" 
+			data-forceCover="1" 
+			data-aspectratio="16:9" 
+			data-autoplay="true" 
+			data-autoplayonlyfirsttime="false" 
+></div>
+		<!-- LAYER NR. 18 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme  tp-iefixlayer" 
+			 id="slide-358-layer-23" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+			data-visibility="['off','off','off','off']"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgba(204,204,204,0.75);"> </div>
+
+		<!-- LAYER NR. 19 -->
+		<div class="tp-caption tp-shape tp-shapewrapper " 
+			 id="slide-358-layer-7" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":0,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Linear.easeNone"},{"delay":"+240","speed":3000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6;background-color:rgb(255,255,255);"> </div>
+
+		<!-- LAYER NR. 20 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-358-layer-1" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-140','-130','-130','-160']" 
+						data-fontsize="['200','150','100','75']"
+			data-lineheight="['200','150','100','75']"
+			data-letterspacing="['-5','-5','-3','-3']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"split":"chars","splitdelay":0.05,"speed":3000,"split_direction":"middletoedge","frame":"0","from":"x:-50px;opacity:0;","color":"#000000","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":650,"frame":"999","color":"transparent","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[5,5,3,3]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 7; white-space: nowrap; font-size: 200px; line-height: 200px; font-weight: 700; color: #ffffff; letter-spacing: -5px;font-family:Poppins;text-transform:uppercase;">DUOTONE </div>
+
+		<!-- LAYER NR. 21 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-358-layer-2" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','-2']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-30','-40','-65','-105']" 
+						data-fontsize="['45','45','35','25']"
+			data-lineheight="['45','45','35','25']"
+			data-letterspacing="['52','32','18','14']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":850,"split":"chars","splitdelay":0.05,"speed":3000,"split_direction":"middletoedge","frame":"0","from":"x:50px;opacity:0;","color":"#000000","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":650,"frame":"999","color":"transparent","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[52,32,18,18]"
+			data-blendmode="overlay"
+
+			style="z-index: 8; white-space: nowrap; font-size: 45px; line-height: 45px; font-weight: 300; color: #ffffff; letter-spacing: 52px;font-family:Poppins;text-transform:uppercase;">FILTER ADD-ON </div>
+
+		<!-- LAYER NR. 22 -->
+		<div class="tp-caption rev-btn  tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-358-layer-5" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['70','70','70','70']" 
+						data-fontsize="['20','20','15','15']"
+			data-lineheight="['60','60','50','50']"
+			data-letterspacing="['10','10','5','5']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="button" 
+			data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":"","speed":"1000","ease":"Power1.easeInOut"}]'
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1800,"speed":2000,"frame":"0","from":"y:50px;sX:1;sY:1;opacity:0;fb:5px;","to":"o:1;fb:0;","ease":"easeInOutQuint"},{"delay":"wait","speed":650,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"750","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgb(255,255,255);bg:rgb(0,0,0);"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[90,90,45,35]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[100,100,50,40]"
+			data-blendmode="overlay"
+
+			style="z-index: 9; white-space: nowrap; font-size: 20px; line-height: 60px; font-weight: 500; color: #000000; letter-spacing: 10px;font-family:Poppins;background-color:rgba(0,0,0,0);border-color:rgb(0,0,0);border-style:solid;border-width:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">GET IT NOW <i class="fa-icon-diamond"></i> </div>
+
+		<!-- LAYER NR. 23 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-358-layer-9" 
+			 data-x="['center','center','center','center']" data-hoffset="['-618','-618','-318','-70']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['149','149','104','69']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2000,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:45;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 10; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 24 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-358-layer-10" 
+			 data-x="['center','center','center','center']" data-hoffset="['643','643','191','191']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-290','-290','-262','-262']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2100,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:25;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 11; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 25 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-358-layer-11" 
+			 data-x="['center','center','center','center']" data-hoffset="['-89','-89','-89','-89']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-343','-343','-343','-343']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2200,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:90;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 12; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 26 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-3" 
+			 id="slide-358-layer-12" 
+			 data-x="['center','center','center','center']" data-hoffset="['-458','-458','-291','-188']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-309','-309','-298','-243']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2300,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:-45;fb:5px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 13; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 27 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-3" 
+			 id="slide-358-layer-13" 
+			 data-x="['center','center','center','center']" data-hoffset="['396','396','382','254']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['116','116','17','44']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2400,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:120;fb:5px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 14; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 65px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 28 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-358-layer-14" 
+			 data-x="['center','center','center','center']" data-hoffset="['299','299','299','245']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-355','-355','-355','-343']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2500,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:45;fb:10px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 15; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 50px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 29 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-358-layer-15" 
+			 data-x="['center','center','center','center']" data-hoffset="['-644','-644','-406','-262']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-116','-116','-55','-35']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2600,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:65;fb:10px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 16; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 30 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-5" 
+			 id="slide-358-layer-16" 
+			 data-x="['center','center','center','center']" data-hoffset="['676','676','454','308']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['266','266','354','293']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2700,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:65;fb:20px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 17; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 135px solid transparent;
+  border-right: 170px solid transparent;
+  border-bottom: 250px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 31 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-5" 
+			 id="slide-358-layer-17" 
+			 data-x="['center','center','center','center']" data-hoffset="['-567','-567','-398','-275']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-397','-397','-433','-299']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2800,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:150;fb:20px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 18; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 235px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 150px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 32 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-358-layer-19" 
+			 data-x="['center','center','center','center']" data-hoffset="['88','88','88','105']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['209','209','209','147']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2900,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:15;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 19; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 33 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-358-layer-20" 
+			 data-x="['center','center','center','center']" data-hoffset="['-219','-219','-219','-190']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['214','214','214','150']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":3000,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:150;fb:10px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 20; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 80px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 34 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-7" 
+			 id="slide-358-layer-21" 
+			 data-x="['center','center','center','center']" data-hoffset="['-731','-731','-351','-266']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['378','378','423','353']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":3100,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:15;fb:30px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 21; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 285px solid transparent;
+  border-right: 220px solid transparent;
+  border-bottom: 290px solid #000;"></div> </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-357" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="../../assets/images/pyramid-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-duotonefilter='rs-duotone-blue-yellow-dark'>
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/pyramid.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="3000" data-ease="Power3.easeOut" data-scalestart="130" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="12" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 35 -->
+		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme  tp-iefixlayer" 
+			 id="slide-357-layer-23" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+			data-visibility="['off','off','off','off']"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgba(204,204,204,0.75);"> </div>
+
+		<!-- LAYER NR. 36 -->
+		<div class="tp-caption tp-shape tp-shapewrapper " 
+			 id="slide-357-layer-7" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":10,"speed":0,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Linear.easeNone"},{"delay":"+240","speed":3000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6;background-color:rgb(255,255,255);"> </div>
+
+		<!-- LAYER NR. 37 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-357-layer-1" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-140','-130','-130','-160']" 
+						data-fontsize="['200','150','100','75']"
+			data-lineheight="['200','150','100','75']"
+			data-letterspacing="['-5','-5','-3','-3']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"split":"chars","splitdelay":0.05,"speed":3000,"split_direction":"middletoedge","frame":"0","from":"x:-50px;opacity:0;","color":"#ffffff","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":650,"frame":"999","color":"transparent","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[5,5,3,3]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 7; white-space: nowrap; font-size: 200px; line-height: 200px; font-weight: 700; color: #000000; letter-spacing: -5px;font-family:Poppins;text-transform:uppercase;">DUOTONE </div>
+
+		<!-- LAYER NR. 38 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-357-layer-2" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','-2']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-30','-40','-65','-105']" 
+						data-fontsize="['45','45','35','25']"
+			data-lineheight="['45','45','35','25']"
+			data-letterspacing="['52','32','18','14']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":850,"split":"chars","splitdelay":0.05,"speed":3000,"split_direction":"middletoedge","frame":"0","from":"x:50px;opacity:0;","color":"#ffffff","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":650,"frame":"999","color":"transparent","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[52,32,18,18]"
+			data-blendmode="overlay"
+
+			style="z-index: 8; white-space: nowrap; font-size: 45px; line-height: 45px; font-weight: 300; color: #000000; letter-spacing: 52px;font-family:Poppins;text-transform:uppercase;">FILTER ADD-ON </div>
+
+		<!-- LAYER NR. 39 -->
+		<div class="tp-caption rev-btn  tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-357-layer-5" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['70','70','70','70']" 
+						data-fontsize="['20','20','15','15']"
+			data-lineheight="['60','60','50','50']"
+			data-letterspacing="['10','10','5','5']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="button" 
+			data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":"","speed":"1000","ease":"Power1.easeInOut"}]'
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1800,"speed":2000,"frame":"0","from":"y:50px;sX:1;sY:1;opacity:0;fb:5px;","to":"o:1;fb:0;","ease":"easeInOutQuint"},{"delay":"wait","speed":650,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"750","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgb(255,255,255);bg:rgb(0,0,0);"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[90,90,45,35]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[100,100,50,40]"
+			data-blendmode="overlay"
+
+			style="z-index: 9; white-space: nowrap; font-size: 20px; line-height: 60px; font-weight: 500; color: #000000; letter-spacing: 10px;font-family:Poppins;background-color:rgba(0,0,0,0);border-color:rgb(0,0,0);border-style:solid;border-width:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">GET IT NOW <i class="fa-icon-diamond"></i> </div>
+
+		<!-- LAYER NR. 40 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-357-layer-9" 
+			 data-x="['center','center','center','center']" data-hoffset="['-618','-618','-374','-112']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['149','149','151','57']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2000,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:45;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 10; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 41 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-357-layer-10" 
+			 data-x="['center','center','center','center']" data-hoffset="['643','643','268','248']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-290','-290','-276','-195']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2100,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:25;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 11; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 42 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-357-layer-11" 
+			 data-x="['center','center','center','center']" data-hoffset="['-89','-89','-89','-89']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-343','-343','-343','-343']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2200,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:90;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 12; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 43 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-3" 
+			 id="slide-357-layer-12" 
+			 data-x="['center','center','center','center']" data-hoffset="['-458','-458','-308','-235']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-309','-309','-245','-218']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2300,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:-45;fb:5px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 13; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 44 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-3" 
+			 id="slide-357-layer-13" 
+			 data-x="['center','center','center','center']" data-hoffset="['396','396','338','229']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['116','116','67','33']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2400,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:120;fb:5px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 14; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 65px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 45 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-357-layer-14" 
+			 data-x="['center','center','center','center']" data-hoffset="['299','299','357','188']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-355','-355','-392','-333']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2500,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:45;fb:10px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 15; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 50px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 46 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-357-layer-15" 
+			 data-x="['center','center','center','center']" data-hoffset="['-644','-644','-394','-233']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-116','-116','-66','-4']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2600,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:65;fb:10px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 16; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 47 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-5" 
+			 id="slide-357-layer-16" 
+			 data-x="['center','center','center','center']" data-hoffset="['676','676','435','308']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['266','266','321','292']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2700,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:65;fb:20px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 17; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 135px solid transparent;
+  border-right: 170px solid transparent;
+  border-bottom: 250px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 48 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-5" 
+			 id="slide-357-layer-17" 
+			 data-x="['center','center','center','center']" data-hoffset="['-567','-567','-311','-197']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-397','-397','-411','-380']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2800,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:150;fb:20px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 18; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 235px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 150px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 49 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" 
+			 id="slide-357-layer-19" 
+			 data-x="['center','center','center','center']" data-hoffset="['88','88','88','89']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['209','209','209','195']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":2900,"speed":2000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;rZ:15;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 19; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 50 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-4" 
+			 id="slide-357-layer-20" 
+			 data-x="['center','center','center','center']" data-hoffset="['-219','-219','-219','-209']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['214','214','214','207']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":3000,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:150;fb:10px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 20; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 80px solid #000;"></div> </div>
+
+		<!-- LAYER NR. 51 -->
+		<div class="tp-caption   tp-resizeme rs-parallaxlevel-7" 
+			 id="slide-357-layer-21" 
+			 data-x="['center','center','center','center']" data-hoffset="['-731','-731','-366','-186']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['378','378','427','383']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":3100,"speed":2000,"frame":"0","from":"y:100px;opacity:0;fb:0;","to":"o:1;rZ:15;fb:30px;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-blendmode="overlay"
+
+			style="z-index: 21; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;"><div style="  width: 0;
+  height: 0;
+  border-left: 285px solid transparent;
+  border-right: 220px solid transparent;
+  border-bottom: 290px solid #000;"></div> </div>
+	</li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+</div><!-- END REVOLUTION SLIDER -->
+
+<script type="text/javascript">
+var revapi168,
+	tpj;	
+(function() {			
+	if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad);
+		else
+	onLoad();
+	
+	function onLoad() {				
+		if (tpj===undefined) {
+			tpj = jQuery;
+
+			if("off" == "on") tpj.noConflict();		
+		}
+	if(tpj("#rev_slider_168_1").revolution == undefined){
+		revslider_showDoubleJqueryError("#rev_slider_168_1");
+	}else{
+		revapi168 = tpj("#rev_slider_168_1").show().revolution({
+			sliderType:"standard",
+			jsFileLocation:"revolution/js/",
+			sliderLayout:"fullscreen",
+			dottedOverlay:"none",
+			delay:9000,
+			particles: {startSlide: "first", endSlide: "last", zIndex: "1",
+				particles: {
+					number: {value: 60}, color: {value: "#ffffff"},
+					shape: {
+						type: "circle", stroke: {width: 0, color: "#ffffff", opacity: 1},
+						image: {src: ""}
+					},
+					opacity: {value: 0.5, random: true, min: 0.1, anim: {enable: false, speed: 3, opacity_min: 0, sync: false}},
+					size: {value: 3, random: true, min: 0.5, anim: {enable: false, speed: 40, size_min: 1, sync: false}},
+					line_linked: {enable: false, distance: 150, color: "#ffffff", opacity: 0.4, width: 1},
+					move: {enable: true, speed: 1, direction: "top", random: true, min_speed: 2, straight: false, out_mode: "out"}},
+				interactivity: {
+					events: {onhover: {enable: true, mode: "bubble"}, onclick: {enable: false, mode: "repulse"}},
+					modes: {grab: {distance: 400, line_linked: {opacity: 0.5}}, bubble: {distance: 400, size: 1, opacity: 1}, repulse: {distance: 200}}
+				}
+			},
+			navigation: {
+				keyboardNavigation:"off",
+				keyboard_direction: "horizontal",
+				mouseScrollNavigation:"off",
+ 							mouseScrollReverse:"default",
+				onHoverStop:"off",
+				arrows: {
+					style:"uranus",
+					enable:true,
+					hide_onmobile:false,
+					hide_onleave:false,
+					tmp:'',
+					left: {
+						h_align:"left",
+						v_align:"center",
+						h_offset:20,
+						v_offset:0
+					},
+					right: {
+						h_align:"right",
+						v_align:"center",
+						h_offset:20,
+						v_offset:0
+					}
+				}
+			},
+			responsiveLevels:[1240,1024,778,480],
+			visibilityLevels:[1240,1024,778,480],
+			gridwidth:[1240,1024,778,480],
+			gridheight:[868,768,960,720],
+			lazyType:"none",
+			parallax: {
+				type:"mouse",
+				origo:"slidercenter",
+				speed:400,
+				speedbg:0,
+				speedls:1000,
+				levels:[2,4,6,8,10,12,14,16,-10,-15,-20,20,30,40,51,55],
+			},
+			shadow:0,
+			spinner:"off",
+			stopLoop:"on",
+			stopAfterLoops:0,
+			stopAtSlide:1,
+			shuffle:"off",
+			autoHeight:"off",
+			fullScreenAutoWidth:"off",
+			fullScreenAlignForce:"off",
+			fullScreenOffsetContainer: "",
+			fullScreenOffset: "",
+			disableProgressBar:"on",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				nextSlideOnWindowFocus:"off",
+				disableFocusListener:false,
+			}
+		});
+		var blends = ["luminosity", "hue", "darken", "lighten", "hard-light", "soft-light", "color-dodge", "color", "screen"],
+			supports = "CSS" in window && "supports" in window.CSS,
+			len = blends.length;
+			
+		for(var i = 0; i < len; i++) {
+			
+			if(!window.CSS.supports("mix-blend-mode", blends[i])) {	
+				supports = false;
+				break;
+				
+			}
+		}
+
+		if(!supports) {
+			
+			jQuery('.tp-iefixlayer').attr('data-visibility', "['on','on','on','on']");
+			
+		}	
+
+		}; /* END OF revapi call */
+		RsAddonDuotone(tpj, revapi168, true, "cubic-bezier(0.645, 0.045, 0.355, 1.000)", "1000");
+		RsParticlesAddOn(revapi168);
+	}; /* END OF ON LOAD FUNCTION */
+}()); /* END OF WRAPPING FUNCTION */
+</script>
+		
+
+				</article>
+		</section>
+		<div class="bottom-history-wrap" style="margin-top:150px">
+				
+        <article class="small-history bottom-history">
+            <i class="fa-icon-question tp-headicon"></i>
+            <h2 class="textaligncenter" style="margin-bottom:25px;">Find the Documentation ?</h2>
+            <p>We would always recommend to use our<a target="_blank" href="http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/"> online documentation</a> however you can find also our embeded local documentation zipped in the Documentation folder. Online Documentation and FAQ Page is regulary updated. You will find More examples, Visit us also at <a href="http://themepunch.com">http://themepunch.com</a> ! </p>
+            <div class="tp-smallinfo">Learn how to build your Slider!</div>
+
+        </article>
+
+        <article class="small-history bottom-history" style="background:#f5f7f9;">
+            <i class="fa-icon-arrows tp-headicon"></i>
+            <h2 class="textaligncenter" style="margin-bottom:25px;">Navigation Examples !</h2>
+            <p>You find many Examples for All Skins and Positions of Navigation examples in the <a target="_blank" href="file:../Navigation">examples/Navigation folder</a>. Based on these prepared examples you can build your own navigation skins. Feel free to copy and paste the markups after your requests in your own documents.</p>
+            <div class="tp-smallinfo">Customize the interaction with your visitor!</div>
+        </article>
+
+        <article class="small-history bottom-history">
+            <i class="fa-icon-cog tp-headicon"></i>
+            <h2 class="textaligncenter" style="margin-bottom:25px;">Layer and Slide Transitions</h2>
+            <p>We prepared a small List of Transition and a light weight Markup Builder in the <a target="_blank" href="file:../Transitions"> examples/Transitions folder</a>. This will help you to get an overview how the Slider and Layer Transitions works. Copy the Markups of the generated Slide and Layer Animation Examples and paste it into your own Documents.</p>
+            <div class="tp-smallinfo">Eye Catching Effects!</div>
+
+        </article>
+    </div>
+    <div class="clearfix"></div>
+
+    <footer>
+        <div class="footer_inner">
+            <div class="footerwidget">
+                <h3>Slider Revolution</h3>
+                <a href="http://revolution.themepunch.com/jquery/#features" target="_self">Features</a>
+                <a href="http://revolution.themepunch.com/examples-jquery/" target="_self">Usage Examples</a>
+                <a href="http://www.themepunch.com/revsliderjquery-doc/slider-revolution-jquery-5-x-documentation/" target="_blank">Online Documentation</a>
+            </div>
+            <div class="footerwidget">
+                <h3>Resources</h3>
+                <a href="http://www.themepunch.com/support-center/" target="_blank">FAQ Database</a>
+                <a href="http://themepunch.com" target="_blank">ThemePunch.com</a>
+                <a href="http://themepunch.us9.list-manage.com/subscribe?u=a5738148e5ec630766e28de16&amp;id=3e718acc63" target="_blank">Newsletter</a>
+                <a href="http://www.themepunch.com/products/" target="_blank">Plugins</a>
+                <a href="http://www.themepunch.com/products/" target="_blank">Themes</a>
+            </div>
+            <div class="footerwidget">
+                <h3>More Versions</h3>
+                <a href="http://revolution.themepunch.com" target="_blank">WordPress</a>
+                <a href="http://codecanyon.net/item/slider-revolution-responsive-prestashop-module/7140939?ref=themepunch" target="_blank">Prestashop</a>
+                <a href="http://codecanyon.net/item/slider-revolution-responsive-magento-extension/9332896?ref=themepunch" target="_blank">Magento</a>
+                <a href="http://codecanyon.net/item/slider-revolution-responsive-opencart-module/9994648?ref=themepunch" target="_blank">OpenCart</a>
+                <a href="http://codecanyon.net/item/slider-revolution-responsive-drupal-module/12041755?ref=themepunch" target="_blank">Drupal</a>
+            </div>
+            <div class="footerwidget social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/themepunchofficial" target="_blank" class="so_facebook" data-rel="tooltip" data-animation="false" data-placement="bottom" data-original-title="Facebook"><i class="s_icon fa-icon-facebook 
+						"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/themepunch" target="_blank" class="so_twitter" data-rel="tooltip" data-animation="false" data-placement="bottom" data-original-title="Twitter"><i class="s_icon fa-icon-twitter"></i></a>
+                    </li>
+                    <li><a href="https://plus.google.com/+ThemePunch/posts" target="_blank" class="so_gplus" data-rel="tooltip" data-animation="false" data-placement="bottom" data-original-title="Google+"><i class="s_icon fa-icon-google-plus"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </footer>
+ 	<script type="text/javascript" src="../../assets/warning.js"></script>
+		</body>
+</html>

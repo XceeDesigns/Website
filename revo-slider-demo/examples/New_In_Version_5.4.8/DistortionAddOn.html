@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Distortion Addon - Slider Revolution</title>
+		<meta name="description" content="Slider Revolution Example" />
+		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+		<meta name="author" content="ThemePunch" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- LOAD JQUERY LIBRARY -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+		
+		<!-- LOADING FONTS AND ICONS -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:600%7CMontserrat:800%2C600%2C400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+		
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="../../revolution/fonts/font-awesome/css/font-awesome.css">
+		
+		<!-- REVOLUTION STYLE SHEETS -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/settings.css">
+		
+		<!-- REVOLUTION LAYERS STYLES -->		
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/layers.css">
+		
+		<!-- REVOLUTION NAVIGATION STYLES -->
+		<link rel="stylesheet" type="text/css" href="../../revolution/css/navigation.css">
+
+		<!-- DISTORTION ADD-ON FILES -->
+		<link rel='stylesheet' href='../../revolution-addons/distortion/css/distortion.css' type='text/css' media='all' />
+		<script type='text/javascript' src='../../revolution-addons/distortion/js/pixi.min.js'></script>
+		<script type='text/javascript' src='../../revolution-addons/distortion/js/revolution.addon.distortion.min.js'></script>
+		
+		<!-- CUSTOM CSS -->
+		<style type="text/css">body{margin: 0}.dt-shadow{text-shadow:0px 10px 30px rgba(0,0,0,1)}</style>
+		<style type="text/css">#rev_slider_265_1 .uranus.tparrows{width:50px; height:50px; background:rgba(255,255,255,0)}#rev_slider_265_1 .uranus.tparrows:before{width:50px; height:50px; line-height:50px; font-size:40px; transition:all 0.3s;-webkit-transition:all 0.3s}#rev_slider_265_1 .uranus.tparrows:hover:before{opacity:0.75}</style>
+	
+		<!-- REVOLUTION JS FILES -->
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.migration.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="../../revolution/js/extensions/revolution.extension.video.min.js"></script>
+		<script type="text/javascript">function setREVStartSize(e){
+				try{ var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;					
+					if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+				}catch(d){console.log("Failure at Presize of Slider:"+d)}
+			};</script>
+	</head>
+	
+	<body>
+
+<div id="rev_slider_265_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="distortion-addon" data-source="gallery" style="background:#000000;padding:0px;">
+<!-- START REVOLUTION SLIDER 5.4.7.4 fullscreen mode -->
+	<div id="rev_slider_265_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.7.4">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-647" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/distort_14-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"..\/..\/revolution-addons\/distortion\/images\/bwmap2.jpg","imagesize":"2273|1278","autoplay":true,"scalex":2,"scaley":2,"speedx":0,"speedy":0,"rotationx":0,"rotationy":0,"rotation":0.2,"transtime":2000,"easing":"Power3.easeOut","transcross":true,"transpower":false,"transitionx":2,"transitiony":2,"transpeedx":0,"transpeedy":0,"transrotx":0,"transroty":0,"transrot":0,"interactive":true,"event":"mousemove","mobile":true,"intertime":300,"intereasing":"Power2.easeOut","interscalex":0,"interscaley":0,"interotation":0.4,"interspeedx":0,"interspeedy":0}'>
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/dummy.png"  alt=""  data-lazyload="../../assets/images/distort_14.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme" 
+			 id="slide-647-layer-10" 
+			 data-x="['right','right','right','left']" data-hoffset="['120','120','60','30']" 
+			 data-y="['middle','middle','middle','bottom']" data-voffset="['0','0','0','100']" 
+						data-fontsize="['40','40','30','30']"
+			data-lineheight="['50','50','40','40']"
+			data-width="['480','480','360','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+
+			data-frames='[{"delay":1000,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; min-width: 480px; max-width: 480px; white-space: normal; font-size: 40px; line-height: 50px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;pointer-events:none;">And, when you want something, all the universe conspires in helping you to achieve it. </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-648" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/distort_5-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"..\/..\/revolution-addons\/distortion\/images\/clouds_large.jpg","imagesize":"3000|1688","autoplay":true,"scalex":20,"scaley":20,"speedx":10,"speedy":3,"rotationx":0,"rotationy":0,"rotation":0,"transtime":2000,"easing":"Power3.easeOut","transcross":true,"transpower":false,"transitionx":60,"transitiony":10,"transpeedx":6,"transpeedy":2,"transrotx":0,"transroty":0,"transrot":0,"interactive":true,"event":"mousemove","mobile":true,"intertime":500,"intereasing":"Power2.easeOut","interscalex":60,"interscaley":10,"interotation":0,"interspeedx":6,"interspeedy":2}'>
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/dummy.png"  alt=""  data-lazyload="../../assets/images/distort_5.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme" 
+			 id="slide-648-layer-8" 
+			 data-x="['right','right','right','left']" data-hoffset="['120','120','60','30']" 
+			 data-y="['middle','middle','middle','bottom']" data-voffset="['0','0','0','100']" 
+						data-fontsize="['40','40','30','30']"
+			data-lineheight="['50','50','40','40']"
+			data-width="['480','480','360','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+
+			data-frames='[{"delay":1000,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; min-width: 480px; max-width: 480px; white-space: normal; font-size: 40px; line-height: 50px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;pointer-events:none;">The most dangerous of all falsehoods is a slightly distorted truth. </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-649" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/underwater2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"..\/..\/revolution-addons\/distortion\/images\/rings_large.jpg","imagesize":"3000|1803","autoplay":true,"scalex":10,"scaley":10,"speedx":10,"speedy":20,"rotationx":0,"rotationy":0,"rotation":0,"transtime":2000,"easing":"Power3.easeOut","transcross":false,"transpower":false,"transitionx":0,"transitiony":0,"transpeedx":0,"transpeedy":0,"transrotx":0,"transroty":0,"transrot":0,"interactive":true,"event":"mousemove","mobile":true,"intertime":500,"intereasing":"Power2.easeOut","interscalex":30,"interscaley":10,"interotation":0,"interspeedx":0,"interspeedy":0}'>
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/dummy.png"  alt=""  data-lazyload="../../assets/images/underwater2.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme" 
+			 id="slide-649-layer-10" 
+			 data-x="['right','right','right','left']" data-hoffset="['120','120','60','30']" 
+			 data-y="['middle','middle','middle','bottom']" data-voffset="['0','0','0','100']" 
+						data-fontsize="['40','40','30','30']"
+			data-lineheight="['50','50','40','40']"
+			data-width="['480','480','360','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+
+			data-frames='[{"delay":1000,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; min-width: 480px; max-width: 480px; white-space: normal; font-size: 40px; line-height: 50px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;pointer-events:none;">Silence, I discover, is something you can actually hear. </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-650" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/desert-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"..\/..\/revolution-addons\/distortion\/images\/fibers_small.jpg","imagesize":"3000|1159","autoplay":true,"scalex":4,"scaley":4,"speedx":0.5,"speedy":-0.5,"rotationx":0,"rotationy":0,"rotation":0,"transtime":2000,"easing":"Power3.easeOut","transcross":false,"transpower":false,"transitionx":0,"transitiony":0,"transpeedx":0,"transpeedy":0,"transrotx":0,"transroty":0,"transrot":0}'>
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/dummy.png"  alt=""  data-lazyload="../../assets/images/desert.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme" 
+			 id="slide-650-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['120','120','60','30']" 
+			 data-y="['middle','middle','middle','bottom']" data-voffset="['0','0','0','100']" 
+						data-fontsize="['40','40','30','30']"
+			data-lineheight="['50','50','40','40']"
+			data-width="['480','480','360','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+
+			data-frames='[{"delay":1000,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; min-width: 480px; max-width: 480px; white-space: normal; font-size: 40px; line-height: 50px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;pointer-events:none;">What makes the desert beautiful is that somewhere it hides a well.  </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-651" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/distort_14-2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"..\/..\/revolution-addons\/distortion\/images\/bwmap1.jpg","imagesize":"2500|1794","autoplay":true,"scalex":5,"scaley":5,"speedx":0,"speedy":0,"rotationx":0,"rotationy":0,"rotation":-0.2,"transtime":2000,"easing":"Power3.easeOut","transcross":false,"transpower":false,"transitionx":0,"transitiony":0,"transpeedx":0,"transpeedy":0,"transrotx":0,"transroty":0,"transrot":0}'>
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/dummy.png"  alt=""  data-lazyload="../../assets/images/distort_14-2.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption  tp-no-events   tp-resizeme" 
+			 id="slide-651-layer-10" 
+			 data-x="['right','right','right','left']" data-hoffset="['120','120','60','30']" 
+			 data-y="['middle','middle','middle','bottom']" data-voffset="['0','0','0','100']" 
+						data-fontsize="['40','40','30','30']"
+			data-lineheight="['50','50','40','40']"
+			data-width="['480','480','360','360']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+
+			data-frames='[{"delay":1000,"split":"words","splitdelay":0.05,"speed":1000,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","split":"words","splitdelay":0.02,"speed":300,"split_direction":"backward","frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; min-width: 480px; max-width: 480px; white-space: normal; font-size: 40px; line-height: 50px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Open Sans;pointer-events:none;">Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-652" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="../../assets/images/glitchbg2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-liquideffect='{"image":"..\/..\/revolution-addons\/distortion\/images\/glitch3.jpg","imagesize":"3000|1997","autoplay":true,"scalex":0,"scaley":0,"speedx":50,"speedy":0,"rotationx":0,"rotationy":0,"rotation":0,"transtime":2000,"easing":"Power3.easeOut","transcross":false,"transpower":false,"transitionx":0,"transitiony":0,"transpeedx":0,"transpeedy":0,"transrotx":0,"transroty":0,"transrot":0,"interactive":true,"event":"mousemove","mobile":true,"intertime":300,"intereasing":"Power2.easeOut","interscalex":15,"interscaley":5,"interotation":0,"interspeedx":10,"interspeedy":0}'>
+		<!-- MAIN IMAGE -->
+		<img src="../../assets/images/dummy.png"  alt=""  data-lazyload="../../assets/images/glitchbg2.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption  tp-no-events tp-shape tp-shapewrapper " 
+			 id="slide-652-layer-14" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['25','25','25','25']" 
+						data-width="['300','300','300','200']"
+			data-height="['300','300','300','200']"
+			data-whitespace="normal"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"opacity:0;fb:20px;","to":"o:1;rZ:45;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgb(0,0,0);pointer-events:none;"> </div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption  tp-no-events  " 
+			 id="slide-652-layer-10" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','5']" 
+						data-fontsize="['70','70','70','50']"
+			data-lineheight="['70','70','70','50']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"y:50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['center','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; white-space: normal; font-size: 70px; line-height: 70px; font-weight: 800; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;pointer-events:none;">GLITCH </div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption  tp-no-events  " 
+			 id="slide-652-layer-12" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['60','60','60','45']" 
+						data-fontsize="['25','25','25','20']"
+			data-lineheight="['30','30','30','25']"
+			data-fontweight="['800','800','800','600']"
+			data-letterspacing="['30','30','30','20']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"y:-50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['center','inherit','inherit','inherit']"
+			data-paddingtop="[3,3,3,2]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[30,30,30,20]"
+
+			style="z-index: 7; white-space: normal; font-size: 25px; line-height: 30px; font-weight: 800; color: #ffffff; letter-spacing: 30px;font-family:'Courier New', Courier, monospace;border-color:rgb(255,255,255);border-style:solid;border-width:1px 1px 1px 1px;pointer-events:none;">BONUS </div>
+	</li>
+</ul>
+<div style="" class="tp-static-layers">
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption  tp-no-events   tp-static-layer" 
+			 id="slider-265-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['50','50','50','20']" 
+			 data-y="['top','top','top','top']" data-voffset="['40','40','40','10']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="5" 
+			data-frames='[{"delay":500,"speed":2500,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10;pointer-events:none;"><img src="../../assets/images/dummy.png" alt="" data-ww="['80px','80px','80px','80px']" data-hh="['80px','80px','80px','80px']" width="1067" height="1067" data-lazyload="../../assets/images/icon1.png" data-no-retina> </div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption  tp-no-events   tp-static-layer" 
+			 id="slider-265-layer-11" 
+			 data-x="['left','left','left','left']" data-hoffset="['126','126','126','96']" 
+			 data-y="['top','top','top','top']" data-voffset="['63','63','63','33']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="5" 
+			data-frames='[{"delay":500,"speed":2500,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 11; white-space: nowrap; font-size: 25px; line-height: 25px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;text-transform:uppercase;pointer-events:none;">Distorsion </div>
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption  tp-no-events   tp-static-layer" 
+			 id="slider-265-layer-12" 
+			 data-x="['left','left','left','left']" data-hoffset="['122','122','122','92']" 
+			 data-y="['top','top','top','top']" data-voffset="['88','88','88','58']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="5" 
+			data-frames='[{"delay":500,"speed":2500,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[6,6,6,6]"
+
+			style="z-index: 12; white-space: nowrap; font-size: 10px; line-height: 10px; font-weight: 400; color: #ffffff; letter-spacing: 6px;font-family:Montserrat;pointer-events:none;">EFFECT ADD-ON </div>
+</div>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+</div><!-- END REVOLUTION SLIDER -->
+
+		<script type="text/javascript">
+var revapi265,
+	tpj;	
+(function() {			
+	if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();	
+	function onLoad() {				
+		if (tpj===undefined) { tpj = jQuery; if("off" == "on") tpj.noConflict();}
+	if(tpj("#rev_slider_265_1").revolution == undefined){
+		revslider_showDoubleJqueryError("#rev_slider_265_1");
+	}else{
+		revapi265 = tpj("#rev_slider_265_1").show().revolution({
+			sliderType:"standard",
+			jsFileLocation:"revolution/js/",
+			sliderLayout:"fullscreen",
+			dottedOverlay:"none",
+			delay:9000,
+			navigation: {
+				keyboardNavigation:"off",
+				keyboard_direction: "horizontal",
+				mouseScrollNavigation:"off",
+ 							mouseScrollReverse:"default",
+				onHoverStop:"off",
+				arrows: {
+					style:"uranus",
+					enable:true,
+					hide_onmobile:false,
+					hide_onleave:false,
+					tmp:'',
+					left: {
+						h_align:"right",
+						v_align:"bottom",
+						h_offset:80,
+						v_offset:30
+					},
+					right: {
+						h_align:"right",
+						v_align:"bottom",
+						h_offset:20,
+						v_offset:30
+					}
+				}
+			},
+			responsiveLevels:[1240,1024,778,480],
+			visibilityLevels:[1240,1024,778,480],
+			gridwidth:[1240,1024,778,480],
+			gridheight:[868,768,960,720],
+			lazyType:"all",
+			shadow:0,
+			spinner:"off",
+			stopLoop:"on",
+			stopAfterLoops:0,
+			stopAtSlide:1,
+			shuffle:"off",
+			autoHeight:"off",
+			fullScreenAutoWidth:"off",
+			fullScreenAlignForce:"off",
+			fullScreenOffsetContainer: "",
+			fullScreenOffset: "",
+			disableProgressBar:"on",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				nextSlideOnWindowFocus:"off",
+				disableFocusListener:false,
+			}
+		});
+	}; /* END OF revapi call */
+	
+    RsLiquideffectAddOn(tpj, revapi265);
+
+ }; /* END OF ON LOAD FUNCTION */
+}()); /* END OF WRAPPING FUNCTION */
+</script>
+
+ 	<script type="text/javascript" src="../../assets/warning.js"></script>
+		</body>
+</html>

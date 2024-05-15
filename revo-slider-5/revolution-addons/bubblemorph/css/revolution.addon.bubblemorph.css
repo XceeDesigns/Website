@@ -1,0 +1,16 @@
+/* 
+ * @author    ThemePunch <info@themepunch.com>
+ * @link      http://www.themepunch.com/
+ * @copyright 2018 ThemePunch
+*/
+
+.tp-bubblemorph {
+	
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	
+}
