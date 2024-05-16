@@ -2017,12 +2017,16 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
 }
 .port-view-more-cont-dark {
   text-align:center;
+  overflow: hidden;
+  position: relative;
+  background:#4b4e53;
 }
 .port-view-more-dark {
+  position: inherit;
+  z-index: 1;
   display:block;
   padding-top:55px;
   padding-bottom:52px;
-  background:#4b4e53;
   font-family: 'Lato',Arial,Helvetica,sans-serif;
   color:#fff;
   font-size:18px;
@@ -2033,8 +2037,27 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   -o-transition: all .3s ease 0s;
   transition: all .3s ease 0s;
 }
+
+.port-view-more-cont-dark::before{
+  content: '';
+  position: absolute;
+  background-color: #101010;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  transition: all .8s ease-out;
+  z-index: 0;
+}
+
+.port-view-more-cont-dark:hover::before{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .port-view-more-dark:hover {
-  background:#101010;
   color:#fff;
 }
 .port-view-more-inv{
