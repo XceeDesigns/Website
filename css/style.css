@@ -1119,12 +1119,12 @@ support for no js
 	margin-top:30px;
 }
 .fes2-img {
-  background: url(../images/fes2.jpg) 50% 50% no-repeat;
+  background: url(../images/responsive.png) 50% 50% no-repeat;
   
   width: 100%;
   display: block;	
   position: relative;
-  background-size: cover;
+  background-size: contain;
      
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1141,9 +1141,9 @@ support for no js
 	font-weight: 300;
 }
 .fes3-img {
-  background: url(../images/fes3.webp) 50% 50% no-repeat;
+  background: url(../images/power.webp) 50% 50% no-repeat;
   background-size: cover;
-  
+  margin-left: 10px;
   width: 100%;
   display: block;	
   position: relative;
