@@ -1133,6 +1133,21 @@ support for no js
   background-repeat: no-repeat;
   background-position: center center;
 }
+.fes2-img-img {
+  background: url(../images/logo-new.png) 50% 50% no-repeat;
+  
+  width: 60%;
+  display: block;	
+  position: relative;
+  background-size: cover;
+     
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .title-fs-45 {
 	color:#4b4e53;
 	font-family: 'Lato',Arial,Helvetica,sans-serif;
