@@ -1,0 +1,53 @@
+ /* CSS for  IE warning
+ ===================================================================*/
+#ie-container{
+	border: 1px solid #F7941D;
+	text-align: center;
+	clear: both;
+	position: relative;
+	background-color: #ffeded;
+}
+#ie-cont-close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+#ie-cont-content {
+	width: 540px;
+	text-align: left;
+	padding: 0;
+	overflow: hidden;
+	color: black;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#ie-cont-brows {
+	width:540px;
+	text-align:center;
+}
+#ie-cont-brows a img{
+	border: none;
+	margin-left:15px;
+}
+#ie-cont-warning {
+	float: left;
+}
+#ie-cont-text{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align:center;
+}
+#ie-text-bold {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 12px;
+}
+#ie-text {
+	font-size: 12px;
+	margin-top: 6px;
+	line-height: 12px;
+}
+
