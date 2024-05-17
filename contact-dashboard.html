@@ -55,6 +55,29 @@
 
     <style>
         /* Style for dashboard entries */
+        @font-face{
+            font-family: MarkPro;
+            src: url('fonts/MarkPro.ttf');
+        }
+        body{
+            font-family: MarkPro;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        #mainbg{
+            background-image: url('dashboardbg.jpg');
+            background-size: cover; 
+            box-shadow: inset 50px 50px 440px 380px rgba(0, 0, 0, 0.2);
+            background-attachment: fixed;
+        }
+        #dashboard{
+            margin-left: 230px;
+            height: 80px;
+            align-content: center;
+            padding-left: 300px;
+            width: 1000px;
+        }
         .dashboard-entry {
             display: flex;
             align-items: center;
@@ -70,6 +93,40 @@
             margin-left: auto;
             cursor: pointer;
         }
+        .section-title1 {
+            margin-left: 500px;
+            font-family: MarkPro;
+            text-align: center;
+            font-weight:300;
+            font-size:35px;
+            line-height:46px;
+            color:#fff; 
+            width: 500px; 
+            padding: 20px; 
+            border-top: 1px solid #fff;
+        }
+        #back-top1 {
+            position: fixed;
+            bottom: 16px;
+            right: 19px;
+            padding:0;
+            margin:0;
+            background-color: #1e1b18;
+            opacity: 0.6;
+            border-radius: 50%;
+            z-index: 20;
+            transition: 0.3s;
+        }
+        #back-top1 a {
+            text-decoration: none;
+            display: block;
+            color:#fff;
+            font-size:34px;
+            z-index:999;
+        }
+        #back-top1:hover {
+            opacity: 0.9;
+        }
     </style>
 
 </head>
@@ -82,13 +139,10 @@
 
     <div id="wrap" class="boxed ">
         <div class="grey-bg">
-
             <header id="nav" class="header header-1 no-transparent mobile-no-transparent">
-
                 <div class="header-wrapper">
                     <div class="container-m-30 clearfix">
                         <div class="logo-row">
-
                             <div class="logo-container-2">
                                 <div class="logo-2">
                                     <a href="contact-dashboard.html" class="clearfix">
@@ -106,124 +160,114 @@
                     </div>
 
                     <div class="main-menu-container">
-
-                        <div class="container-m-30 clearfix">
-
-                            <div id="main-menu">
+                        <div class="container-m-30 clearfix"  >
+                            <div id="main-menu" >
                                 <div class="navbar navbar-default" role="navigation">
-
                                     <nav class="collapse collapsing navbar-collapse right-1024">
                                         <ul class="nav navbar-nav">
-
-                                            <li class="parent">
+                                            <li class="parent" >
                                                 <a href="index.html">
-                                                    <div class="main-menu-title">HOME</div>
+                                                    <div class="main-menu-title" style="font-weight: bold;
+                                                    border-right: 1px solid #1e1b18;
+                                                    padding-right: 25px; letter-spacing: 0.2em">HOME</div>
                                                 </a>
                                             </li>
-
                                             <li class="parent">
                                                 <a href="services.html">
-                                                    <div class="main-menu-title">SERVICES</div>
+                                                    <div class="main-menu-title" style="font-weight: bold;
+                                                    border-right: 1px solid #1e1b18;
+                                                    padding-right: 25px; letter-spacing: 0.2em">SERVICES</div>
                                                 </a>
                                             </li>
-
                                             <li id="menu-contact-info-big" class="parent megamenu">
                                                 <a href="contact.html">
-                                                    <div class="main-menu-title">CONTACT</div>
+                                                    <div class="main-menu-title" style="font-weight: bold;
+                                                    border-right: none;
+                                                    padding-right: 25px; letter-spacing: 0.2em">CONTACT</div>
                                                 </a>
                                             </li>
-
                                         </ul>
-
                                     </nav>
-
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
 
                     <ul class="cd-header-buttons">
-                        <li><a class="cd-search-trigger" href="#cd-search"><span></span></a></li>
+                        <li><a class="cd-search-trigger" href="#cd-search" ><span></span></a></li>
                     </ul>
                     <div id="cd-search" class="cd-search">
                         <form class="form-search" id="searchForm">
                             <input type="text" value="" name="q" id="q" placeholder="Search...">
                         </form>
                     </div>
-
                 </div>
-
             </header>
 
-            <div class="page-title-cont page-title-big grey-light-bg">
+            <div class="page-title-cont page-title-big" id="mainbg" style="height: 750px;" >
                 <div class="relative container align-left">
                     <div class="row">
-
                         <div class="col-md-8">
-                            <h1 class="page-title">Dashboard</h1>
-                            <div class="page-sub-title">
-                                Data is the new oil; dashboard is the refinery!
+                            <h1 class="page-title" style="color: #fff; font-weight: bold; font-size: 62px; letter-spacing: -0.02em ">Dashboard</h1>
+                            <div class="page-sub-title" style="color: #00BFB3; letter-spacing: 0.45em; font-weight: bold; padding-top: 10px; font-size: 11px">
+                                Data is the new oil &nbsp | &nbsp Dashboard is the refinery
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="breadcrumbs">
-                                <a href="index.html">Home</a><span class="slash-divider">/</span><span
-                                    class="bread-current">Dashboard</span>
+                                <a href="index.html" style="color: #fff">Home &nbsp /</a><span class="slash-divider"></span><span
+                                    class="bread-current" style="color: #FFD700">Dashboard</span>
                             </div>
                         </div>
 
                     </div>
                 </div>
-            </div>
-
-            <div class="page-section">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <div class="contact-form-cont">
-                                <div class="mb-40">
-                                    <h2 class="section-title">Dashboard <span class="bold">XceedDesigns</span></h2>
-                                </div>
-                                <div>
-                                    <!-- Code to be added here -->
-                                    <div id="dashboard" class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-6">
-                                                <input type="password" id="fetchInput" class="form-control mb-3"
-                                                    placeholder="Enter authentication code">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <button onclick="fetchData();" class="btn btn-primary mb-3" id="fetchBtn">Fetch
-                                                    Entries</button>
+                <div class="page-section">
+                    <div class="container-fluid">
+                        <div class="row">
+    
+                            <div class="col-md-6">
+                                <div class="contact-form-cont">
+                                    <div class="mt-70 mb-50">
+                                        <h2 class="section-title1" >Xplore  <span style="font-weight: bold">XceeDesigns</span></h2>
+                                    
+                                    </div>
+                                    <div>
+                                        <!-- Code to be added here -->
+                                        <div id="dashboard" class="container">
+                                            <div class="row">
+                                                <div class="col-md-6" >
+                                                    <input type="password" id="fetchInput" class="form-control mb-3"
+                                                        placeholder="Authentication code">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button onclick="fetchData();" class="fetch-button" id="fetchBtn">Search</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
-                    </div
+                    </div>
                 </div>
             </div>
 
-            <hr class="mt-0 mb-0">
+            
 
+            <!-- <hr class="mt-0 mb-0"> -->
+            <div class="container">
             <div id="contact-link" class="page-section p-110-cont">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-md-4 col-sm-6">
                             <div class="cis-cont">
                                 <div class="cis-icon">
                                     <div class="icon icon-basic-map"></div>
                                 </div>
                                 <div class="cis-text">
-                                    <h3><span class="bold">ADDRESS</span></h3>
+                                    <h3><span class="bold" style="font-family: MarkPro">ADDRESS</span></h3>
                                     <p>Ghaziabad, India</p>
                                 </div>
                             </div>
@@ -234,7 +278,7 @@
                                     <div class="icon icon-basic-mail"></div>
                                 </div>
                                 <div class="cis-text">
-                                    <h3><span class="bold">EMAIL</span></h3>
+                                    <h3><span class="bold" style="font-family: MarkPro">EMAIL</span></h3>
                                     <p><a href="mailto:info@xceedesigns.com">xceedesigns@gmail.com</a></p>
                                 </div>
                             </div>
@@ -245,22 +289,18 @@
                                     <div class="icon icon-basic-smartphone"></div>
                                 </div>
                                 <div class="cis-text">
-                                    <h3><span class="bold">CALL US</span></h3>
+                                    <h3><span class="bold" style="font-family: MarkPro">CALL US</span></h3>
                                     <p>+91 95829 95138</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
+        </div>
 
-            <footer class="page-section pt-80 pb-50">
+            <footer class="page-section pb-50">
                 <div class="container">
-                    <div class="row">
-
-                    </div>
-
                     <div class="footer-2-copy-cont clearfix">
                         <div class="footer-2-soc-a right">
                             <a href="https://twitter.com/XceeDesigns" title="Twitter" target="_blank"><i
@@ -276,16 +316,11 @@
                                 href="https://www.linkedin.com/company/xceeddesigns/?viewAsMember=true"
                                 target="_blank">&copy; XceeDesigns 2024</a>
                         </div>
-
-
                     </div>
-
                 </div>
             </footer>
 
-
             <!-- modal starts here -->
-
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -308,7 +343,7 @@
 
             <!-- modal ends here -->
 
-            <p id="back-top">
+            <p id="back-top1">
                 <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
             </p>
 
