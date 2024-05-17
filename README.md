@@ -1,4 +1,4 @@
-Note:
+### Note:
 - Open the link of this web app [Live Link](https://www.xceedesigns.com/)
 
 # XceeDesigns LLC
@@ -41,3 +41,9 @@ Welcome to XceeDesigns, your one-stop solution for all your business website nee
 7. Push to the branch: `git push origin feature/new-feature`.
 8. Submit a pull request to the main repository.
 9. The pull request will be merged within 24 hrs provided it solves the issue.
+
+### Contributers
+
+<a href="https://github.com/XceeDesigns/Website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=XceeDesigns/Website" />
+</a>
