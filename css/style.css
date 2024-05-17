@@ -1191,15 +1191,39 @@ support for no js
   margin: 0;
 }
 .section-title {
-  margin:0;
-  padding:22px 25px 24px 25px;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  margin-left: 0px;
 	font-weight:300;
-	font-size:30px;
-	line-height:36px;
-	color:#4b4e53; 
-  border-left:#4b4e53 2px solid;
+	font-size:35px;
+	line-height:46px;
 }
+.fetch-button{
+  border: 2px solid #00BFB3;
+  color: #00BFB3;
+  font-weight: bolder;
+  background-color:rgba(0,0,0,0.1);
+  border-radius: 5px;
+  transition: 0.4s;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.fetch-button:hover{
+  transform: scale(0.997);
+	color: #fff;
+	background-color: #00BFB3;
+	font-weight: bold;
+}
+#fetchInput{
+  border: 2px solid #ffd700;
+  background-color:rgba(0,0,0,0.2);
+  color: #fff;
+  transition: 0.4s;
+}
+#fetchInput:hover{
+  background-color: #ffd700;
+}
+
 .section-title-2 {
   margin:0;
   padding:25px 25px 27px 25px;
@@ -2596,15 +2620,16 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   border-left:1px solid #bdbdbd;
 }
 .cis-text h3 {
-  color: #4b4e53;
-  font-weight: 300;
-  font-size: 16px;
+  color: #1e1b18;
+  font-weight: bold;
+  font-size: 18px;
   line-height: 26px;
   margin: 0;
 }
 .cis-text p {
   margin: 0;
   font-size: 12px;
+  
 }
 
 /* #GMAPS 1 #NEW
@@ -3128,7 +3153,8 @@ select.input-border {
 =====================================================*/
 .footer-2-copy-cont {
   padding-top:30px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #000;
+  font-weight: bold;
 }
 .widget{
   margin-bottom:60px;
@@ -3279,12 +3305,14 @@ select.input-border {
 }
 #main-menu .navbar .nav > li > a .main-menu-title{
 	line-height:20px;
+
 }
+
 #main-menu .navbar .nav > li > a {
 	padding:38px 3px 5px 3px;
 	margin: 0 12px 17px 12px;
 	border-bottom: 2px solid rgba(45,78,83,0);
-	color:#4b4e53;
+	color:#1e1b18;
   letter-spacing:4px;
   background-color: transparent;
 }
@@ -3311,7 +3339,7 @@ select.input-border {
 	border-color:rgba(75,78,83,0); 
 }
 .affix.header-1.header-black-white #main-menu .navbar .nav > li.current > a, .affix.header-1.header-black-white #main-menu .navbar .nav > li > a {
-	color:#000; 
+	color:#ccc; 
 }
 
 /***** #INDENT MAIN CONTAINER	( responsive in "media query" section)*****/
