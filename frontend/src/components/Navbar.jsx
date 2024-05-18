@@ -1,4 +1,6 @@
 import { useState } from "react";
+import logo from '../assets/Images/logo-new.png'
+
 
 function Navbar() {
   const [Input , setInput] = useState("") ; 
@@ -17,7 +19,7 @@ function Navbar() {
                   <div className="logo-2">
                     <a href="contact-dashboard.html" className="clearfix">
                       <img
-                        src="images/logo-new.png"
+                        src={logo}
                         className="logo-img logo-color-change"
                         alt="Logo"
                       />
