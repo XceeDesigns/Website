@@ -1132,6 +1132,17 @@ support for no js
 
   background-repeat: no-repeat;
   background-position: center center;
+  /* Animation properties */
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .title-fs-45 {
 	color:#4b4e53;
@@ -1154,6 +1165,17 @@ support for no js
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center center;
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .line-3-70{
 	margin-top:11px;
