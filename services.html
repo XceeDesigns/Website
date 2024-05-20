@@ -177,6 +177,9 @@
                   <div class="navbar navbar-default" role="navigation">
                     <nav class="collapse collapsing navbar-collapse right-1024">
                       <ul class="nav navbar-nav">
+                        <li>
+                          <div class="main-menu-title toggle"><label  id="dark-change"></label></div>
+                        </li>
                         <li class="parent">
                           <a href="index.html">
                             <div class="main-menu-title">HOME</div>
@@ -660,5 +663,13 @@
     <script src="js/owl.carousel.min.js"></script>
 
     <script src="js/main.js"></script>
+    <script>
+      var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+    </script>
   </body>
 </html>

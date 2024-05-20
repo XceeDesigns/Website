@@ -116,27 +116,33 @@
 
                     <nav class="collapse collapsing navbar-collapse right-1024">
                       <ul class="nav navbar-nav">
+                        <li>
+                          <div class="main-menu-title toggle"><label  id="dark-change"></label></div>
+                        </li>
 
-                        <li class="parent">
+                        <li class="parent home">
                           <a href="index.html">
                             <div class="main-menu-title">HOME</div>
                           </a>
                         </li>
 
-                        <li class="parent">
+                        <li class="parent ser">
                           <a href="services.html">
                             <div class="main-menu-title">SERVICES</div>
                           </a>
                         </li>
 
-                        <li id="menu-contact-info-big" class="parent megamenu">
+                        <li id="menu-contact-info-big" class="parent megamenu con">
                           <a href="contact.html">
                             <div class="main-menu-title">CONTACT</div>
                           </a>
                         </li>
 
-                      </ul>
+                        
 
+
+                      </ul>
+                 
                     </nav>
 
                   </div>
@@ -153,6 +159,8 @@
               <form class="form-search" id="searchForm">
                 <input type="text" value="" name="q" id="q" placeholder="Search...">
               </form>
+            
+              
             </div>
 
           </div>
@@ -176,7 +184,7 @@
 
 
                   <div class="tp-caption font-lato font-white tp-resizeme " id="slide-898-layer-1"
-                    style="z-index: 8; white-space: nowrap; letter-spacing:10px;" data-fontsize="['77','77','52','49']"
+                    data-fontsize="['77','77','52','49']"
                     data-fontweight="300" data-height="none" data-lineheight="['85','85','85','85']"
                     data-responsive_offset="on" data-splitin="none" data-splitout="none"
                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:.95;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"nothing"}]'
@@ -185,7 +193,7 @@
                     data-voffset="['-105','-105','-90','-85']">IMAGINATION</div>
 
                   <div class="tp-caption font-lato font-white tp-resizeme " id="slide-898-layer-2"
-                    style="z-index: 8; white-space: nowrap; letter-spacing:10px;" data-fontsize="['67','67','45','42']"
+                    data-fontsize="['67','67','45','42']"
                     data-fontweight="300" data-height="none" data-lineheight="['80','80','80','80']"
                     data-responsive_offset="on" data-splitin="none" data-splitout="none"
                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:.95;","delay":900,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"nothing"}]'
@@ -195,7 +203,7 @@
                   </div>
 
                   <div class="tp-caption font-lato font-white tp-resizeme " id="slide-898-layer-3"
-                    style="z-index: 8; white-space: nowrap; letter-spacing:10px; " data-fontsize="['78','78','52','50']"
+                    data-fontsize="['78','78','52','50']"
                     data-fontweight="600" data-height="none" data-lineheight="['90','90','90','90']"
                     data-responsive_offset="on" data-splitin="none" data-splitout="none"
                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:.95;","delay":1300,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"nothing"}]'
@@ -844,6 +852,14 @@
 
       RsParticlesAddOn(revapi8);
     });
+    
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+  
   </script>
 
 
