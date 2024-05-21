@@ -3213,6 +3213,11 @@ select.input-border {
   position: relative;
   width: 100%;
 }
+/* New font for the navbar */
+@font-face{
+  font-family: MarkPro;
+  src: url('MarkPro.ttf');
+} 
 
 @media (max-width: 992px) {
   .container-m-60 {
@@ -3269,10 +3274,12 @@ select.input-border {
 #main-menu .navbar .nav {
   margin: 0;
   position: static;
+  
 }
 #main-menu .navbar .nav > li {
   position: relative;
   z-index:5;
+ 
 }
 #main-menu .navbar .nav > li > a {
   font-size:12px;
@@ -3304,10 +3311,11 @@ select.input-border {
 }
 #main-menu .navbar .nav > li > a {
 	padding:38px 3px 5px 3px;
+  font-family: MarkPro;
+  color: #1e1b18;
+  font-weight: bold;
 	margin: 0 12px 17px 12px;
-	border-bottom: 2px solid rgba(45,78,83,0);
-	color:#4b4e53;
-  letter-spacing:4px;
+  letter-spacing:0.13em;
   background-color: transparent;
 }
 .affix.header-1 #main-menu .navbar .nav > li > a {
