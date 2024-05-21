@@ -1,26 +1,49 @@
 /* hover effect */
+#services-link .icon{
+    color:rgb(21, 21, 22);
+    text-shadow: 0 0 10px rgba(33, 3, 61, 0.8);
 
+    transition: transform 0.3s ease, color 0s ease, text-shadow 0.6s ease; 
+}
 #services-link .icon:hover{
-    transform:scale(1.05);
- 
-  color: #c00000;
-  text-shadow: 0 0 10px rgba(255, 144, 41, 0.8);
+    transform:scale(1.5);
+    color:rgb(21, 21, 22);
+    text-shadow: 0 0 10px rgba(33, 3, 61, 0.8);
   
+}
+#work-process-link .icon{
+    transform: scale(1);
+    color: rgb(246, 249, 248);
+    text-shadow: 0 0 10px rgba(148, 213, 213, 0.8);
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.6s ease; 
 }
 
 #work-process-link > div .icon:hover{
-    transform:scale(1.30);
+    transform:scale(1.3);
    color:rgb(43, 226, 183);
-   text-shadow: 0 0 10px rgba(221, 220, 220, 0.8);
+   text-shadow: 0 0 10px rgba(221, 220, 220, 0.8); 
+}
+#contact-link .icon{
+    color:rgb(21, 21, 22);
+    text-shadow: 0 0 10px rgba(33, 3, 61, 0.8);
+
+    transition: transform 0.3s ease, color 0s ease, text-shadow 0.6s ease;
+
 }
 #contact-link .icon:hover{
-    transform:scale(1.50);
-    color:rgb(192, 43, 226);
-    text-shadow: 0 0 10px rgba(204, 22, 110, 0.8);
+    transform:scale(1.5);
+    color:rgb(21, 21, 22);
+    text-shadow: 0 0 10px rgba(33, 3, 61, 0.8);
 }
 
+#about > div .icon{
+    color:rgb(21, 21, 22);
+    text-shadow: 0 0 10px rgba(33, 3, 61, 0.8);
+
+    transition: transform 0.3s ease, color 0s ease, text-shadow 0.6s ease;
+}
 #about > div .icon:hover{
-    transform:scale(1.20);
-    color:rgb(160, 12, 246);
-    text-shadow: 0 0 10px rgba(51, 14, 88, 0.8);
+    transform:scale(1.5);
+    color:rgb(21, 21, 22);
+    text-shadow: 0 0 10px rgba(33, 3, 61, 0.8);
 }
