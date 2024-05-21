@@ -295,6 +295,7 @@
                             data-msg-email="Please enter a valid email address"
                             maxlength="100"
                             class="controled"
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                             name="email"
                             id="email"
                             placeholder="EMAIL"
@@ -534,6 +535,14 @@
 
         contactForm.addEventListener("submit", async function (event) {
           event.preventDefault();
+          const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const emailInput = document.getElementById('email').value;
+  
+        // Check if email matches the pattern
+        if (!emailPattern.test(emailInput)) {
+          alert('Please enter a valid email address (e.g., user@example.com)');
+          return;
+        }
 
           const response = await fetch(
             "https://xceedesigns-backend.vercel.app/contact",
