@@ -3,4 +3,5 @@ Disallow: /private/
 Disallow: /admin/
 Disallow: /page-search-results/
 
+Disallow: /page-search-results/
 Sitemap: https://www.xceedesigns.com/sitemap.xml
