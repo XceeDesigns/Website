@@ -2129,8 +2129,9 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   padding-top: 20px;
   padding-bottom: 20px;
   border-left: 1px solid #eee;
+  transition: transform 0.3s ease; /* Added for smooth transition */
 }
-.client-row .col-sm-3:first-child,.client-row  .client1-item:first-child{
+.client-row .col-sm-3:first-child, .client-row .client1-item:first-child {
   border-left: none;
 }
 .client-row.border-bot {
@@ -2138,14 +2139,81 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
 }
 .client-row img {
   height: 100px;
+  transition: transform 0.3s ease; /* Added for smooth transition */
 }
 .client1-item {
-  text-align:center;
+  text-align: center;
+}
+.client-row .col-sm-3:hover img {
+  transform: scale(1.4); /* Scale image on hover */
 }
 @media only screen and (max-width: 992px) {
-  .client-row .col-sm-3, .client-row.border-bot, .client1-item  {
+  .client-row .col-sm-3, .client-row.border-bot, .client1-item {
     border: none;
   }
+}
+
+/* #OUR CLIENTS #NEW
+================================================== */
+#owl-clients .item {
+  margin: 0 50px;
+}
+#owl-clients .item img {
+  width: 100px;
+}
+.our-clients-cont {
+  padding: 60px 0;
+}
+
+/* Add keyframes for hover-triggered animations */
+@keyframes hoverFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply hover-triggered animation to the quote */
+.quote p {
+  font-size: 1.2em;
+  font-style: italic;
+  transition: all 0.3s ease;
+}
+.quote:hover p {
+  animation: hoverFadeInUp 0.5s ease-out forwards;
+}
+
+/* Apply hover-triggered animation to the footer */
+.quote footer {
+  font-size: 1em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  opacity: 1; /* Ensure footer is initially visible */
+}
+.quote:hover footer {
+  animation: hoverFadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.3s; /* Delay the footer animation for a staggered effect */
+}
+
+/* Add keyframes for sliding in from the left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply slide-in animation to the section title */
+.section-title {
+  animation: slideInLeft 1s ease-out forwards;
 }
 
 /* #TESTIMONIALS 1 #NEW
@@ -4040,7 +4108,7 @@ header.affix .logo .logo-img {
 
 /* #OUR CLIENTS #NEW
 ================================================== */ 
-#owl-clients .item{
+/* #owl-clients .item{
 	margin: 0 50px;
 }
 #owl-clients .item img{
@@ -4048,7 +4116,7 @@ header.affix .logo .logo-img {
 }
 .our-clients-cont {
 	padding:60px 0;
-}
+} */
 
 /* #TABS 3 #NEW
 ================================================== */
