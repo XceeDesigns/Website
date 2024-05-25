@@ -11296,3 +11296,59 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 .shop-ad-height {
   height:200px;
 }
+
+/* testimonial */
+.test{
+  background-color: #eeeeee;
+}
+
+.testimonial {
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  height: 520px;
+  width: 230px;
+}
+.testimonial img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.testimonial p {
+  font-size: 16px;
+  color: #333;
+}
+.testimonial h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #555;
+}
+.testimonial span {
+  color: #777;
+  font-size: 14px;
+}
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+  background: #ddd;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  margin: 5px;
+}
+.owl-nav button.owl-prev:hover,
+.owl-nav button.owl-next:hover {
+  background: #ccc;
+}
+.owl-page span{
+  background-color: black;
+}
+
+/* FAQ page */
+.panel-heading{
+  background-color: #4b4e53 !important; /* Starting color */
+}
+.panel-title{
+  color: white;
+}

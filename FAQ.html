@@ -2,7 +2,7 @@
 
 <html lang="en">
   <head>
-    <title>Contact Us - XceeDesigns</title>
+    <title>Services - XceeDesigns</title>
     <meta charset="utf-8" />
     <meta name="robots" content="index, follow" />
     <meta
@@ -105,6 +105,7 @@
       sizes="16x16"
       href="images/favicons/favicon-16x16.png"
     />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta
       name="msapplication-TileImage"
@@ -188,10 +189,11 @@
                           </a>
                         </li>
                         <li id="menu-contact-info-big" class="parent megamenu">
-                          <a href="FAQ.html">
-                            <div class="main-menu-title">FAQ</div>
-                          </a>
-                        </li>
+                            <a href="#">
+                              <div class="main-menu-title">FAQ</div>
+                            </a>
+                          </li>
+
                         <li id="menu-contact-info-big" class="parent megamenu">
                           <a href="contact.html">
                             <div class="main-menu-title">CONTACT</div>
@@ -223,190 +225,158 @@
           </div>
         </header>
 
-        <div class="page-title-cont page-title-big grey-light-bg">
+        <div class="page-title-cont page-title-small grey-light-bg">
           <div class="relative container align-left">
             <div class="row">
               <div class="col-md-8">
-                <h1 class="page-title">CONTACT</h1>
-                <div class="page-sub-title">
-                  "Got questions or feedback? Reach out to us - we're just a
-                  click away!"
-                </div>
+                <h1 class="page-title">FAQ</h1>
               </div>
 
               <div class="col-md-4">
                 <div class="breadcrumbs">
                   <a href="index.html">Home</a
                   ><span class="slash-divider">/</span
-                  ><span class="bread-current">CONTACT</span>
+                  ><span class="bread-current">FAQ</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="page-section">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe
-                      class="embed-responsive-item"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14002.567551550494!2d77.46414720248674!3d28.670439510301275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1f4ad5b59eb%3A0xd0e6b38805a9310b!2sShastri%20Nagar%2C%20Ghaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1714302644672!5m2!1sen!2sin"
-                      width="100%"
-                      height="500px"
-                      style="border: 0"
-                      allowfullscreen=""
-                      loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="contact-form-cont">
-                  <div class="mb-40">
-                    <h2 class="section-title">
-                      CONTACT <span class="bold">US</span>
-                    </h2>
-                  </div>
-                  <div>
-                    <form id="contact-form" onsubmit="">
-                      <div class="row">
-                        <div class="col-md-12 mb-30">
-                          <input
-                            type="text"
-                            value=""
-                            data-msg-required="Please enter your name"
-                            maxlength="100"
-                            class="controled"
-                            name="name"
-                            id="name"
-                            placeholder="NAME"
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-12 mb-30">
-                          <input
-                            type="email"
-                            value=""
-                            data-msg-required="Please enter your email address"
-                            data-msg-email="Please enter a valid email address"
-                            maxlength="100"
-                            class="controled"
-                            name="email"
-                            id="email"
-                            placeholder="EMAIL"
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-12 mb-40">
-                          <textarea
-                            maxlength="5000"
-                            data-msg-required="Please enter your message"
-                            rows="3"
-                            class="controled"
-                            name="message"
-                            id="message"
-                            placeholder="MESSAGE"
-                            required
-                          ></textarea>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-12 text-center-xxs mt-50">
-                          <input
-                            type="submit"
-                            name="enter"
-                            value="SEND MESSAGE"
-                            class="button medium gray"
-                          />
-                        </div>
-                      </div>
-                    </form>
-                    <div
-                      class="alert alert-success hidden animated fadeIn"
-                      id="contactSuccess"
-                    >
-                      Thanks, your message has been sent to us
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <hr class="mt-0 mb-0" />
-
-        <div id="contact-link" class="page-section p-110-cont">
+        <div id="services-link" class="page-section fes4-cont light-bg">
           <div class="container">
             <div class="row">
-              <div class="col-md-4 col-sm-6">
-                <div class="cis-cont">
-                  <div class="cis-icon">
-                    <div class="icon icon-basic-map"></div>
-                  </div>
-                  <div class="cis-text">
-                    <h3><span class="bold">ADDRESS</span></h3>
-                    <p onclick="redirectToGoogleMaps()" class="location">
-                      Ghaziabad, India
-                    </p>
-                    <script>
-                      function redirectToGoogleMaps() {
-                        var googleMapsUrl =
-                          "https://www.google.com/maps/place/Shastri+Nagar,+Ghaziabad,+Uttar+Pradesh/@28.67044,77.474447,14z/data=!4m6!3m5!1s0x390cf1f4ad5b59eb:0xd0e6b38805a9310b!8m2!3d28.6729014!4d77.4749378!16s%2Fg%2F1tf7kyhy?hl=en&entry=ttu";
-                        window.open(googleMapsUrl, "_blank");
-                      }
-                    </script>
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="fes4-box wow fadeIn">
+                  <h2 class="section-title">
+                    <span class="bold">FAQs</span>
+                  </h2>
+                </div>
+              </div>
+              </div>
+              <!-- FAQ Item 1 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                  <h4 class="panel-title">
+                 What services does Xceedesigns offer?
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Xceedesigns specializes in a wide range of services including website design and development, graphic design, branding, digital marketing, and more. We offer comprehensive solutions to meet your unique business needs.
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="cis-cont">
-                  <div class="cis-icon">
-                    <div class="icon icon-basic-mail"></div>
-                  </div>
-                  <div class="cis-text">
-                    <h3><span class="bold">EMAIL</span></h3>
-                    <p>
-                      <a href="mailto:info@xceedesigns.com"
-                        >xceedesigns@gmail.com</a
-                      >
-                    </p>
+              <!-- FAQ Item 2 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                  <h4 class="panel-title">
+                   How can I request a quote for my project?
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Requesting a quote is easy! Simply visit our website and fill out the contact form with your project details. Our team will review your requirements and get back to you with a personalized quote promptly.
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="cis-cont">
-                  <div class="cis-icon">
-                    <div class="icon icon-basic-smartphone"></div>
-                  </div>
-                  <div class="cis-text">
-                    <h3><span class="bold">CALL US</span></h3>
-                    <p onclick="redirectToDialer()" class="phone-number">
-                      +91 95829 95138
-                    </p>
-                    <script>
-                      function redirectToDialer() {
-                        var phoneNumber = "+919582995138"; // Change this to the desired phone number
-                        window.location.href = "tel:" + phoneNumber;
-                      }
-                    </script>
+              <!-- FAQ Item 3 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                  <h4 class="panel-title">
+                  Can you help me with website maintenance and updates?
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Absolutely! We provide ongoing website maintenance and support services to ensure your website stays up-to-date and secure. Whether you need content updates, software upgrades, or security patches, we've got you covered.
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+              <!-- FAQ Item 4 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                  <h4 class="panel-title">
+                    Do you offer responsive design for mobile devices?
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Yes, all our websites are built with responsive design in mind. This means your website will look great and function seamlessly on all devices, including smartphones, tablets, and desktops.
+                  </div>
+                </div>
+              </div>
+              <!-- FAQ Item 5 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                  <h4 class="panel-title">
+                     How long does it take to complete a project?
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Project timelines can vary depending on the scope and complexity of the project. We strive to deliver high-quality work in a timely manner. Once we have a better understanding of your requirements, we'll provide you with a project timeline.
+                  </div>
+                </div>
+              </div>
+              <!-- FAQ Item 6 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                  <h4 class="panel-title">
+                     Can I see examples of your previous work?
+                  </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Absolutely! We have a portfolio section on our website where you can view some of our past projects. Feel free to browse through our work and see the quality of our designs for yourself.
+                  </div>
+                </div>
+              </div>
+              <!-- FAQ Item 7 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                  <h4 class="panel-title">
+                    What payment methods do you accept?
+                  </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    We accept various payment methods including credit/debit cards, bank transfers, and PayPal. Our team will provide you with payment details once the project scope has been finalized.
+                  </div>
+                </div>
+              </div>
+              <!-- FAQ Item 8 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+                  <h4 class="panel-title">
+                    Will I have ownership of my website after it's completed?
+                  </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Yes, once the project is complete and payment has been received, you will have full ownership of your website. We'll provide you with all the necessary files and documentation to ensure a smooth transition.
+                  </div>
+                </div>
+              </div>
+              <!-- FAQ Item 9 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                  <h4 class="panel-title">
+                     Do you offer ongoing support after the project is finished?
+                  </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Absolutely! We offer ongoing support and maintenance plans to ensure your website continues to perform optimally. Whether you need technical assistance or have questions about your website, our team is here to help.
+                  </div>
+                </div>
+              </div>
+     
+
+        <div class="port-view-more-cont-dark">
+          <a class="port-view-more-dark" href="contact.html"
+            >LET'S WORK TOGETHER</a
+          >
         </div>
 
         <div class="page-section nl-cont">
@@ -487,43 +457,6 @@
           </div>
         </footer>
 
-        <!-- modal starts here -->
-
-        <div
-          class="modal fade"
-          id="myModal"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="myModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel">Modal Title</h5>
-                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button> -->
-              </div>
-              <div class="modal-body">
-                <p>Modal body text goes here.</p>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- modal ends here -->
-
         <p id="back-top">
           <a href="#top" title="Back to Top"
             ><span class="icon icon-arrows-up"></span
@@ -531,42 +464,6 @@
         </p>
       </div>
     </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const contactForm = document.getElementById("contact-form");
-
-        contactForm.addEventListener("submit", async function (event) {
-          event.preventDefault();
-
-          const response = await fetch(
-            "https://xceedesigns-backend.vercel.app/contact",
-            {
-              method: "POST",
-              body: JSON.stringify({
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                message: document.getElementById("message").value,
-              }),
-              headers: {
-                "Content-Type": "application/json",
-              },
-            }
-          );
-          const parsedResponse = await response.text();
-          const modalBody = document.querySelector(".modal-body");
-          const modalTitle = document.querySelector(".modal-title");
-          modalTitle.textContent = "XceeDesigns LLC.";
-          modalTitle.style.fontWeight = "bold";
-          modalBody.textContent =
-            "Thank you for contacting us. We'll get back to you soon!";
-          // modalBody.style.color = '#04aa6d';
-          $("#myModal").modal("show");
-          document.getElementById("contact-form").reset();
-          console.log(response.status);
-        });
-      });
-    </script>
 
     <script src="js/jquery-1.11.2.min.js"></script>
 
