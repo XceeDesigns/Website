@@ -46,6 +46,7 @@
 
     <!-- stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -271,7 +272,7 @@
 
             
             <!-- footer starts here -->
-            <footer class="page-section pt-80 pb-50">
+            <!-- <footer class="page-section pt-80 pb-50">
                 <div class="container">
                     <div class="row">
 
@@ -294,7 +295,128 @@
                     </div>
 
                 </div>
+            </footer> -->
+            <footer class="footer-section">
+                <div class="container">
+                    <div class="footer-cta pt-5 pb-5">
+                        <div class="row">
+                            <div class="col-xl-4 col-md-4 mb-30">
+                                <div class="single-cta">
+                                    <i class="fas fa-map-marker-alt" style="padding: 1rem;"></i>
+                                    <div class="cta-text">
+                                        <h4>Find us</h4>
+                                        <p onclick="redirectToGoogleMaps()" class="location">Ghaziabad, India</p>
+                                        <script>
+                                          function redirectToGoogleMaps() {
+                                            var googleMapsUrl = "https://www.google.com/maps/place/Shastri+Nagar,+Ghaziabad,+Uttar+Pradesh/@28.67044,77.474447,14z/data=!4m6!3m5!1s0x390cf1f4ad5b59eb:0xd0e6b38805a9310b!8m2!3d28.6729014!4d77.4749378!16s%2Fg%2F1tf7kyhy?hl=en&entry=ttu";
+                                            window.open(googleMapsUrl, "_blank");
+                                          }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-4 mb-30">
+                                <div class="single-cta">
+                                  <i class="fas fa-phone" style="padding: 1rem;"></i>
+                                    <div class="cta-text">
+                                        <h4>Call us</h4>
+                                        <p onclick="redirectToDialer()" class="phone-number">+91 95829 95138</p>
+                                        <script>
+                                          function redirectToDialer() {
+                                            var phoneNumber = "+919582995138"; // Change this to the desired phone number
+                                            window.location.href = "tel:" + phoneNumber;
+                                          }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-4 mb-30">
+                                <div class="single-cta">
+                                    <i class="far fa-envelope-open" style="padding:1rem "></i>
+                                    <div class="cis-text">
+                                      <h3><span class="bold" style="color: white;">EMAIL</span></h3>
+                                      <p><a href="mailto:info@haswell.com">xceedesigns@gmail.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-content pt-5 pb-5">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 mb-50">
+                                <div class="footer-widget">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="logo.png" class="img-fluid" alt="logo"></a>
+                                    </div>
+                                    <div class="footer-text">
+                                        <p>Empowering Tomorrow's Success, Today: Crafting Dynamic Websites, Delivering Seamless Online Solutions</p>
+                                    </div>
+                                    <div class="footer-social-icon">
+                                        <span>Follow us</span>
+                                        <a href="https://twitter.com/XceeDesigns" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        <a href="https://www.linkedin.com/company/xceeddesigns/?viewAsMember=true" title="LinkedIn+"
+                                        target="_blank"><i class="fa fa-linkedin"></i></a>
+                                      <a href="https://www.instagram.com/xceedesigns.official/" title="Dribbble" target="_blank"><i
+                                          class="fa fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                              <div class="footer-widget">
+                                    <div class="footer-widget-heading">
+                                        <h3>Useful Links</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="services.html">services</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="#">About us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                                <div class="footer-widget">
+                                    <div class="footer-widget-heading">
+                                        <h3>Subscribe</h3>
+                                    </div>
+                                    <div class="footer-text mb-25">
+                                        <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                    </div>
+                                    <div class="subscribe-form">
+                                        <form action="#">
+                                            <input type="text" placeholder="Email Address">
+                                            <button><i class="fab fa-telegram-plane"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                                <div class="copyright-text">
+                                    <p>Copyright &copy; 2024, All Right Reserved</a></p>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                                <div class="footer-menu">
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Terms</a></li>
+                                        <li><a href="#">Privacy</a></li>
+                                        <li><a href="#">Policy</a></li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </footer>
+            
             <!-- footer ends here -->
 
             <!-- modal starts here -->
