@@ -68,14 +68,21 @@
 
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700' rel='stylesheet'
     type='text/css'>
-
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <link rel="stylesheet" href="css/icons-fonts.css">
 
   <link rel="stylesheet" href="css/style.css">
 
+
   <link rel='stylesheet' href="css/animate.min.css">
   <!--== all the linked files ends here ==-->
-
+<link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -595,91 +602,133 @@
       </div>
     </div>
   </div>
-<!--============ CONTACT US========
-======================================-->
-  <div id="contact-link" class="page-section p-110-cont">
+
+  <!--==========footer============== contributed in gssoc2024-->
+
+  <footer class="footer-section">
     <div class="container">
-      <div class="row">
-
-        <div class="col-md-4 col-sm-6">
-          <div class="cis-cont">
-            <div class="cis-icon">
-              <div class="icon icon-basic-map"></div>
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt" style="padding: 1rem;"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <p onclick="redirectToGoogleMaps()" class="location">Ghaziabad, India</p>
+                            <script>
+                              function redirectToGoogleMaps() {
+                                var googleMapsUrl = "https://www.google.com/maps/place/Shastri+Nagar,+Ghaziabad,+Uttar+Pradesh/@28.67044,77.474447,14z/data=!4m6!3m5!1s0x390cf1f4ad5b59eb:0xd0e6b38805a9310b!8m2!3d28.6729014!4d77.4749378!16s%2Fg%2F1tf7kyhy?hl=en&entry=ttu";
+                                window.open(googleMapsUrl, "_blank");
+                              }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                      <i class="fas fa-phone" style="padding: 1rem;"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <p onclick="redirectToDialer()" class="phone-number">+91 95829 95138</p>
+                            <script>
+                              function redirectToDialer() {
+                                var phoneNumber = "+919582995138"; // Change this to the desired phone number
+                                window.location.href = "tel:" + phoneNumber;
+                              }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open" style="padding:1rem "></i>
+                        <div class="cis-text">
+                          <h3><span class="bold" style="color: white;">EMAIL</span></h3>
+                          <p><a href="mailto:info@haswell.com">xceedesigns@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="cis-text">
-              <h3><span class="bold">ADDRESS</span></h3>
-              <p onclick="redirectToGoogleMaps()" class="location">Ghaziabad, India</p>
-              <script>
-                function redirectToGoogleMaps() {
-                  var googleMapsUrl = "https://www.google.com/maps/place/Shastri+Nagar,+Ghaziabad,+Uttar+Pradesh/@28.67044,77.474447,14z/data=!4m6!3m5!1s0x390cf1f4ad5b59eb:0xd0e6b38805a9310b!8m2!3d28.6729014!4d77.4749378!16s%2Fg%2F1tf7kyhy?hl=en&entry=ttu";
-                  window.open(googleMapsUrl, "_blank");
-                }
-              </script>
-            </div>
-          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="cis-cont">
-            <div class="cis-icon">
-              <div class="icon icon-basic-mail"></div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="logo.png" class="img-fluid" alt="logo"></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Empowering Tomorrow's Success, Today: Crafting Dynamic Websites, Delivering Seamless Online Solutions</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="https://twitter.com/XceeDesigns" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/xceeddesigns/?viewAsMember=true" title="LinkedIn+"
+                            target="_blank"><i class="fa fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com/xceedesigns.official/" title="Dribbble" target="_blank"><i
+                              class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="services.html">services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="cis-text">
-              <h3><span class="bold">EMAIL</span></h3>
-              <p><a href="mailto:info@haswell.com">xceedesigns@gmail.com</a></p>
-            </div>
-          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="cis-cont">
-            <div class="cis-icon">
-              <div class="icon icon-basic-smartphone"></div>
-            </div>
-            <div class="cis-text">
-              <h3><span class="bold">CALL US</span></h3>
-              <p onclick="redirectToDialer()" class="phone-number">+91 95829 95138</p>
-              <script>
-                function redirectToDialer() {
-                  var phoneNumber = "+919582995138"; // Change this to the desired phone number
-                  window.location.href = "tel:" + phoneNumber;
-                }
-              </script>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
-  </div>
-
-  <!--========= FOOTER =========
-  =================================-->
-  <footer class="page-section pt-80 pb-50">
-    <div class="container">
-      <div class="row">
-
-      </div>
-
-      <div class="footer-2-copy-cont clearfix">
-        <div class="footer-2-soc-a right">
-          <a href="https://twitter.com/XceeDesigns" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/xceeddesigns/?viewAsMember=true" title="LinkedIn+"
-            target="_blank"><i class="fa fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/xceedesigns.official/" title="Dribbble" target="_blank"><i
-              class="fa fa-instagram"></i></a>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2024, All Right Reserved</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="left">
-          <a class="footer-2-copy" href="https://www.linkedin.com/company/xceeddesigns/?viewAsMember=true"
-            target="_blank">&copy; XceeDesigns 2024</a>
-        </div>
-
-
-      </div>
-
     </div>
-  </footer>
+</footer>
 
-  <!--==== Arrow to go up ====-->
+
+
+<!--==== Arrow to go up ====-->
   <p id="back-top">
     <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
   </p>
