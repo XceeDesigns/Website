@@ -335,6 +335,9 @@
                     >
                       Thanks, your message has been sent to us
                     </div>
+                    <div id="loader" class="loader" style="display: none;">
+                      <img src="images/loader.gif" alt="Loading..." />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -529,12 +532,13 @@
     </div>
 
     <script>
+      const loader = document.getElementById("loader");
       document.addEventListener("DOMContentLoaded", function () {
         const contactForm = document.getElementById("contact-form");
 
         contactForm.addEventListener("submit", async function (event) {
           event.preventDefault();
-
+          loader.style.display = "block";
           const response = await fetch(
             "https://xceedesigns-backend.vercel.app/contact",
             {
@@ -559,6 +563,7 @@
           // modalBody.style.color = '#04aa6d';
           $("#myModal").modal("show");
           document.getElementById("contact-form").reset();
+          loader.style.display = "none";
           console.log(response.status);
         });
       });
