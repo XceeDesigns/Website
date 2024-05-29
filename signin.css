@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-top: 100px;
+    margin-left: 180px;
+}
+  
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+
+.container{
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    height:500px;
+    width: 450px;
+    float: right;
+    margin-right: 300px;
+    border-radius: 20px;
+}
+.page{
+    text-align: center;
+    padding-top: 30px;
+    justify-content: center;
+}
+
+.last{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.last h4{
+    color: rgb(25, 14, 248);
+}
+.btn{
+    height: 40px;
+    width: 180px;
+    background-color: rgb(99, 199, 241);
+    border-radius: 29px;
+    text-align: center;
+    padding-top: 20px;
+    margin-left: 135px;
+    margin-bottom: 29px;
+    margin-top: 70px;
+}
+.btn:hover{
+    background-color: rgb(113, 232, 243);
+}
+.section{
+    display: flex;
+}
+.lost{
+    margin-left:140px;
+    color:rgb(0, 171, 228);
+}
+input{
+    height: 40px;
+    border-radius: 5px;
+    width: 350px;
+    border: none;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.box1{
+    margin-left: 50px;
+    justify-content: center;
+}
+.content{
+    margin-left: 50px;
+    justify-content: center;
+}
