@@ -334,10 +334,7 @@
                       id="contactSuccess"
                     >
                       Thanks, your message has been sent to us
-                    </div>
-                    <div id="loader" class="loader" style="display: none;">
-                      <img src="images/loader.gif" alt="Loading..." />
-                    </div>
+                    </div>          
                   </div>
                 </div>
               </div>
@@ -530,7 +527,18 @@
         </p>
       </div>
     </div>
-
+    <div class="loader"id="loader" style="display: none;">
+      <div class="dot-spinner">
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+        <div class="dot-spinner__dot"></div>
+    </div>
+    </div>
     <script>
       const loader = document.getElementById("loader");
       document.addEventListener("DOMContentLoaded", function () {
@@ -538,7 +546,7 @@
 
         contactForm.addEventListener("submit", async function (event) {
           event.preventDefault();
-          loader.style.display = "block";
+          loader.style.display = "flex";
           const response = await fetch(
             "https://xceedesigns-backend.vercel.app/contact",
             {
