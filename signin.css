@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    
 }
 
 .floating {  
@@ -20,7 +21,7 @@
 }
 
 .container{
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     height:500px;
     width: 450px;
     float: right;
@@ -44,7 +45,8 @@
 .btn{
     height: 40px;
     width: 180px;
-    background-color: rgb(99, 199, 241);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply; background-blend-mode: soft-light,screen;background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     border-radius: 29px;
     text-align: center;
     padding-top: 20px;
@@ -53,14 +55,19 @@
     margin-top: 70px;
 }
 .btn:hover{
-    background-color: rgb(113, 232, 243);
+    background-color: #DCD9D4;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+    background-blend-mode: soft-light,screen;
 }
 .section{
     display: flex;
 }
 .lost{
     margin-left:140px;
-    color:rgb(0, 171, 228);
+    color:rgb(14, 15, 15);
+}
+.lost:hover{
+    color:#979494;
 }
 input{
     height: 40px;
