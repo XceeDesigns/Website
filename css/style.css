@@ -11414,3 +11414,10 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
     opacity: 1;
   }
 }
+ /* responsive for loader in mobile  */
+@media screen and (max-width: 768px) {
+  .dot-spinner{
+    --uib-size: 4.5rem;
+    top: 22em;
+  }
+}
