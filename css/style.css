@@ -3017,10 +3017,23 @@ ul.contact-list li{
 
 /* #CONTACT FORM #NEW
 =====================================================*/
+.embed-responsive{
+  margin-top:9%;
+  margin-left:2%;
+  padding-bottom:79%;
+  
+}
 .contact-form-cont {
 	position: relative;
   max-width:550px;
   padding:80px 50px 30px 60px;
+  margin-top:8%;
+  border-radius:20px;
+  margin-left:6%;
+  margin-right:14%;
+  box-shadow:rgba(0,0,0,0.25) 0px 54px 55px,rgba(0,0,0,0.12) 0px -12px 30px,rgba(0,0,0,0.12) 0px 4px 6px,rgba(0,0,0,0.17) 0px 12px 13px,rgba(0,0,0,0.09) 0px -3px 5px;
+  background:linear-gradient(rgb(238, 237, 237),white,rgb(241, 241, 241));
+  margin-bottom:5%;
 }
 .contact-form-container-left {
 	position: relative;
