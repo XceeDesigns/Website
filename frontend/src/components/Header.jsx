@@ -6,7 +6,9 @@ import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import Nav from './Nav';
 import './App.css';
 
-function Header() {
+// filter brightness-0 invert
+
+function Header({filter}) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,12 +27,12 @@ function Header() {
   return (
     <>
       <div className='relative bg-transparent h-16 w-full  flex justify-between px-8 py-12 items-center z-[20] '>
-        <Logo />
+        <Logo filter={filter} />
         <div className='flex justify-between gap-4 px-4'>
-          <Nav className="hidden md:block" />
-          <IoIosSearch className='filter brightness-0 invert h-10 w-6 cursor-pointer' onClick={toggleSearch} />
+          <Nav textColor={'text-black'} className="hidden md:block" />
+          <IoIosSearch className={`${filter} h-10 w-6 cursor-pointer`} onClick={toggleSearch} />
           <RxHamburgerMenu
-            className={`filter brightness-0 invert h-10 w-6 md:hidden cursor-pointer`}
+            className={`${filter} h-10 w-6 md:hidden cursor-pointer`}
             onClick={toggleMenu}
           />
         </div>
