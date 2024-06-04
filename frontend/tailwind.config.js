@@ -12,6 +12,16 @@ export default {
       fontFamily: {
         sans: ['Raleway', 'sans-serif'],
       },
+      fontSize: {
+        'xxs': '0.625rem', // 10px
+        'xxxs': '0.5rem',  // 8px
+        // Add more custom sizes as needed
+      } , 
+      spacing: {
+        '128': '32rem',  // Adding a custom spacing value of 32rem (512px)
+        '144': '36rem',  // Adding a custom spacing value of 36rem (576px)
+      }
+      ,
       keyframes: {
         slideDown: {
           '0%': { transform: 'translateY(-100%)' },
