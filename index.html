@@ -77,6 +77,217 @@
 
   <link rel='stylesheet' href="css/animate.min.css">
   <!--== all the linked files ends here ==-->
+  <style>
+    .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100px;
+  padding: 15px 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.nav,
+.nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  justify-content: space-between;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav .logo {
+  width:100px;
+  color:white;
+  margin-top:0px;
+}
+.nav .nav-links {
+  column-gap: 50px;
+  list-style: none;
+}
+.nav .nav-links a {
+  transition: all 0.2s linear;
+}
+.nav.openSearch .nav-links a {
+  opacity: 0;
+  pointer-events: none;
+}
+.nav .search-icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav .search-box {
+  position: absolute;
+  right: 250px;
+  height: 45px;
+  max-width: 555px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s linear;
+}
+.nav.openSearch .search-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box .search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  left: 15px;
+  color: black;
+  transform: translateY(-50%);
+}
+.search-box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 0 15px 0 45px;
+}
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+  display: none;
+}
+.nav .logo {
+    margin-left: -40%; /* Adjust the left margin of the logo */
+}
+/* responsive */
+@media screen and (max-width: 1160px) {
+  .nav {
+    padding: 15px 100px;
+  }
+  .nav .search-box {
+    right: 150px;
+  }
+  .nav .logo {
+    margin-left: -15%; /* Adjust the left margin of the logo */
+}
+}
+@media screen and (max-width: 950px) {
+  .nav {
+    padding: 15px 50px;
+  }
+  .nav .search-box {
+    right: 100px;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: block;
+  }
+  .nav {
+    padding: 15px 20px;
+  }
+  .nav .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    max-width: 280px;
+    width: 100%;
+    padding-top: 100px;
+    row-gap: 10px;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    z-index: 100;
+    color:black;
+  }
+  .nav-links a{
+    color:black;
+  }
+  .nav.openNav .nav-links {
+    left: 0;
+  }
+  .nav .navOpenBtn {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left:-100px;
+  }
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .search-box {
+    top: calc(100% + 10px);
+    max-width: calc(100% - 20px);
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .nav .logo{
+    margin-right:50%;
+  }
+
+}
+@media screen and (max-width: 520px)
+{
+  .nav .logo{
+    margin-left: -40px;
+    margin-right:0%;
+  }
+  .nav .navOpenBtn{
+    margin-left: -15%;
+  }
+}
+.nav {
+    z-index: 2000; /* Ensure the navbar is on top */
+    position: fixed; /* Fix the navbar position */
+    width: 100%; /* Ensure the navbar spans the entire width */
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Adjust this value as needed */
+    transform: translateY(-50%);
+    z-index: 2; /* Ensure the search icon is above the input field */
+}
+
+input[type="text"] {
+    padding-right: 30px; /* Adjust this value to leave space for the search icon */
+}
+.nav {
+    background-color: transparent; /* Make the navbar transparent */
+}
+
+
+.nav-links li {
+    font-size: 20px; /* Increase the font size of the list items */
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#index-link{
+  top:-25px;
+}
+.logo .logo-color-change {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+  </style>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
 
 </head>
 
@@ -88,87 +299,48 @@
 
   <div id="wrap" class="boxed ">
     <div class="grey-bg">
-
-
-      <div class="header-transporent-bg-black">
-
-          <!--==========navigation bar===============
-          =======================================-->
-        <header id="nav" class="header header-1 header-black-white affix-on-mobile">
-          <div class="header-wrapper">
-            <div class="container-m-30 clearfix">
-              <div class="logo-row">
-
-                <div class="logo-container-2">
-                  <div class="logo-2">
-                    <a href="contact-dashboard.html" class="clearfix">
-                      <img src="images/logo-new.png" class="logo-img logo-color-change" alt="Logo">
-                    </a>
-                  </div>
-                </div>
-                <div class="menu-btn-respons-container">
-                  <button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse"
-                    data-target="#main-menu .navbar-collapse">
-                    <span aria-hidden="true" class="icon_menu hamb-mob-icon"></span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="main-menu-container">
-
-              <div class="container-m-30 clearfix">
-
-                <div id="main-menu">
-                  <div class="navbar navbar-default" role="navigation">
-
-                    <nav class="collapse collapsing navbar-collapse right-1024">
-                      <ul class="nav navbar-nav">
-
-                        <li class="parent">
-                          <a href="index.html">
-                            <div class="main-menu-title">HOME</div>
-                          </a>
-                        </li>
-
-                        <li class="parent">
-                          <a href="services.html">
-                            <div class="main-menu-title">SERVICES</div>
-                          </a>
-                        </li>
-
-                        <li id="menu-contact-info-big" class="parent megamenu">
-                          <a href="contact.html">
-                            <div class="main-menu-title">CONTACT</div>
-                          </a>
-                        </li>
-
-                      </ul>
-
-                    </nav>
-
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <ul class="cd-header-buttons">
-              <li><a class="cd-search-trigger" href="#cd-search"><span></span></a></li>
-            </ul>
-
-            <!--==== search bar inside the navbar ===-->
-            <div id="cd-search" class="cd-search">
-              <form class="form-search" id="searchForm">
-                <input type="text" value="" name="q" id="q" placeholder="Search...">
-              </form>
-            </div>
-
+        <nav class="nav">
+          <i class="uil uil-bars navOpenBtn"></i>
+          <a href="contact-dashboard.html" class="logo">
+            <img src="images/logo-new.png" class="logo logo-color-change" alt="Logo">
+          </a>
+          <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="index.html">ABOUT US</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+          <i class="uil uil-search search-icon" id="searchIcon"></i>
+          <div class="search-box">
+            <i class="uil uil-search search-icon"></i>
+            <input type="text" placeholder="Search here..." />
           </div>
-        <!-- ======== navigation bar ends ==========-->
-        </header>
+        </nav>
+        <script>
+          const nav = document.querySelector(".nav"),
+  searchIcon = document.querySelector("#searchIcon"),
+  navOpenBtn = document.querySelector(".navOpenBtn"),
+  navCloseBtn = document.querySelector(".navCloseBtn");
 
+searchIcon.addEventListener("click", () => {
+  nav.classList.toggle("openSearch");
+  nav.classList.remove("openNav");
+  if (nav.classList.contains("openSearch")) {
+    return searchIcon.classList.replace("uil-search", "uil-times");
+  }
+  searchIcon.classList.replace("uil-times", "uil-search");
+});
+
+navOpenBtn.addEventListener("click", () => {
+  nav.classList.add("openNav");
+  nav.classList.remove("openSearch");
+  searchIcon.classList.replace("uil-times", "uil-search");
+});
+navCloseBtn.addEventListener("click", () => {
+  nav.classList.remove("openNav");
+});
+          </script>
         <!--======= HOME PAGE  ======
         ===================================-->
         <div id="index-link" class="relative">
