@@ -1109,6 +1109,12 @@ support for no js
   .right-50{
     right:50%;
   }
+  .left-40{
+    left:40%;
+  }
+  .right-40{
+    right:40%;
+  }
 }
 .fes2-main-text-cont {
   margin: 0 auto;
@@ -1119,20 +1125,14 @@ support for no js
 	margin-top:30px;
 }
 .fes2-img {
-  background: url(../images/responsive.png) 50% 50% no-repeat;
-  z-index: 1000;
-  
-  width: 80%;
-  display: block;	
-  position: relative;
+  background: url(../images/responsive.png) no-repeat center center;
   background-size: cover;
-     
-  -webkit-box-sizing: border-box;
+  width: 80%;
+  height: 100%; /* Ensure the element has a height */
+  display: block;
+  position: relative;
   box-sizing: border-box;
   overflow: hidden;
-
-  background-repeat: no-repeat;
-  background-position: center center;
   /* Animation properties */
   animation: slideInFromRight 1s ease-out forwards;
 }
@@ -1153,20 +1153,14 @@ support for no js
 	font-weight: 300;
 }
 .fes3-img {
-  background: url(../images/performance-01.png) 50% 50% no-repeat;
+  background: url(../images/performance-01.png) no-repeat center center;
   background-size: cover;
-  z-index: 10000;
-  align-items: center;
   width: 80%;
-  display: block;	
+  height: 100%; /* Ensure the element has a height */
+  display: block;
   position: relative;
-  background-size: cover;
-     
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: center center;
   animation: slideInFromLeft 1s ease-out forwards;
 }
 
@@ -11136,6 +11130,14 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 	box-shadow: 0 5px 15px rgba(0,0,0,.35);
 	border-radius: 7px;
 }
+.row-2{
+  margin-right: 0px;
+  margin-left: 100px;
+}
+.row-1{
+  margin-right: 100px;
+  margin-left:0px;
+}
 @media screen and (max-width: 414px) and (orientation:portrait),screen and (max-width:736px) and (orientation:landscape) {
 	.cookiealert {
 		bottom: 0;
@@ -11293,6 +11295,8 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 /* #1.25
 ***************************************************/
 .equal-height {
+  display: flex;
+  justify-content: space-between;
   height:473px;
 }
 @media only screen and (max-width: 768px){
