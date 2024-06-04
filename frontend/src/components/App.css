@@ -9,3 +9,10 @@
   opacity: 0;
   transition: height 0.5s ease, opacity 0.5s ease;
 }
+
+.raleway{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
