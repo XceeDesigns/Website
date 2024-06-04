@@ -1119,9 +1119,10 @@ support for no js
 	margin-top:30px;
 }
 .fes2-img {
-  background: url(../images/fes2.jpg) 50% 50% no-repeat;
+  background: url(../images/responsive.png) 50% 50% no-repeat;
+  z-index: 1000;
   
-  width: 100%;
+  width: 80%;
   display: block;	
   position: relative;
   background-size: cover;
@@ -1152,10 +1153,11 @@ support for no js
 	font-weight: 300;
 }
 .fes3-img {
-  background: url(../images/fes3.webp) 50% 50% no-repeat;
+  background: url(../images/performance-01.png) 50% 50% no-repeat;
   background-size: cover;
-  
-  width: 100%;
+  z-index: 10000;
+  align-items: center;
+  width: 80%;
   display: block;	
   position: relative;
   background-size: cover;
