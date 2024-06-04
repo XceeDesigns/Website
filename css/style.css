@@ -2651,7 +2651,11 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
 	text-align:center;
 	padding-top: 45px;
 }
-
+@media (max-width: 767px) {
+  .mr-mobile {
+    margin-right: 40px;
+  }
+}
 /* #STATICK MEDIA #NEW
 =====================================================*/
 .sm-img-bg {
