@@ -2872,6 +2872,54 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   font-weight: 400;
   text-transform:uppercase;
 }
+.fes2-img {
+  background: url(../images/fes2.jpg) 50% 50% no-repeat;
+  
+  width: 100%;
+  display: block;	
+  position: relative;
+  background-size: cover;
+     
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* Animation properties */
+  animation: slideInFromRight 1s ease-out forwards;
+}
+.fes-services-img {
+  background: url(../images/services1.jpg) 50% 50% no-repeat;
+  width: 100%;
+  display: block;	
+  position: relative;
+  background-size: cover;
+     object-fit: contain;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+background-position: center center;
+  background-repeat: no-repeat;
+  /* Animation properties */
+  animation: slideInFromRight 1s ease-out forwards;
+}
+.fes-vision-img {
+  background: url(../images/Mission-removebg-preview.jpg) 45% 45% no-repeat;
+  background-position: center center;
+  width: 100%;
+  display: block;	
+  position: relative;
+  background-size: cover;
+     
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  /* Animation properties */
+  animation: slideInFromRight 1s ease-out forwards;
+}
 .page-title-font-big {
   margin-bottom:0px;
   font-size: 40px;
