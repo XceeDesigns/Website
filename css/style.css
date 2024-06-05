@@ -1136,7 +1136,37 @@ support for no js
   /* Animation properties */
   animation: slideInFromRight 1s ease-out forwards;
 }
+.fes-services-img {
+  background: url(../images/services1.jpg) 50% 50% no-repeat;
+  width: 100%;
+  display: block;	
+  position: relative;
+  background-size: cover;
+     object-fit: contain;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+background-position: center center;
+  background-repeat: no-repeat;
+  /* Animation properties */
+  animation: slideInFromRight 1s ease-out forwards;
+}
+.fes-vision-img {
+  background: url(../images/Mission-removebg-preview.jpg) 50% 50% no-repeat;
+  background-position: center center;
+  width: 100%;
+  display: block;	
+  position: relative;
+  background-size: cover;
+     
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
 
+  background-repeat: no-repeat;
+  /* Animation properties */
+  animation: slideInFromRight 1s ease-out forwards;
+}
 @keyframes slideInFromRight {
   from {
     transform: translateX(100%);

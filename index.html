@@ -142,7 +142,7 @@
                             <div class="main-menu-title">CONTACT</div>
                           </a>
                         </li>
-
+                        
                       </ul>
 
                     </nav>
@@ -155,17 +155,18 @@
             </div>
 
             <ul class="cd-header-buttons">
-              <li><a class="cd-search-trigger" href="#cd-search"><span></span></a></li>
+              <li id="showSearch"><a  class="cd-search-trigger" href="#cd-search"><span></span></a></li>
             </ul>
 
             <!--==== search bar inside the navbar ===-->
             <div id="cd-search" class="cd-search">
               <form class="form-search" id="searchForm">
-                <input type="text" value="" name="q" id="q" placeholder="Search...">
+                <input type="text" value="" name="q" id="q"  placeholder="Search..." >
               </form>
             </div>
 
           </div>
+        
         <!-- ======== navigation bar ends ==========-->
         </header>
 
@@ -702,6 +703,15 @@
   </div>
   </div>
   <!-- ========== script starts here =========-->
+  <script>
+    document.getElementById('showSearch').addEventListener('click', function() {
+      // Show the hidden section          
+      var input = document.getElementById('q');
+      input.focus();
+    });
+  </script>
+
+
   <script src="js/jquery-1.11.2.min.js"></script>
 
   <script src="js/bootstrap.min.js"></script>
