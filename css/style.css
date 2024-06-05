@@ -1109,6 +1109,12 @@ support for no js
   .right-50{
     right:50%;
   }
+  .left-40{
+    left:40%;
+  }
+  .right-40{
+    right:40%;
+  }
 }
 .fes2-main-text-cont {
   margin: 0 auto;
@@ -1119,19 +1125,14 @@ support for no js
 	margin-top:30px;
 }
 .fes2-img {
-  background: url(../images/fes2.jpg) 50% 50% no-repeat;
-  
-  width: 100%;
-  display: block;	
-  position: relative;
+  background: url(../images/responsive.png) no-repeat center center;
   background-size: cover;
-     
-  -webkit-box-sizing: border-box;
+  width: 80%;
+  height: 100%; /* Ensure the element has a height */
+  display: block;
+  position: relative;
   box-sizing: border-box;
   overflow: hidden;
-
-  background-repeat: no-repeat;
-  background-position: center center;
   /* Animation properties */
   animation: slideInFromRight 1s ease-out forwards;
 }
@@ -1182,19 +1183,14 @@ background-position: center center;
 	font-weight: 300;
 }
 .fes3-img {
-  background: url(../images/fes3.webp) 50% 50% no-repeat;
+  background: url(../images/performance-01.png) no-repeat center center;
   background-size: cover;
-  
-  width: 100%;
-  display: block;	
+  width: 80%;
+  height: 100%; /* Ensure the element has a height */
+  display: block;
   position: relative;
-  background-size: cover;
-     
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: center center;
   animation: slideInFromLeft 1s ease-out forwards;
 }
 
@@ -1281,6 +1277,7 @@ background-position: center center;
 .p-140-cont{ padding-top:140px; padding-bottom:140px;}
 .pt-110-cont{ padding-top:110px;}
 .pt-100-cont{ padding-top:100px;}
+.pt-50-b-50-cont { padding-top:50px; padding-bottom:50px;}
 .pt-80-b-50-cont { padding-top:80px; padding-bottom:50px;}
 .pt-100-b-80-cont { padding-top:100px; padding-bottom:80px;}
 .pt-110-b-80-cont { padding-top:110px; padding-bottom:80px;}
@@ -2681,7 +2678,11 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
 	text-align:center;
 	padding-top: 45px;
 }
-
+@media (max-width: 980px) {
+  .mr-mobile {
+    margin-right: 40px;
+  }
+}
 /* #STATICK MEDIA #NEW
 =====================================================*/
 .sm-img-bg {
@@ -11159,6 +11160,14 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 	box-shadow: 0 5px 15px rgba(0,0,0,.35);
 	border-radius: 7px;
 }
+.row-2{
+  margin-right: 0px;
+  margin-left: 100px;
+}
+.row-1{
+  margin-right: 100px;
+  margin-left:0px;
+}
 @media screen and (max-width: 414px) and (orientation:portrait),screen and (max-width:736px) and (orientation:landscape) {
 	.cookiealert {
 		bottom: 0;
@@ -11316,6 +11325,8 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 /* #1.25
 ***************************************************/
 .equal-height {
+  display: flex;
+  justify-content: space-between;
   height:473px;
 }
 @media only screen and (max-width: 768px){
