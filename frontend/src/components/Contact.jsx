@@ -10,7 +10,7 @@ import Footer from './Footer';
 function Contact() {
   return (
     <div className='w-full'>
-      {/* <Header filter={""}></Header> */}
+      <Header filter={""}></Header>
       <div className='bg-gray-100 flex flex-col gap-6 md:flex-row px-6 py-10 md:items-center md:justify-around md:py-20 md:px-8'>
         <div className='flex flex-col gap-2'>
           <h1 className='text-2xl font-normal text-black raleway tracking-widest'>CONTACT</h1>
