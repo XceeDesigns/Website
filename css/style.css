@@ -248,6 +248,7 @@ margin: 0;
 padding: 0;
 border: 0;
 outline: 0;
+cursor: none;
 }
 :focus {
 outline: 0;
@@ -11431,4 +11432,17 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
     --uib-size: 4.5rem;
     top: 22em;
   }
+}
+
+.custom-cursor{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: grey;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  z-index: 999999;
+  transform: translateX(0) translateY(0) ;
+  transition: transform 0.1s;
 }

@@ -81,6 +81,10 @@
 </head>
 
 <body>
+<!--============ Custom Cursor================-->
+
+<div class="custom-cursor"></div>
+
 <!--============ loader================-->
   <div id="loader-overflow">
     <div id="loader3">Please enable JS</div>
@@ -891,6 +895,16 @@
       var input = document.getElementById('q');
       input.focus();
     });
+
+    //<!--=== Custom Cursor ===-->
+    let body = document.getElementsByTagName('body')[0];
+    let mouse = document.getElementsByClassName('custom-cursor')[0];
+    body.addEventListener('mousemove', function(e)
+    {
+      mouse.style.transform = `translateX(${e.clientX}px)
+                               translateY(${e.clientY}px)`
+    });
+
   </script>
 <!--=== script ends here ===-->
 
