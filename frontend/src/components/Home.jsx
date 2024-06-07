@@ -3,9 +3,11 @@ import Header from './Header'
 
 function Home() {
   return (
-    <div>
-    <Header filter={""}/>
-    <div className='text-white'>Home</div>
+    <div className='w-full'>
+   <Header filter={""} background={"bg-white"}></Header>
+   <div className='text-black font-bold'>
+    HOME
+   </div>
     </div>
   )
 }

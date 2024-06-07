@@ -20,6 +20,12 @@ export default {
       spacing: {
         '128': '32rem',  // Adding a custom spacing value of 32rem (512px)
         '144': '36rem',  // Adding a custom spacing value of 36rem (576px)
+      } , 
+      height: {
+        '126': '31.5rem', // Customize as needed
+        '144': '36rem',
+         '150': '42rem' // Customize as needed
+        // Add more custom heights if needed
       }
       ,
       keyframes: {

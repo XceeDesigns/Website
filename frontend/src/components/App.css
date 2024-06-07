@@ -20,4 +20,8 @@
 .xxs{
   font-size: 6px/* 12px */;
   line-height: 12px/* 16px */;
+}/* App.css */
+.header {
+  transition: height 0.3s ease, padding 0.3s ease;
 }
+
