@@ -11433,16 +11433,14 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
     top: 22em;
   }
 }
+/* <<<<<<< Custom Cursor >>>>>>> */
 
-.custom-cursor{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background-color: grey;
-  height: 35px;
-  width: 35px;
+.dot {
+  width: 30px;
+  height: 30px;
+  background: rgb(194, 194, 194);
+  position:fixed;
   border-radius: 50%;
-  z-index: 999999;
-  transform: translateX(0) translateY(0) ;
-  transition: transform 0.1s;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 }
