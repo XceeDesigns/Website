@@ -11432,3 +11432,149 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
     top: 22em;
   }
 }
+
+/* footer section start */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  background: #fff;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: poppins;
+}
+#footer {
+  background: #fff;
+  color: #000;
+  padding: 3rem;
+  padding-top: 7rem;
+  padding-bottom: 80px;
+  background-image: none; 
+}
+#footer2 {
+  background: #fff;
+  color: #000;
+  padding: 3rem;
+  margin-top: 0px;
+  padding-top: 7rem;
+  padding-bottom: 80px;
+  background-image: url(../images/work-proc-bg.jpg); 
+}
+.logo-footer {
+  max-width: 300px; 
+}
+
+.social-links h2 {
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+.social-links img {
+  padding-bottom: 25px;
+}
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #777;
+}
+.social-icons a {
+  color: #777;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #000;
+}
+.social-icons a i {
+  box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+  color: #000;
+  font-size: 16px;
+  margin-right: 12px;
+}
+li {
+  list-style: none;
+}
+.useful-link h2 {
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+.useful-link img {
+  padding-bottom: 15px;
+}
+.use-links {
+  line-height: 32px;
+}
+.use-links li i {
+  font-size: 14px;
+  padding-right: 8px;
+  color: #777;
+}
+.use-links li a {
+  color: #777;
+  font-size: 15px;
+  font-weight: 500;
+}
+.use-links li a:hover {
+  color: #000;
+}
+.address h2 {
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+.address img {
+  padding-bottom: 15px;
+}
+.address-links li a {
+  color: #777;
+  font-size: 15px;
+  font-weight: 500;
+}
+.address-links li a:hover {
+  color: #000;
+}
+.address-links li i {
+  font-size: 16px;
+  padding-right: 8px;
+  color: #000;
+}
+.address-links li i:nth-child(1) {
+  padding-top: 9px;
+}
+.address-links .address1 {
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  color: #777;
+}
+.address-links {
+  line-height: 32px;
+  color: #777;
+}
+.copy-right-sec {
+  padding: 1.8rem;
+  background-image: url(../images/work-proc-bg.jpg);
+  color: #fff;
+  text-align: center;
+}
+.copy-right-sec a {
+  color: #fcd462;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+}
+
+/* footer section end */
