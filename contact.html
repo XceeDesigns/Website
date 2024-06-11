@@ -294,7 +294,10 @@
                             id="email"
                             placeholder="EMAIL"
                             required
-                          />
+                            type="email" class="form-control" id="email" name="email" placeholder="EMAIL" required
+                        pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" 
+                          title="Please enter a valid Gmail address (example: yourname@gmail.com)">
+                        
                         </div>
                       </div>
 
@@ -307,9 +310,13 @@
                             class="controled"
                             name="message"
                             id="message"
-                            placeholder="MESSAGE"
+                            placeholder= "MESSAGE"
+                          
                             required
-                          ></textarea>
+                             class="form-control" id="message" name="message" placeholder="MESSAGE" required
+                              minlength="50" 
+                            title="Message must be at least 50 characters long">
+                          </textarea>
                         </div>
                       </div>
 
