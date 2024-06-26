@@ -71,14 +71,17 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="font-6/css/all.css">
-  
 
+  
+  <link rel="stylesheet" href="css/progressBar.css">
   <link rel='stylesheet' href="css/animate.min.css">
   <!--== all the linked files ends here ==-->
 
 </head>
 
 <body>
+
+
 <!--============ loader================-->
   <div id="loader-overflow">
     <div id="loader3">Please enable JS</div>
@@ -892,6 +895,17 @@
       input.focus();
     });
   </script>
+
+<div id="progressBar"></div>
+<script>
+  window.onscroll = function () {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  };
+</script>
+
 <!--=== script ends here ===-->
 
 
