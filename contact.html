@@ -602,34 +602,37 @@
     
         const form = event.target;
         const email = document.getElementById("mce-EMAIL").value;
-        const url = form.action;
-        
-        if (email) {
-          const data = new FormData(form);
+        const url = new URL(form.action);
     
-          fetch(url, {
-            method: 'POST',
-            body: data,
-            headers: {
-              'Accept': 'application/json'
-            }
-          })
-          .then(response => response.json())
-          .then(data => {
+        if (email) {
+          const params = new URLSearchParams(new FormData(form)).toString();
+          const script = document.createElement('script');
+          script.src = `${url}&${params}`;
+    
+          script.onload = function() {
+            document.head.removeChild(script);
+          };
+    
+          script.onerror = function() {
+            document.getElementById("notification_container").innerHTML = '<div class="alert alert-danger">Could not connect to the server. Please try later.</div>';
+            document.head.removeChild(script);
+          };
+    
+          document.head.appendChild(script);
+    
+          window['mcCallback'] = function(response) {
             const notificationContainer = document.getElementById("notification_container");
-            if (data.result === "success") {
+            if (response.result === "success") {
               notificationContainer.innerHTML = '<div class="alert alert-success">Thank you for subscribing!</div>';
             } else {
               notificationContainer.innerHTML = '<div class="alert alert-danger">Subscription failed. Please try again later.</div>';
             }
             form.reset();
-          })
-          .catch(error => {
-            document.getElementById("notification_container").innerHTML = '<div class="alert alert-danger">Could not connect to the server. Please try later.</div>';
-          });
+          };
         }
       });
     </script>
+    
     
   </body>
 </html>
