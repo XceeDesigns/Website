@@ -775,8 +775,50 @@ function initPageSliders(){
 					scrollPerPage : false,
 			 
 			  });
-
-        // CAROUSEL CLIENTS NAV NO AUTO PLAY
+     
+        window.botpressWebChat.init({
+          "composerPlaceholder": "Chat with XceeDesigns",
+          "botConversationDescription": "Happy to solve your queries!!",
+          "botId": "32bf3b66-9057-4f5d-ba01-52f2be970135",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "32bf3b66-9057-4f5d-ba01-52f2be970135",
+          "webhookId": "37cac2fa-4263-478b-b1a1-a4b0e87a1b1d",
+          "lazySocket": true,
+          "themeName": "prism",
+          "botName": "XceeDesigns",
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/86807226-f5c0-4019-94e8-f7b5898925e5/v59439/style.css",
+          "frontendVersion": "v1",
+          "useSessionStorage": true,
+          "enableConversationDeletion": true,
+          "theme": "prism",
+          "themeColor": "#2563eb",
+          "allowedOrigins": [],
+          "mode": "pop_left"
+        });    
+    
+    function injectCustomStyles() {
+      const iframe = document.querySelector('iframe[id^="bp-widget"]');
+      if (iframe) {
+          const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+          const linkElement = iframeDocument.createElement('link');
+          linkElement.rel = 'stylesheet';
+          linkElement.href = 'chatbot-custom.css'; // Path to your custom CSS file
+          iframeDocument.head.appendChild(linkElement);
+      } else {
+          setTimeout(injectCustomStyles, 100); // Retry after a delay if the iframe is not found
+      }
+  }
+  
+  // Wait for the chatbot to load and then inject the custom styles
+  window.addEventListener('message', function(event) {
+      if (event.data && event.data.name === 'webchatLoaded') {
+          injectCustomStyles();
+      }
+  });
+        
+  
+  // CAROUSEL CLIENTS NAV NO AUTO PLAY
 			  $(".owl-clients-nav").owlCarousel({
 			 
 				  //Set AutoPlay to 3 seconds
