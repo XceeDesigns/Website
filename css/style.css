@@ -6458,7 +6458,7 @@ a:hover, a:focus {
 #back-top {
 	position: fixed;
 	bottom: 25px;
-  right: 25px;
+  left: 25px;
 	padding:0;
 	margin:0;
 	z-index: 1000;
