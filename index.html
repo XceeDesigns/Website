@@ -71,9 +71,22 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="font-6/css/all.css">
-  
+
 
   <link rel='stylesheet' href="css/animate.min.css">
+
+<!--  Smmooth Scrolling -->
+  <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  </script>
   <!--== all the linked files ends here ==-->
 
 </head>
@@ -679,13 +692,13 @@
         <div class="left">
 
           <div class="footer-2-copy">
-          <p class="copyright">&copy; XceeDesigns 
+          <p class="copyright">&copy; XceeDesigns
             <script>
                 document.write(new Date().getFullYear());
             </script>| All rights reserved
           </p>
           </div>
-          
+
         </div>
 
       </div>
@@ -887,7 +900,7 @@
   </script>
    <script>
     document.getElementById('showSearch').addEventListener('click', function() {
-      // Show the hidden section          
+      // Show the hidden section
       var input = document.getElementById('q');
       input.focus();
     });
