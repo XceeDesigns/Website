@@ -244,8 +244,8 @@ if it's not present, don't show loader */
 /* #CSS RESET
  ===================================================================*/
 html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td {
-margin: 0;
-padding: 0;
+margin: 50;
+padding: 50;
 border: 0;
 outline: 0;
 }
@@ -753,6 +753,12 @@ support for no js
   display: block;
   position: relative;
   overflow: hidden;
+}
+
+.chatbot-container {
+  position: relative;
+  width:auto;
+  color: #0C0;
 }
 /******   CAPTIONS   ******/
 .tp-caption.dark-light-32 {
@@ -6452,7 +6458,7 @@ a:hover, a:focus {
 #back-top {
 	position: fixed;
 	bottom: 25px;
-  right: 25px;
+  left: 25px;
 	padding:0;
 	margin:0;
 	z-index: 1000;

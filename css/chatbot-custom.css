@@ -1,0 +1,35 @@
+/* Example custom styles for the chatbot */
+#bp-web-widget {
+    border: 2px solid #2563eb; /* Example border style */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example shadow */
+    overflow: hidden;
+}
+
+/* Additional styles can target internal elements */
+.bp-chat-container {
+    background-color: #f0f0f0; /* Change background color */
+    color: #333; /* Change text color */
+}
+
+/* Customize the chat header */
+.bp-header {
+    background-color: #eb2553; /* Header background color */
+    color: white; /* Header text color */
+}
+
+/* Customize the chat input area */
+.bp-composer {
+    background-color: #fff; /* Input background color */
+    border-top: 1px solid #ddd; /* Input border */
+}
+
+/* Customize the chat bubbles */
+.bp-message.incoming .bp-bubble {
+    background-color: #e0e0e0; /* Incoming message bubble color */
+}
+
+.bp-message.outgoing .bp-bubble {
+    background-color: #70093a; /* Outgoing message bubble color */
+    color: white; /* Outgoing message text color */
+}
