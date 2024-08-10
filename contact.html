@@ -420,45 +420,45 @@
             <div class="relative">
               <div id="mc_embed_signup" class="nl-form-container clearfix">
                 <form
-                  action="http://abcgomel.us9.list-manage.com/subscribe/post-json?u=ba37086d08bdc9f56f3592af0&amp;id=e38247f7cc&amp;c=?"
-                  method="post"
-                  id="mc-embedded-subscribe-form"
-                  name="mc-embedded-subscribe-form"
-                  class="newsletterform validate"
-                  target="_blank"
-                  novalidate
-                >
-                  <input
-                    type="email"
-                    value=""
-                    name="EMAIL"
-                    class="email nl-email-input"
-                    id="mce-EMAIL"
-                    placeholder="Enter your email"
-                    required
-                  />
-                  <div style="position: absolute; left: -5000px">
-                    <input
-                      type="text"
-                      name="b_ba37086d08bdc9f56f3592af0_e38247f7cc"
-                      tabindex="-1"
-                      value=""
-                    />
-                  </div>
-
-                  <input
-                    type="submit"
-                    value="SUBSCRIBE"
-                    name="subscribe"
-                    id="mc-embedded-subscribe"
-                    class="button medium gray"
-                  />
-                </form>
-                <div id="notification_container"></div>
+              id="subscribe-form"
+              action="http://abcgomel.us9.list-manage.com/subscribe/post-json?u=ba37086d08bdc9f56f3592af0&amp;id=e38247f7cc&amp;c=?"
+              method="post"
+              name="mc-embedded-subscribe-form"
+              class="newsletterform validate"
+              target="_blank"
+              novalidate>
+              <input
+                type="email"
+                value=""
+                name="EMAIL"
+                class="email nl-email-input"
+                id="mce-EMAIL"
+                placeholder="Enter your email"
+                required
+              />
+              <div style="position: absolute; left: -5000px">
+                <input
+                  type="text"
+                  name="b_ba37086d08bdc9f56f3592af0_e38247f7cc"
+                  tabindex="-1"
+                  value=""
+                />
               </div>
-            </div>
-          </div>
-        </div>
+
+              <input
+                type="submit"
+                value="SUBSCRIBE"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                class="button medium gray"
+              />
+            </form>
+            <div id="notification_container"></div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
         <footer class="page-section pt-80 pb-50">
           <div class="container">
@@ -613,5 +613,44 @@
     <script src="js/owl.carousel.min.js"></script>
 
     <script src="js/main.js"></script>
+
+    <script>
+      document.getElementById("subscribe-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        const form = event.target;
+        const email = document.getElementById("mce-EMAIL").value;
+        const url = new URL(form.action);
+    
+        if (email) {
+          const params = new URLSearchParams(new FormData(form)).toString();
+          const script = document.createElement('script');
+          script.src = `${url}&${params}`;
+    
+          script.onload = function() {
+            document.head.removeChild(script);
+          };
+    
+          script.onerror = function() {
+            document.getElementById("notification_container").innerHTML = '<div class="alert alert-danger">Could not connect to the server. Please try later.</div>';
+            document.head.removeChild(script);
+          };
+    
+          document.head.appendChild(script);
+    
+          window['mcCallback'] = function(response) {
+            const notificationContainer = document.getElementById("notification_container");
+            if (response.result === "success") {
+              notificationContainer.innerHTML = '<div class="alert alert-success">Thank you for subscribing!</div>';
+            } else {
+              notificationContainer.innerHTML = '<div class="alert alert-danger">Subscription failed. Please try again later.</div>';
+            }
+            form.reset();
+          };
+        }
+      });
+    </script>
+    
+    
   </body>
 </html>
