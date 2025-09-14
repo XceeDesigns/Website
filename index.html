@@ -75,6 +75,61 @@
 
   <link rel='stylesheet' href="css/animate.min.css">
 
+  <!-- PopUp CSS - Start -->
+
+  <style>
+    /* Background overlay */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Popup box */
+    .popup {
+      background: #eee;
+      padding: 20px;
+      width: 360px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .popup p{
+      font-size: 16px;
+    }
+
+    /* Close button */
+    .popup button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: rgb(75, 78, 83);;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .popup button:hover {
+      background: #0056b3;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+  </style>
+
+  <!-- PopUp CSS - End -->
+
 <!--  Smmooth Scrolling -->
   <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
   <script>
@@ -668,6 +723,17 @@
     </div>
   </div>
 
+  <!--========= POPUP Modal =========
+  =================================-->
+
+   <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <h2>Exciting Offer!</h2>
+      <p>Get 20% Off on your First Website from XceedDesigns 🎉</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
 
 
 
@@ -928,6 +994,27 @@
     });
   </script>
 <!--=== script ends here ===-->
+
+
+<!--=== Popup script starts here ===-->
+<script>
+    // Show popup when page loads
+    window.onload = function() {
+      let popup = document.getElementById("popupOverlay");
+      popup.style.display = "flex";
+
+      // Hide after 5 seconds (5000ms)
+      setTimeout(function() {
+        popup.style.display = "none";
+      }, 5000);
+    };
+
+    // Close popup
+    function closePopup() {
+      document.getElementById("popupOverlay").style.display = "none";
+    }
+  </script>
+<!--=== Popup script ends here ===-->
 
 
 </body>
